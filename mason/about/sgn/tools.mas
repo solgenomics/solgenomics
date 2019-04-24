@@ -1,0 +1,55 @@
+<%once>
+  use CXGN::Page::FormattingHelpers qw/info_table_html/;
+</%once>
+
+<&| /page/info_section.mas, title => 'Data' &>
+<dl>
+<dt>Solanaceae and other Genomes</dt>
+<dd>SGN is a home for Solanaceae and closely related genomes, such as selected Rubiaceae genomes (e.g., <i>Coffea</i>). The <a href="/organism/Solanum_lycopersicum/genome">tomato</a>, <a href="/organism/Solanum_tuberosum/genome">potato</a>, <a href="/organism/Capsicum_annuum/genome">pepper</a>, and <a href="/organism/Solanum_melongena">eggplant</a> genome are examples of genomes that are currently available. If you would like to include a Solanaceae genome that you sequenced in SGN, please <a href="/contact/form">contact us</a>.</dd>
+<dt>ESTs</dt>
+<dd>SGN houses EST collections for tomato, potato, pepper, eggplant and
+petunia and corresponding unigene builds. EST sequence data and cDNA
+clone resources greatly facilitate cloning strategies based on
+sequence similarity, the study of syntenic relationships between
+species in comparative mapping projects, and are essential for
+microarray technology.
+</dd>
+<dt>Unigenes</dt>
+<dd>SGN assembles and publishes unigene builds from these EST sequences.  For more information, see <a href="/methods/unigene/index.pl">Unigene Methods</a>.</dd>
+<dt>Maps and Markers</dt>
+<dd>SGN has genetic maps and a searchable catalog of markers for
+tomato, potato, pepper, and eggplant.</dd>
+  </ul>
+</dd>
+<dt>Tools</dt>
+<dd>SGN makes available a wide range of web-based bioinformatics tools
+for use by anyone, listed <a href="/tools/">here</a>.  Some of our
+most popular tools include <a href="/tools/blast/">BLAST</a> searches,
+the <a href="/tools/solcyc/">SolCyc biochemical pathways database</a>,
+a <a href="/tools/caps_designer/caps_input.pl">CAPS experiment
+designer</a>,  an <a href="/tools/align_viewer/">Alignment Analyzer</a> and <a href="/tools/tree_browser/">browser for phylogenetic trees</a>. The <a href="http://vigs.solgenomics.net">VIGS tool</a> can help predict the properties of VIGS (Viral Induced Gene Silencing) constructs.</dd>
+
+</dl>
+
+<p>The data in SGN have been submitted by many different research
+groups around the world which are acknowledged on the corresponding
+pages on SGN.  If you have data you would like to submit for display
+on SGN, please use the <a href="/contact/form">contact us</a> web form.</p>
+
+<p>For more information about SGN datasets, see the <a href= "/content/sgn_data.pl">SGN Data
+Overview</a>. Entire datasets can also be downloaded from our <a href="ftp://ftp.solgenomics.net">FTP site</a>.</p>
+
+</&>
+
+
+<&| /page/info_section.mas, title => 'SGN community-driven gene and phenotype database' &>
+<ul style="margin: 0; padding-left: 1em">
+
+   <li>We have developed simple web interfaces for the SGN user-community to submit, annotate, and curate the Solanaceae locus and phenotype databases. Our goal is to share biological information, and have the experts in their field
+   review existing data and submit information about their favorite genes and phenotypes.</li>
+
+   <li>Please read more about the <a href="/phenome/index.pl">phenome database</a>
+    and how to submit information to SGN.</li>
+
+</ul>
+</&>

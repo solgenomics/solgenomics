@@ -1,0 +1,20 @@
+
+<%doc>
+
+Mason module that displays div of tomato information, based on the contents of a file.
+Takes no arguments.
+
+</%doc>
+
+% if( -r $file ) {
+  <% $m->file( $file ) %>
+% } else {
+ <div class="ghosted">Tomato genome information temporarily unavailable</div>
+% }
+
+
+<%init>
+use File::Spec;
+my $file = File::Spec->catfile( $c->get_conf('homepage_files_dir'), 'tomato_genome_info.txt');
+</%init>
+

@@ -1,0 +1,103 @@
+
+
+<%doc>
+
+=head1 NAME
+
+/phenome/assign_owner.mas - a component for printing assign locus owner form
+
+=head1 DESCRIPTION
+
+
+Parameters:
+
+=over 6
+
+=item object_id
+
+object  id
+
+=item  object_type
+
+the type of the object (e.g. 'locus', 'stock')
+
+=item show_form
+must be logged in as a curator. Defaults to 0
+
+=item sp_person_autocomplete_uri
+defaults to  '/ajax/people/autocomplete'
+
+=item owners_div
+defaults to 'object_owners'
+
+=item owner_add_uri
+must pass this param
+
+=back
+
+=head1 AUTHOR
+
+Naama Menda <nm249@cornell.edu>
+
+=cut
+
+</%doc>
+
+<%args>
+
+  $object_id
+  $object_type
+  $sp_person_autocomplete_uri => '/ajax/people/autocomplete/1'
+  $owner_add_uri
+  $show_form => 0
+  $owners_div => 'object_owners'
+</%args>
+
+<script language="javascript">
+
+  jQuery(function() {
+     jQuery("#sp_person").autocomplete({
+	 source: '<% $sp_person_autocomplete_uri %>'
+     });
+  });
+
+  function submit_owner_form() {
+       var sp_person = jQuery("#sp_person").val();
+         jQuery.ajax({
+           dataType: "json",
+           url: "<% $owner_add_uri %>" ,
+           type:"POST",
+           data: 'object_id='+<% $object_id %>+'&sp_person='+sp_person ,
+           success: function(response) {
+               var error = response.error;
+               if (error) { alert(error) ; }
+       	       display_owners( "<% $owners_div %>" );
+           }
+       } );
+  }
+
+</script>
+
+
+% if ($show_form) {
+
+ <&| /page/optional_show.mas, title => "Assign owner" &>
+ 
+<div id="associate_owner_form">
+  Notice: 'user' account will be updated to 'submitter'
+  <div id="person_search" >
+    <form name="owner_form" >
+      <input type="text" style="width: 70%" id="sp_person" name="sp_person" value = "type first or last name"/>
+      <input type="hidden" id="object_id" name="object_id" value="<% $object_id %>" />
+       <input
+         type="button"
+         name = "assign_owner"
+         onclick="javascript:submit_owner_form()"
+         value = "Assign owner" />
+    </form>
+  </div>
+</div>
+
+</&>
+
+% }

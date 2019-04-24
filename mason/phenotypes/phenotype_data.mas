@@ -1,0 +1,177 @@
+
+<%doc>
+
+=head1 NAME
+
+/phenotypes/phenotype_data.mas - a component for printing table with stats of a phenotype object
+
+=head1 DESCRIPTION
+
+
+Parameters:
+
+=over 4
+
+=item phenotypes
+
+arrayref of L<Bio::Chado::Schema::Phenotype> objects
+
+=item div
+
+div id (for using with javascript)
+
+=item has_qtl
+
+applies to qtl populations. Used for adding a link to the qtl page
+
+=item object_id
+
+the database id of the object with associated phenotyeps
+
+
+=back
+
+=head1 AUTHOR
+
+Naama Menda <nm249@cornell.edu>
+
+=cut
+
+</%doc>
+
+<%args>
+    $phenotypes=>undef
+    $div=> ''
+    $has_qtl => undef
+    $object_id => undef
+</%args>
+
+<%once>
+use CXGN::Page::FormattingHelpers qw/ tooltipped_text columnar_table_html /;
+
+use Statistics::Descriptive;
+use Scalar::Util qw(looks_like_number);
+
+</%once>
+
+<%perl>
+
+my %data;
+my @qual_data;
+my %info; # hash of term names, since we can have multiple phenotypes of the same term
+my $graph_icon = qq |<img src="/documents/img/pop_graph.png"/> |;
+
+####
+if ($phenotypes) { ###  && UNIVERSAL::isa($phenotypes,"UNIVERSAL"))  { 
+foreach my $phenotype (@$phenotypes) {
+  ###while ( my $phenotype = $phenotypes->next ) { 
+   #$phenotype is a list of row objects with the following column values
+   # qw/ stock_id value observable observable_id definition method_name type_name  accession db_name project_description cv_name unit_name ##  
+  
+  #first make sure phenotype_cvterm is a unit.ontology# Not sure this is necessary, since all we have (now) in phenotype_cvterm is units
+  ##### if $phenotype->get_column('cv_name') ne 'unit.ontology' || undef ;    
+  my $unit_name = $phenotype->get_column('unit_name');
+  my $type_name = $phenotype->get_column('type_name');
+  my $method_name;
+  if ($type_name eq 'method') {
+     $method_name = $phenotype->get_column('method_name');
+  } elsif ( !$type_name ) {
+     $method_name =  'Trait' ;
+  } else { next; } #skip the row if a phenotypeprop was fetched , but it is not a 'mehtod' type.
+ 
+  #push @ { $info{$observable->name."|". $observable->cvterm_id ."|". $definition . "|" . $unit} } , $phenotype;
+
+
+  my $observable_name = $phenotype->get_column('observable');
+  my $value =  $phenotype->get_column('value') ;
+  push @{ $info{$method_name}{$observable_name}{phenotypes}} , $phenotype->get_column('value') ;
+  $info{$method_name}{$observable_name}{cvterm_id} = $phenotype->get_column('observable_id');
+  $info{$method_name}{$observable_name}{definition} = $phenotype->get_column('definition');
+  $info{$method_name}{$observable_name}{unit} = $unit_name ;
+}
+
+}
+my $count = 0;
+#display traits sorted by name
+##NEED TO SORT BY cvtermprop or by parent? , then by name######
+foreach my $method(sort keys %info ) {
+  foreach my $term_name(sort keys %{ $info{$method} } ) {
+    my $term_id    = $info{$method}{$term_name}{cvterm_id};
+    my $definition = $info{$method}{$term_name}{definition};
+    my $unit       = $info{$method}{$term_name}{unit} ;
+    $unit = " ($unit)" if $unit;
+    $definition .= $definition . $unit if $unit;
+
+    my @values; # all quantitative data does here
+    my @qual_values; #all qualitative data goes here
+    foreach my $i ( @{ $info{$method}{$term_name}{phenotypes} } ) {
+      my $value = $i ;###->value;
+      if (looks_like_number($value))  {  push @values, $value ; }
+      else { push @qual_values, $value ; }
+    }
+    my $stat = Statistics::Descriptive::Sparse->new();
+    $stat->add_data(@values);
+
+    my $mean_value =  sprintf("%.2f", $stat->mean);
+    my $min = sprintf("%.2f", $stat->min);
+    my $max = sprintf("%.2f", $stat->max);
+    
+    if (scalar(@values) ) {
+       no warnings 'uninitialized';
+       push  @ { $data{$method}{phen} } ,  [map {$_}
+                     ( { width => "320" , content => (tooltipped_text(qq|<a href="/cvterm/$term_id/view">$term_name</a> $unit|, $definition ) ) } , { width => "60", content => $mean_value }, { with => "60" , content => $min } , { width => "60" , content => $max }, { width => "40" , content => scalar(@values) } )  ];
+
+      push  @ { $data{$method}{phen}[$count] } , qq | <a href="/phenome/qtl_analysis.pl?stock_id=$object_id&amp;cvterm_id=$term_id" onClick="Qtl.waitPage()"> $graph_icon</a> |    if $has_qtl;
+      $count++;
+    }
+    if (scalar(@qual_values) ) {
+      push  @qual_data,  [map {$_}
+                          ( (tooltipped_text(qq|<a href="/cvterm/$term_id/view">$term_name</a>|, $definition) )  , join(', ' , @qual_values ) ) ];
+    }
+  }
+     @ { $data{$method}{headings} } = ("$method" , "Average", "Min", "Max", "Lines/repeats");
+     push @ { $data{$method}{headings} } , 'QTL(s)' if $has_qtl;
+}      
+
+</%perl>
+
+<script  language="javascript">
+
+</script>
+
+<& /util/import_javascript.mas, classes => [ "CXGN.Phenome.Qtl" ] &>
+
+<div id = "$div">
+
+% foreach my $key( sort keys %data ) {
+%  my @data_points = @ { $data{$key}{phen} } if $data{$key}{phen};
+%  my @headings    = @ { $data{$key}{headings} };
+%  if (@data_points) {
+
+<& /page/columnar_table.mas,
+      headings   => \@headings,
+      data       => \@data_points,
+        __alt_freq   =>2,
+        __alt_width  =>1,
+        __alt_offset =>3,
+        __align =>'lrrrc',
+&>
+
+%   }
+% }
+
+% if(@qual_data) {
+
+<& /page/columnar_table.mas,
+  headings => ["Qualitative Trait", "Value"],
+    data     => \@qual_data ,
+      __alt_freq   =>2,
+      __alt_width  =>1,
+      __alt_offset =>3,
+      __align =>'ll',
+&>
+
+% }
+</div>
+
+<& /qtl/waitmessage.mas &>

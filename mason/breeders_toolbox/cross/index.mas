@@ -1,0 +1,136 @@
+
+<%args>
+$cross_id
+$cross_name => ''
+$breeding_program => undef
+$progeny_count => undef
+$trial_id => undef
+$trial_name => undef
+$user_id => undef
+</%args>
+
+<& /util/import_javascript.mas, classes => ["jquery", "jqueryui", "thickbox", "CXGN.Phenome.Tools", "CXGN.Page.FormattingHelpers", "jquery.cookie", "CXGN.List", "CXGN.BreederSearch", "CXGN.BreedersToolbox.CrossDetailPage" ] &>
+
+% use utf8;
+% $cross_name ||= "Untitled cross";
+% my $basename = $cross_name."P";
+% my $cross_properties = $c->config->{cross_properties};
+% my @cross_props = split ',',$cross_properties;
+
+<& /page/page_title.mas, title => "Details for cross '$cross_name'" &>
+
+<&| /page/info_section.mas, title => "Cross information" &>
+
+<& /page/form.mas,
+  object_type=>'cross',
+  object_id=> $cross_id,
+  form_name=> 'stock_form',
+  server_side_script => '/phenome/stock/stock_ajax_form.pl',
+  form_div_name=>'stock_details',
+  js_object_name=> 'stockForm',
+  page_url => "/cross/$cross_id" ,
+  alternate_new_button => '',
+  alternate_delete_button => ''
+&>
+
+</&>
+
+<div id="cross_name" style="visibility:hidden">
+<% $cross_name %>
+</div>
+
+<div id="cross_id" style="visibility:hidden">
+<% $cross_id %>
+</div>
+
+
+<& /util/import_javascript.mas, classes => ['jquery','jquery.dataTables'] &>
+<& /util/import_css.mas, paths => ['/documents/inc/datatables/jquery.dataTables.css'] &>
+
+<&| /page/info_section.mas, title => 'Parents', collapsible=>1, collapsed=>0 &>
+    <div class = "well well-sm">
+        <div class = "panel panel-default">
+            <div class = "panel-body">
+                <div style="overflow:scroll">
+                    <table id = "parent_information" class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>Cross Type</th>
+                                <th>Female Accession</th>
+                                <th>Male Accession</th>
+                                <th>Female Plot</th>
+                                <th>Male Plot</th>
+                                <th>Female Plant</th>
+                                <th>Male Plant</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+ </&>
+
+
+% my $edit_link = "[Edit]";
+% if ($user_id) { $edit_link = '<a id="edit_properties_link">[Edit]</a>'; }
+
+<&| /page/info_section.mas, title => 'Crossing Experimental Info', collapsible => 1, collapsed => 0, subtitle => $edit_link &>
+    <div class = "well well-sm">
+        <div class = "panel panel-default">
+            <div class = "panel-body">
+                <div style="overflow:scroll">
+                <table id = "cross_properties" class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+% foreach my $cross_prop(@cross_props){
+                        <th><%$cross_prop%></th>
+%}
+                        </tr>
+                    </thead>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+ </&>
+
+
+<div id="edit_properties_dialog">
+
+    <select id="properties_select">
+% foreach my $cross_prop(@cross_props){
+        <option value="<%$cross_prop%>"><%$cross_prop%></option>
+%}
+    </select>
+
+    <input id="property_value" />
+
+    <button id="property_submit" >Save</button>
+
+    <p><b>WARNING!</b>&nbsp;Changing the parameters can have unpredicatable results in downstream analyses if they are inconsistent with other data.</p>
+
+</div>
+
+
+<& /breeders_toolbox/seedlots_section.mas, stock_id=>$cross_id, stock_type=>'cross', stock_uniquename=>$cross_name &>
+
+% my $add_progeny_link = "[add progeny]";
+% if ($user_id) { $add_progeny_link= '<a id="add_more_progeny_link">[add progeny]</a>'; }
+
+<&|  /page/info_section.mas, title => "Progeny", collapsible => 1, collapsed => 0, subtitle => $add_progeny_link   &>
+
+    <div id="progeny_information_div">
+        [loading...]
+    </div>
+
+    <div id="add_more_progeny_dialog">
+        <table>
+            <tr><td>Basename</td><td><input type="input" id="basename" name="basename" value="<% $basename %>" /></td></tr>
+            <tr><td>Start number</td><td><input type="input" id="start_number" name="start_number" size="5" value="<% $progeny_count + 1 %>" /></td></tr>
+            <tr><td>How many?</td><td><input type="input" id="progeny_count" name="progeny_count" size="5" /></td></tr>
+        </table>
+    </div>
+
+
+</&>

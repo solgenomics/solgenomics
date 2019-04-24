@@ -1,0 +1,25 @@
+
+<%args>
+$uri
+</%args>
+
+<%perl>
+
+use XML::Feed;
+
+my $feed = XML::Feed->parse(URI->new($uri));
+
+if (! $feed) { 
+  print "The news feed is currently not available.<br />\n";
+  return;
+}
+
+foreach my $e ($feed->entries) { 
+  my $dt = $e->issued();
+  my $title = $e->title;
+  $title =~ s/[^\x00-\x7E]//g;
+  print  "<p><a  href=\"".$e->link()."\">$title</a> [".$dt->year."/".$dt->month."/".$dt->day."]</p>";
+}
+</%perl>
+
+

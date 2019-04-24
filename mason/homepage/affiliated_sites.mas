@@ -1,0 +1,12 @@
+
+<%perl>
+
+use strict;
+use CXGN::Tools::File;
+
+my $file = $c->get_conf('homepage_files_dir').'/affiliated_sites.txt';
+
+</%perl>
+
+<% CXGN::Tools::File::read_commented_file($file) %>
+

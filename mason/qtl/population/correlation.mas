@@ -1,0 +1,33 @@
+<%doc>
+
+=head1 NAME 
+
+qtl/population/correlation.mas - displays correlation heatmap 
+
+=AUTHOR
+
+Isaak Y Tecle (iyt2@cornell.edu)
+
+=cut
+
+</%doc>
+
+<%args>
+
+$pop
+
+</%args>
+
+<%perl>
+
+my $pop_id = $pop->get_population_id();
+
+</%perl>
+
+
+
+<& /solgs/population/correlation.mas,
+    pop_id => $pop_id
+&>
+
+ 

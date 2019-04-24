@@ -1,0 +1,34 @@
+
+<%doc>
+
+=head1 NAME
+
+oldloci.mas - a mason component that shows a list of loci that have been featured in the locus of the week section. The component takes no parameters.
+
+=cut 
+
+</%doc>
+
+<%perl>
+use strict;
+use File::Spec;
+use CXGN::Tools::File;
+
+my $file=(File::Spec->catfile($c->get_conf("homepage_files_dir"), "loci.txt"));
+
+my $loci = qq{ <br /><p class="boxbgcolor5"><br />The list of all loci of the week is currently unavailable due to a server problem. We apologize for any inconvenience. Please check back later.<br /><br /></p><br /><br /> };
+
+
+eval { 
+
+  $loci = $m->file($file);
+
+};
+
+
+</%perl>
+
+<& /page/page_title.mas, title=>'All Loci of the Week' &>
+
+<% $loci %>
+

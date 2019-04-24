@@ -1,0 +1,29 @@
+<div id="outercontainer">
+  <a name="top"></a>
+
+  <div id="clone_shoppingcart" style="display: none">
+    <span id="clone_cart_count"></span> clone(s) in cart (<a class="toplink" style="text-decoration: underline" href="/search/clone-order.pl">order</a>)
+  </div>
+
+  <& /site/header/browser_alert.mas &>
+  <& /site/toolbar.mas &>
+  <& /system_message.mas &>
+% if ( $c->req->uri->path_query =~ "logout=yes") {  
+  <!-- & /logout_message.mas & -->
+
+
+% }
+
+<script defer="defer">
+
+jQuery(document).ready( function() { 
+
+  setUpLogin();
+  setUpLists();
+  setUpDatasets();
+
+});
+
+</script>
+
+<!-- END HEADER -->

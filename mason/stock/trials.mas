@@ -1,0 +1,32 @@
+
+<%args>
+$stock_id
+</%args>
+
+<& /util/import_javascript.mas, classes => [ 'jquery', 'jquery.dataTables' ] &>
+
+<table class="table table-hover table-bordered" id="trial_summary_data">
+<thead>
+  <tr>
+    <th>Trial name</th>
+    <th>Location</th>
+    <th>Details</th>
+  </tr>
+</thead>
+
+</table>
+
+<& /util/import_css.mas, paths => ['/documents/inc/datatables/jquery.dataTables.css'] &>
+
+<script>
+
+    jQuery(document).ready(function () {
+        jQuery('#stock_trials_section_onswitch').click(function(){
+            jQuery('#trial_summary_data').DataTable( {
+                'destroy': true,
+                'ajax': '/stock/'+ <% $stock_id %> + '/datatables/trials',
+            });
+        });
+    });
+
+</script>

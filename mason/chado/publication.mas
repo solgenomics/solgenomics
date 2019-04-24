@@ -1,0 +1,68 @@
+
+
+<%doc>
+
+=head1 NAME
+
+/chado/publications.mas - a component for printing publication info
+
+=head1 DESCRIPTION
+
+Parameters:
+
+=over 4
+
+=item pub
+
+CXGN::Chado::Publication object
+
+=item db
+
+db name for linking the publication to an xref (usually PubMed)
+
+=item accession
+
+the accession of the dbxref
+
+=item doi
+
+the DOI of the publication, if one exists
+
+=back
+
+=head1 AUTHOR
+
+Naama Menda <nm249@cornell.edu>
+
+=cut 
+
+</%doc>
+<%args>
+  $pub
+  $doi => undef
+  $db => undef
+  $accession => undef
+</%args>
+
+<& /util/import_javascript.mas, classes => 'CXGN.Phenome.Publication' &>
+<div class="publication_embedded">
+  <span class="title"> <% $doi %> <% $pub->get_title |h%> </span>  <a href="/publication/<% $pub->get_pub_id |h%>/view">
+    <% $pub->get_series_name |h%> (<% $pub->get_pyear |h%>) </a>
+  <br />
+  <a class="toggle_abstract" href="#">Show / hide abstract</a>
+  <div class="detail">
+    <div class="abstract">
+       <% $pub->get_abstract |h%>
+    </div>
+     <div class="citation">
+       <% $pub->get_authors_as_string |h%>.
+       <% $pub->get_series_name |h%>.
+       <% $pub->get_pyear |h%>.
+        <% $pub->get_volume |h%>(<% $pub->get_issue |h%>).
+       <% $pub->get_pages |h%>.
+      </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,382 @@
+<%doc>
+
+=head1 NAME
+
+/chado/cvterm.mas - a component for printing the cvterm page
+
+=head1 DESCRIPTION
+
+Parameters:
+
+=over 1
+
+=item cvterm
+
+CXGN::Chado::Cvterm object
+
+
+
+=back
+
+=head1 AUTHOR
+
+Naama Menda <nm249@cornell.edu>
+
+=cut
+
+</%doc>
+
+<%args>
+  $cvterm
+  $cvtermref
+</%args>
+
+<%once>
+use CXGN::Page::FormattingHelpers qw/
+ info_section_html
+ page_title_html
+ columnar_table_html
+/;
+use CXGN::Phenome::Qtl::Tools;
+</%once>
+
+<%perl>
+
+my $cvterm_id   = $cvterm->cvterm_id;
+my $db_name     = $cvterm->db->name;
+my $accession   = $cvterm->accession;
+my $cvterm_name = $cvterm->name;
+my $definition  = $cvterm->definition;
+my $comment     = '' ;#$cvterm->comment;
+#$stockref->{props} (hash of arrayrefs of cvtermprops. Keys = prop name, value = prop value)
+my $editable_cvterm_props_string = $cvtermref->{editable_cvterm_props};
+my @editable_cvterm_props = split "," , $editable_cvterm_props_string;
+
+
+my $is_obsolete = $cvterm->is_obsolete();
+my @synonyms    = $cvterm->synonyms();
+my @def_dbxrefs = $cvterm->def_dbxrefs();
+my @secondary_dbxrefs = $cvterm->secondary_dbxrefs();
+my @image_ids = $cvterm->get_image_ids;
+
+my $curator   = $cvtermref->{curator};
+my $submitter = $cvtermref->{submitter};
+my $sequencer = $cvtermref->{sequencer};
+my $cvtermprops = $cvtermref->{props};
+
+
+my @def_accessions;
+if ( scalar (@def_dbxrefs ) > 0 ) {
+  # @def_accessions = map( $_->db->name . ":" . $_->accession , @def_dbxrefs);
+}
+
+my @secondary_accessions = ();
+foreach ( @secondary_dbxrefs) {
+  my $db_name =       $_->db->name;
+  my $acc =           $_->accession;
+  my $urlprefix=      $_->db->urlprefix;
+  my $url =           $_->db->url;
+  my $full_acc =      $db_name . ":" . $acc;
+  my $link = $full_acc;
+  if ( $url ) {
+    my $xref_link = $urlprefix . $url . $acc;
+    $link = qq | <a href="$xref_link">$full_acc</a> |
+  }
+  push @secondary_accessions , $link ;
+}
+
+my @qtl_pops = CXGN::Phenome::Qtl::Tools->new()->is_from_qtl( $cvterm_id );
+my @qtl_data;
+
+if ( @qtl_pops )
+ {
+    foreach my $pop (@qtl_pops)
+    {
+      my $pop_id   = $pop->get_population_id();
+      my $name     = $pop->get_name();
+      my $desc     = $pop->get_description();
+      my $qtl_link = qq | <a href="/phenome/qtl_analysis.pl?population_id=$pop_id&amp;cvterm_id=$cvterm_id" onClick="Qtl.waitPage()">$name</a> |;
+      push @qtl_data, [ $qtl_link, $desc ];
+    }
+ }
+
+my $this_page = "/cvterm/$cvterm_id/view/";
+my $image_subtitle =
+   " <a href=\"/image/add?type_id=$cvterm_id&type=cvterm&refering_page=$this_page\">[Add image]</a>" ;
+
+
+my $edit_privs = $curator || $submitter || $sequencer;
+
+</%perl>
+
+
+<& /util/import_javascript.mas, classes => [qw [CXGN.AJAX.Ontology  CXGN.Phenome.Qtl thickbox jquery  jquery.dataTables] ] &>
+
+
+<script language="javascript">
+  function recursiveAnnotations( a ) {
+      jQuery.ajax( { url:      a.url+"?cvterm_id=<% $cvterm_id %>" ,
+                     dataType: "json",
+                     success: function(response) {
+                              //jQuery("#"+a.content_id).html(response.html);
+                              jQuery("#"+a.count_id).html( response.count + ' ' + a.inflect[ response.count == 1 ? 0 : 1 ]);
+                       if( response.error )  {
+                             alert(response.error);
+                      }
+                     }
+                  });
+  }
+</script>
+
+
+<& /page/page_title.mas, title=> "$accession '$cvterm_name' " &>
+
+
+<&| /page/info_section.mas, title=>"Cvterm details" &>
+<table>
+<tr><td>Term id</td><td><b><% $accession %></b></td></tr>
+<tr><td>Term name</td><td><b><% $cvterm_name %></b></td></tr>
+<tr><td>Term definition</td><td><b><% $definition %></b></td></tr>
+<tr><td>Comment</td><td><b><% $comment %></b></td></tr>
+</table>
+
+% if ($is_obsolete) {
+<b>Obsolete:</b> TRUE <br />
+% }
+
+<br /><b>Synoyms</b><br />
+% foreach my $synonym (@synonyms) {
+<% $synonym %> <br />
+% }
+
+<br /><b> Definition dbxrefs</b><br />
+% foreach my $da (@def_accessions) {
+<% $da %><br />
+% }
+
+<br /><b> Related dbxrefs</b><br />
+% foreach my $sa (@secondary_accessions) {
+<% $sa %><br />
+%  }
+
+</&>
+<br />
+
+
+% my $props_subtitle = $edit_privs ? "[<a id=\"cvterm_add_props\" href=\"javascript:cvtermprops_addPropDialog()\">Add...</a>]" : "[Add]";
+
+<&| /page/info_section.mas, title => "Trait Properties" , collapsible=> 1, is_subsection => 1, subtitle=>$props_subtitle &>
+      <& /chado/cvtermprops.mas,
+       cv_name    => 'trait_property',
+       cvterm_id  =>$cvterm_id,
+       props      => $cvtermprops,
+        div_name   => 'cvtermprops',
+	edit_privs => $edit_privs,
+	subset     => \@editable_cvterm_props,
+	editable   => \@editable_cvterm_props  &>
+</&>
+
+<h4>Add this term to a list</h4>
+
+<div id="cvterm_id" style="display:none" ><% $cvterm_name %>|<% $accession %></div>
+
+<&| /page/info_section.mas, title=>"Add to list", collapsible=>1, collapsed=>1 &>
+<div id="paste_to_list">
+LOAD...
+</div>
+
+</&>
+<script>
+
+  if (isLoggedIn()) { 
+    addToListMenu('paste_to_list', 'cvterm_id', { listType: 'traits' } );
+  }
+  else { 
+    jQuery('#paste_to_list').html("&nbsp;Please log in to use lists.");
+  }
+  
+</script>
+
+<br />
+
+
+<& /ontology/embedded_browser.mas, cvterm => $cvterm &>
+
+
+
+<&| /page/info_section.mas,
+    title=> "Annotated loci",
+    subtitle => '',
+    collapsible => 1,
+    collapsed   => 1,
+&>
+
+<table id="loci_data" class="display">
+<thead>
+  <tr>
+    <th>Organism</th>
+    <th>Locus symbol</th>
+    <th>Locus name</th>
+  </tr>
+</thead>
+
+</table>
+
+<script>
+
+  jQuery(document).ready(function () {
+  
+    jQuery('#loci_data').DataTable( { 
+      'ajax': '/cvterm/'+ <% $cvterm_id %> + '/datatables/annotated_loci',
+     });
+  });
+
+</script>
+
+
+</&>
+
+
+
+<&| /page/info_section.mas,
+       title=> "Annotated stocks",
+       collapsible => 1,
+       collapsed=>1,
+       subtitle => '',
+       hide_if_empty => 1,
+ &>
+
+<table id="annotated_stocks_data" class="display">
+<thead>
+  <tr>
+     <th>Type</th>
+    <th>Stock name</th>
+    <th>Description</th>
+  </tr>
+</thead>
+
+</table>
+
+<script>
+
+  jQuery(document).ready(function () {
+  
+    jQuery('#annotated_stocks_data').DataTable( { 
+      'ajax': '/cvterm/'+ <% $cvterm_id %> + '/datatables/annotated_stocks',
+     });
+  });
+
+</script>
+
+
+</&>
+
+
+
+% if ( @qtl_pops )
+% {
+    <&| /page/info_section.mas,
+        title       => "QTL analysis",
+        collapsible => 1,
+   &>
+     <& /page/columnar_table.mas,
+        headings     => ["Analyze QTL in population", "Population description"], 
+        data         => \@qtl_data,
+        __alt_freq   => 2,
+        __align      =>'l',
+     &>
+  </&>
+% }
+
+
+
+<&| /page/info_section.mas,
+      title       => "Phenotyped accessions",
+      collapsible => 1,
+      collapsed=>1,
+      subtitle    => '' ,
+&>
+
+
+<table id="phen_stocks_data" class="display">
+<thead>
+  <tr>
+     <th>Type</th>
+    <th>Stock name</th>
+    <th>Description</th>
+  </tr>
+</thead>
+
+</table>
+
+<script>
+
+  jQuery(document).ready(function () {
+  
+    jQuery('#phen_stocks_data').DataTable( { 
+      'ajax': '/cvterm/'+ <% $cvterm_id %> + '/datatables/phenotyped_stocks',
+     });
+  });
+
+</script>
+
+
+</&>
+
+
+
+<&| /page/info_section.mas,
+      title       => "Phenotyping trials",
+      collapsible => 1,
+      collapsed=>1,
+      subtitle    => '<span id="trial_count"></span>',
+&>
+
+<script language="javascript">
+    recursiveAnnotations({
+                         url:        "/cvterm/"+<% $cvterm_id %>+"/datatables/direct_trials",
+                         content_id: "trial_div",
+                         count_id:   "trial_count",
+                         inflect:    [ 'trial', 'trials' ],
+                       });
+</script>
+
+
+
+<table id="trial_data" class="display">
+<thead>
+  <tr>
+     <th>Trial name</th>
+     <th>Description</th>
+  </tr>
+</thead>
+
+</table>
+
+<script>
+
+  jQuery(document).ready(function () {
+  
+    jQuery('#trial_data').DataTable( { 
+      'ajax': '/cvterm/'+ <% $cvterm_id %> + '/datatables/direct_trials',
+       }
+     );
+  });
+
+</script>
+
+</&>
+
+<&| /page/info_section.mas, 
+    title => "Images and figures",
+    subtitle      => $image_subtitle,
+    collapsible   => 1,
+    collapsed     => 0,
+    hide_if_empty => 1,
+&>
+
+<& /image/print_images.mas, images => \@image_ids &>
+
+</&>
+
+<& /qtl/waitmessage.mas &>

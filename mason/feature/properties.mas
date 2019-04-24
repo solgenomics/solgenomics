@@ -1,0 +1,41 @@
+<%args>
+    $feature
+</%args>
+<%once>
+    use HTML::Entities;
+    use CXGN::Page::FormattingHelpers qw/info_table_html/;
+    use SGN::View::Feature qw/ description_featureprop_types cvterm_link /;
+</%once>
+<%perl>
+   # find all featureprops other that Note, which is already taken
+   # care of, group them by type
+   my $props = $feature->search_related(
+       'featureprops',
+       {
+           # filter out featureprops that are used as the feature's description
+           'type_id' => {
+               -not_in => description_featureprop_types($feature)
+                            ->get_column('cvterm_id')
+                            ->as_query
+            },
+           'length(value)' => { '<=', 1000 },
+       },
+       { prefetch => 'type' },
+     );
+     my %properties;
+     while( my $fp = $props->next ) {
+         push @{$properties{ $fp->type->name } ||= []}, $fp;
+     }
+
+   if( %properties ) {
+       for my $propname ( sort keys %properties ) {
+           my $fps = $properties{$propname};
+           my $name = $m->scomp('/chado/cvterm_link.mas', cvterm => $fps->[0]->type, caps => 'ucfirst' );
+           my $value = @$fps > 1
+               ? '<ul>'.(join '', map "<li>".encode_entities($_->value)."</li>", @$fps).'</ul>'
+               : encode_entities($fps->[0]->value);
+
+           print qq|<dl style="float: left; margin: 1em"><dt>$name</dt><dd>$value</dd></dl>\n|;
+       }
+   }
+</%perl>

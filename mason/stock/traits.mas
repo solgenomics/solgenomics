@@ -1,0 +1,33 @@
+
+<%args>
+$stock_id
+</%args>
+
+<!-- & /util/import_javascript.mas, classes => [ 'jquery', 'jquery.dataTables' ] & -->
+
+<table class="table table-hover table-bordered" id="traitlist_summary_data" >
+<thead>
+  <tr>
+    <th>Trait ID</th>
+    <th>Trait name</th>
+    <th>Average Value</th>
+    <th>Standard deviation</th>
+  </tr>
+</thead>
+
+</table>
+
+<!-- link rel="stylesheet" type="text/css" href="/documents/inc/datatables/jquery.dataTables.css" -->
+
+<script>
+
+    jQuery(document).ready(function () {
+        jQuery('#stock_traits_section_onswitch').click(function(){
+            jQuery('#traitlist_summary_data').DataTable( {
+                'destroy':true,
+                'ajax': '/stock/'+ <% $stock_id %> + '/datatables/traitlist',
+            });
+        });
+    });
+
+</script>

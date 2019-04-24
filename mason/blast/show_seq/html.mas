@@ -1,0 +1,32 @@
+<%args>
+  $seq
+  $highlight_coords
+  $source
+  $format_links => []
+  $blast_url => undef
+</%args>
+
+<& /page/page_title.mas, title => $seq->id &>
+<%once>
+	use Number::Bytes::Human ();
+</%once>
+<%init>
+	my $seq_bytes = $seq->length*1.018+length($seq->id)+length($seq->desc)+1;
+</%init>
+<div style="text-align: right; margin: 0 10px 1em 0">
+  <b>Whole sequence (<% Number::Bytes::Human::format_bytes($seq_bytes) %>B):</b>
+  <% join ' | ',
+     map {
+           my ($name,$link) = @$_;
+           qq|<a href="$link">$name</a>|
+     } @$format_links
+  %>
+</div>
+
+<& /sequence/highlighted.mas,
+   seq    => $seq,
+   source => $source,
+   highlight_coords      => $highlight_coords,
+   highlight_description => 'BLAST matches',
+   blast_url => $blast_url,
+ &>

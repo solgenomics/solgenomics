@@ -1,0 +1,39 @@
+
+<%args>
+$trial_id 
+</%args>
+
+<div id="data_agreement_div">
+
+</div>
+
+<script>
+
+jQuery(document).ready(function () {
+
+    get_data_agreement(<% $trial_id %>, 'data_agreement_div');
+
+    function get_data_agreement(project_id, div) { 
+      jQuery.ajax( { 
+        async: true,
+        url: '/breeders/trial/data_agreement/get',
+        data: { 'project_id': project_id },
+        success: function(response) {
+           if (response.text) { 
+             jQuery('#'+div).html(response.text);
+           }
+           else { 
+             jQuery('#'+div).html('By default, trial data is provided under the Toronto agreement, as explained in the <a href="/usage_policy">data usage policy</a>.');
+           }
+           if (response.message) { alert(response.message); }
+        },
+        error: function(response) { 
+           alert('An error occurred fetching the data agreement data.');
+        }
+      });
+    }
+
+});
+
+
+</script>

@@ -1,0 +1,109 @@
+<%args>
+  $form
+  $results                    => undef
+  $form_opts                  => undef
+  $pagination_link_maker      => undef
+  $request                    => undef
+  $schema                     => undef
+  $sp_person_autocomplete_uri => '/ajax/people/autocomplete'
+  $trait_autocomplete_uri     => '/ajax/stock/trait_autocomplete'
+  $onto_autocomplete_uri      => '/ajax/cvterm/autocomplete'
+  $trait_db_name              => 'SP'
+</%args>
+
+<& /page/page_title.mas, title => "Search Accessions and Plots" &>
+
+<%once>
+  use Number::Format;
+  use CXGN::Page::FormattingHelpers qw/ columnar_table_html /;
+  use SGN::View::Stock qw/stock_link stock_organisms stock_types /;
+  use JSON::Any;
+</%once>
+
+<%perl>
+
+$form_opts = { stock_types => stock_types($schema), organisms=>stock_organisms($schema)}
+if (!$form_opts) ;
+my $new_stock_link = qq| <a href="/stock/0/new">Submit new stock</a> \| <a href=../../phenome/qtl_form.pl>QTL Population</a>|;
+
+</%perl>
+
+<& /util/import_javascript.mas,
+    classes => [qw(jquery CXGN.Effects jquery.cookie)]
+&>
+
+
+% if( $results ) {
+%   my $pager = $results->pager;
+
+  <&| /page/info_section.mas, title    => 'Search results',
+                              subtitle => 'results '
+                                          .$pager->first
+                                          .'-'.$pager->last
+                                          .' of '.Number::Format->new->format_number($pager->total_entries)
+   &>
+% my @data =();	
+%   if( $results->count ) {
+%               @data =
+%            map {
+%                my $organism = $_->organism;
+%            [
+%                stock_link($_),
+%                $_->type->name,
+%                $organism ? $organism->species : '',
+%            ] } $results->all;
+
+     <% columnar_table_html(
+            headings => ['Stock Name','Stock Type', 'Organism'],
+            data     => [ @data ],
+        )
+      %>
+%   } else {
+     <h3 style="text-align: center">no matching results found</h3>
+%   }
+
+<div style="text-align:right">
+Copy items on this page to list: 
+<span id="item_list_menu">
+</span>
+
+<div id="item_list">
+</div>	
+</div>
+
+% my @items = map { $_->uniquename() } $results->all();
+% my $item_json = JSON::Any->new()->encode(\@items);
+<script>
+
+  jQuery(document).ready( function() { 
+    var items = eval(<% $item_json %>);
+
+    if (isLoggedIn()) { 
+      jQuery('#item_list').hide();
+      jQuery('#item_list').html(items.join("\n"));
+      
+      addToListMenu('item_list_menu', 'item_list', 'div');
+    }
+    else { 
+      jQuery('#item_list_menu').html('Log in to use lists.');
+    }
+  });
+
+</script>
+
+
+  </&>
+
+  <& /page/pagination_control.mas, pager => $pager, link_maker => $pagination_link_maker &>
+% }
+<&| /page/info_section.mas, title => 'Search' , subtitle => $new_stock_link &>
+  <& /stock/stock_search_form.mas,
+    form                       => $form,
+    opts                       => $form_opts,
+    request                    => $request,
+    sp_person_autocomplete_uri => $sp_person_autocomplete_uri,
+    trait_autocomplete_uri     => $trait_autocomplete_uri,
+    onto_autocomplete_uri      => $onto_autocomplete_uri,
+    trait_db_name              => $trait_db_name,
+  &>
+</&>

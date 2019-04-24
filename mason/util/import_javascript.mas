@@ -1,0 +1,32 @@
+<%doc>
+
+=head1 DESCRIPTION
+
+Produces a list of <script src=""></script> lines for a set of
+legacy JavaScript modules or legacy JSAN class names, including any necessary dependencies.
+
+=head1 ARGS
+
+=head2 C<entries> - single class name, or arrayref of JavaScript entry modules to import
+
+=head1 EXAMPLES
+
+  <& /import_javascript, entries => [], legacy => [] &>
+  
+=cut
+
+</%doc>
+<%args>
+ $entries => []
+ $classes => []
+ $legacy => []
+</%args>
+<%perl>
+  $legacy = [ $legacy ] unless ref $legacy;
+  $classes = [ $classes ] unless ref $classes; #< coerce to arrayref
+  push @$legacy, @$classes;
+  push @{ $c->stash->{jsan_classes} }, @$legacy;
+
+  $entries = [ $entries ] unless ref $entries; #< coerce to arrayref
+  push @{ $c->stash->{js_modules} }, @$entries;
+</%perl>

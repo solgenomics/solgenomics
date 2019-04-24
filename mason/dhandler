@@ -1,0 +1,5 @@
+<%perl>
+use Carp;
+confess 'mason component not found: '.$m->dhandler_arg;
+
+</%perl>

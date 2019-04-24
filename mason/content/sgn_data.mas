@@ -1,0 +1,43 @@
+<%doc>
+
+=head1 NAME
+
+sgn_data.mas - SGN page for organism data overview in a tree format
+
+=cut
+
+</%doc>
+
+<%args>
+    $organism_trees
+</%args>
+
+<& /util/import_javascript.mas, classes => ["CXGN.Page.FormattingHelpers", "CXGN.Effects"] &>
+
+<& /page/page_title.mas, title=> "SGN data overview" &>
+
+<script language="javascript" type="text/javascript" src="/js/popup.js"></script>
+
+<div class="page_introduction">
+  This page presents a summary of all currently available data on SGN
+  sorted by species.  Click a species name for details about available
+  its available maps, loci, libraries, ESTs, metabolic annotation and
+  phenotyped accessions.
+</div>
+
+% for my $category (reverse sort keys %$organism_trees) {
+%    my $organism_tree = $organism_trees->{$category};
+
+   <&| /page/info_section.mas,
+     title         => $category,
+     subtitle      => 'click on an organism name to see more details ',
+     empty_message => 'Tree not available',
+     collapsible   => 1,
+     collapsed     => 0,
+     &>
+
+     <& /organism/tree.mas, organism_tree => $organism_tree &>
+
+   </&>
+
+% }

@@ -1,0 +1,143 @@
+
+<%doc>
+
+
+</%doc>
+
+<%args> 
+
+</%args>
+
+<& '/page/page_title.mas', title => "Compare trials" &>
+
+<& /util/import_css.mas, paths => ['tools/trial_comparison.css'] &>
+
+<& '/util/import_javascript.mas', classes => [ 'jquery', 'jqueryui', 'popup', 'CXGN.List', 'CXGN.Login', 'd3.d3v4Min','brapi.BrAPI','brapi.StudyComparison'] &>
+
+<style>
+#tc-grid, #tc-histogram{
+  position: relative;
+}
+#tc-grid svg, #tc-histogram svg{
+  width:100%;
+  height: auto;
+}
+</style>
+
+<div class="row">
+  <center class = "col-md-offset-2 col-md-8">
+    <form class="tc-form">
+      <div class="form-group">
+        <label for="trials_list_select">Choose a list of trials:</label>
+        <div id="trials_list_select_container">
+          <select disabled class="form-control input-sm" id="trials_list_select">
+            <option selected="selected">Loading...</option>
+          </select>
+        </div>
+        <img hidden id="trials-loading-spinner" src="/img/wheel.gif" alt="loading">
+      </div>
+      <div class="form-group">
+        <label>Choose Observation Level</label>
+        <select class="form-control input-sm" id="unit_select">
+          <option selected value="plot">Plot</option>
+          <option value="plant">Plant</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Choose a trait to compare:</label>
+        <select disabled class="form-control input-sm" id="trait_select">
+          <option selected="selected" value=""> </option>
+        </select>
+      </div>
+      <img hidden id="results-loading-spinner" src="/img/wheel.gif" alt="loading">
+    </form>
+  </center>
+</div>
+
+<div id="result_div" class="row">
+  <div class="tc-main">
+    <div hidden="true" id="tc-grid" class="col-lg-6 col-md-6 col-sm-12"></div>
+    <div hidden="true" id="tc-histogram" class="col-lg-6 col-md-6 col-sm-12"></div>
+  </div>
+</div>
+
+<script>
+
+(function() {
+  'use strict';
+  var list;
+
+  $(document).ready(function(){
+    if (isLoggedIn()) {
+      list = new CXGN.List();
+      var select_html = list.listSelect('trials', ['trials'], ' ');
+      $('#trials_list_select_container').html(select_html);
+      if (d3.select('#trials_list_select').selectAll("option").size()<2){
+        d3.select('#trials_list_select').html("<option>No trial lists! (Create one using the wizard.)</option>");
+      }
+      $('#trials_list_select').change(call_change);
+    }
+    else {
+      $('#trials_list_select').html('<option selected="selected">You must be logged in to use lists.</option>');
+    }
+  })
+
+  function call_change(){
+    $("#trials-loading-spinner").show();
+    $("#tc-grid").hide();
+    $("#tc-histogram").hide();
+    $('#trait_select').attr("disabled",true).html('<option selected="selected" disabled value=""> </option>');
+    var trial_list_id = $('#trials_list_select').val();
+    if (trial_list_id === "") {
+      $("#trials-loading-spinner").hide();
+      return;
+    }
+    setTimeout(function(){ //use setTimeout to pull sync call list.getListData out of event listener thread.
+      var item_data = list.getListData(trial_list_id);
+      // var items = item_data.elements;
+      // console.log("items: ",items);
+      var ids = list.transform2Ids(trial_list_id, item_data);
+      console.log("ids: ",ids);
+
+      BrAPI("/brapi/v1")
+        .phenotypes_search({
+            "studyDbIds" : ids,
+            "observationLevel" : $('#unit_select').val(),
+            "pageSize" : 10000000})
+        .all(createSComp);
+      $('#unit_select').change(call_change);
+    },1);
+  }
+
+  function createSComp(data){
+      $("#trials-loading-spinner").hide();
+      $('#trait_select').attr("disabled",false);
+      var scomp = StudyComparison().links(function(dbId){
+          return "/stock/"+dbId+"/view";
+      });
+      var sharedVars = scomp.loadData(data);
+      
+      console.log("vars",sharedVars)
+      
+      var varOpts = d3.select("#trait_select")
+              .selectAll("option:not([disabled])")
+              .data(sharedVars);
+      varOpts.exit().remove();
+      varOpts.enter().append("option").merge(varOpts)
+              .attr("value",function(d){return d})
+              .text(function(d){return d})
+              .raise();
+              
+      
+      $("#trait_select").change(function(){
+        $("#tc-grid").show();
+        $("#tc-histogram").show();
+        scomp.setVariable($("#trait_select").val());
+        scomp.graphGrid("#tc-grid");
+        scomp.multiHist("#tc-histogram");
+        return false;
+      });
+  }
+}());
+
+</script>

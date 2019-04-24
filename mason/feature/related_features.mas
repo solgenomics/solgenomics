@@ -1,0 +1,13 @@
+<%args>
+    $feature
+    $reference_sequence => undef
+</%args>
+
+<&
+    /chado/relations.mas,
+    %ARGS,
+    principle         => $feature,
+    relationship_name => 'feature_relationship',
+    object_type_text  => 'Features',
+    list_component    => '/feature/feature_list.mas',
+&>

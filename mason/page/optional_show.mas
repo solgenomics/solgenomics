@@ -1,0 +1,43 @@
+<%doc>
+
+=ITEM1 NAME
+
+/page/optional_show.mas - a doodad to show an optional section
+
+=ITEM1 DESCRIPTION
+
+C<<& /page/optional_show.mas, title=> $title, content=>$content, default_show=>1 &>>
+
+IMPORTANT: This mason component depends on jQuery. The enclosing component is responsible for importing jqueryui.
+
+=cut
+
+</%doc>
+
+<%args>
+  $id => 'optional_show_'.++$uniq_id_count
+  $title
+  $content => ''
+  $default_show => 0
+  $class => ''
+</%args>
+<%once>
+  our $uniq_id_count;
+</%once>
+<!-- & /util/import_javascript.mas, classes => 'jqueryui' & -->
+<div id="<% $id %>" class="optional_show <% $class %>">
+    <h3 class="<% $default_show ? 'active' : '' %>"><span class="icon">&nbsp;</span><span class="title"><% $title %></span></h3>
+    <div>
+       <% $m->content || $content %>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(function($) {
+      $("#<% $id %> h3").click(function() {
+        $(this).next().toggle();
+        $(this).toggleClass('active');
+        return false;
+      })<% $default_show ? '' : '.next().hide();' %>
+    });
+</script>
+

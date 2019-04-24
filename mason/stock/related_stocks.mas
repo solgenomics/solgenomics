@@ -1,0 +1,35 @@
+<%doc>
+=head1 NAME
+
+related_stocks.mas
+
+This file is deprecated, replaced with related_stock.mas
+
+=head1 DESCRIPTION
+
+This component can print related stocks from the stock_relationship table
+
+
+=head1 ARGUMENTS
+
+=over 1
+
+=item stock
+a Bio::Chado::Schema::Stock::Stock object
+
+=back
+=cut
+
+</%doc>
+
+<%args>
+  $stock
+</%args>
+
+<&
+    /chado/relations.mas,
+    principle         => $stock,
+    relationship_name => 'stock_relationship',
+    object_type_text  => 'Stock',
+    list_component => '/stock/stock_table.mas',
+&>

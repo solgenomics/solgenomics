@@ -1,0 +1,146 @@
+<%args>
+
+  $results
+
+  $quick_search_term
+
+  $show_times => 0
+
+  $xrefs      => {}
+  $xrefs_time => 0
+
+</%args>
+
+<& /page/page_title.mas, title => 'Quick search for '.encode_entities( '"'.$quick_search_term.'"' ) &>
+
+<div class="page_introduction">
+  Note: The quick search does not perform exactly the same queries as
+  full searches for the various data types.  If your desired result
+  does not appear, you may want to try again with one of the advanced
+  search tools in the "search" menu.
+</div>
+
+<&| /page/info_section.mas, title => 'Exact matches' &>
+
+<div class="well">
+
+% if( $show_times ) {
+  <div>Site xref search time: <% sprintf('%0.1f sec', $xrefs_time) %></div>
+% }
+% if( @$xrefs ) {
+  <& /sitefeatures/mixed/xref_set/link.mas, xrefs => $xrefs &>
+
+  <hr style="border: 0; border-bottom: 1px solid #aaa; width: 90%; margin: 1.5em auto 1.2em auto"  />
+% }
+
+  <div>
+    <dl>
+    <dt>Identifiers</dt>
+    <dd>
+      <div style="float: left; width: 50%">
+        <% $search{clone} %>
+        <% $search{est} %>
+      </div>
+      <div style="float: right; width: 50%">
+        <% $search{unigene} %>
+        <% $search{microarray} %>
+      </div>
+      <div style="clear: both; margin-bottom: -1.7em">&nbsp;</div>
+    </dd>
+    </dl>
+  </div>
+
+</div>
+
+</&>
+
+<&| /page/info_section.mas,
+    title => 'Fuzzy searches',
+    subtitle => 'click to view search results',
+ &>
+
+<div class="well">
+  
+  <div>
+    <dl>
+    <dt>
+      <div style="float: left; width: 50%">Identifiers</div>
+      <div style="float: right; width: 50%">cDNA Libraries</div>
+    </dt>
+    <dd>
+      <div style="float: left; width: 50%">
+        <% $search{marker} %>
+        <% $search{bac} %>
+        <% $search{phenotype} %>
+        <% $search{locus_allele} %>
+      </div>
+      <div style="float: right; width: 50%">
+        <% $search{library} %>
+      </div>
+      <div style="clear: both; margin-bottom: -1.7em">&nbsp;</div>
+    </dd>
+    </dl>
+  </div>
+
+  <hr style="border: 0; border-bottom: 1px solid #aaa; width: 90%; margin: 1.5em auto 1.2em auto"  />
+
+  <div>
+    <dl>
+    <dt>
+      <div style="float: left; width: 50%">People (searching by name)</div>
+      <div style="float: right; width: 50%">Annotations</div>
+    </dt>
+    <dd>
+      <div style="float: left; width: 50%">
+        <% $search{people} %>
+      </div>
+      <div style="float: right; width: 50%">
+        <% $search{manual_annotations} %>
+        <% $search{automatic_annotations} %>
+      </div>
+      <div style="clear: both; margin-bottom: -1.7em">&nbsp;</div>
+    </dd>
+    </dl>
+  </div>
+
+  <hr style="border: 0; border-bottom: 1px solid #aaa; width: 90%; margin: 1.5em auto 1.2em auto"  />
+
+  <div>
+    <dl>
+    <dt>
+      <div style="float: left; width: 50%">Images</div>
+      <div style="float: right; width: 50%">Web Pages</div>
+    </dt>
+    <dd>
+      <div style="float: left; width: 50%">
+        <% $search{image} %>
+      </div>
+      <div style="float: right; width: 50%">
+        <% $search{sgn_pages} %>
+        <% $search{external_link} %>
+        <% $search{web} %>
+      </div>
+      <div style="clear: both; margin-bottom: -1.7em">&nbsp;</div>
+    </dd>
+    </dl>
+  </div>
+
+</div>
+
+</&>
+
+<%init>
+
+  use HTML::Entities;
+
+  my %search = %$results;
+  for my $search ( values %search ) {
+      my ( $url, $desc ) = @{$search->{result}};
+      my $time  = $show_times ? sprintf(' (%0.1f sec)', $search->{time}) : '';
+      my $html = $url ? qq|<div><a class="quicksearch_hit" href="$search->{result}[0]">$search->{result}[1]$time</a></div>|
+                      : qq|<div class="ghosted">$desc$time</div>|;
+      $search = $html;
+  }
+
+</%init>
+

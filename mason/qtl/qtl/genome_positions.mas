@@ -1,0 +1,35 @@
+<%doc>
+
+=head1 NAME 
+genome_positions.mas - a mason component for jbrowse tracks for qtl markers
+
+=AUTHOR
+Isaak Y Tecle (iyt2@cornell.edu)
+=cut
+
+</%doc>
+
+
+<%args>
+$markers
+</%args>
+
+<%perl>
+my $src_feature = 'SL2.50';
+</%perl>
+
+<&| /page/info_section.mas, collapsible=>1, collapsed=>1, title => "QTL markers' genomic matches" &>
+
+% if (ref($markers)) {
+%    foreach my $marker (@$markers) {
+%      my $marker_name = $marker->name_that_marker();
+       
+  <hr/><p style="text-align:center;"><% $marker_name %></p> <hr/>
+
+  <& /feature/jbrowse_exact_match.mas, feature => $marker_name, src_feature => $src_feature &>
+%}
+%}
+
+</&>
+
+
