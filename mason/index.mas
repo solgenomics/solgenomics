@@ -7,12 +7,21 @@ $preferred_species => undef
 $editable_stock_props => {}
 </%args>
 
+</div>
+
+<div style="background-color:lightyellow;min-height:200px;height:auto;border-style:dotted;border-width:5px;color:grey"><br /><br /><br /><br /><font size="20"><center>SOL CODE</center></font></div>
+
 <& homepage/carousel.mas &>
 
-<br/>
+  <br />
+    
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="row" >
+
+    <div class="col-sm-0 col-md-1 col-lg-1 col-xl-2" >
+    </div>
+    
+    <div class="col-sm-6 col-md-5 col-lg-5 col-xl-4" >
       
       <div class="panel panel-info">
         <div class="panel-heading">News</div>
@@ -38,7 +47,7 @@ $editable_stock_props => {}
       
     </div>
       
-      <div class="col-sm-6 col-md-6 col-lg-6">
+      <div class="col-sm-6 col-md-5 col-lg-5 col-xl-4">
         
         <div class="panel panel-info">
           <div class="panel-heading">Events</div>
@@ -57,7 +66,7 @@ $editable_stock_props => {}
 
     	    </tbody>
     	  </table>
-      </div>
+        </div>
 
         <!-- div class="panel panel-info">
           <div class="panel-heading">Affiliated Sites</div>
@@ -74,7 +83,9 @@ $editable_stock_props => {}
         </div -->
         
       </div>
-      
+         <div class="col-sm-0 col-md-1 col-lg-1 col-xl-2" >
+    </div>
+   
   </div>
 </div>
 

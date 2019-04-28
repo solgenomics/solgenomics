@@ -218,7 +218,7 @@
 
 </div>
 
-<ul id="btn_carousel_indicators" class="nav nav-pills nav-justified sgn_carousel_button_group">
+<!-- ul id="btn_carousel_indicators" class="nav nav-pills nav-justified sgn_carousel_button_group">
   <li class="active"><a data-target="#myCarousel" data-slide-to="0">Tomato</a></li>
   <li><a data-target="#myCarousel" data-slide-to="1">Potato</a></li>
   <li><a data-target="#myCarousel" data-slide-to="2">Pepper</a></li>
@@ -227,7 +227,7 @@
   <li><a data-target="#myCarousel" data-slide-to="5">Eggplant</a></li>
   <li><a data-target="#myCarousel" data-slide-to="6">SOL Meeting</a></li>
   <!-- <li><a data-target="#myCarousel" data-slide-to="6">5th ISTD</a></li> -->
-</ul>
+</ul -->
 
 <style>
 	.sgn_carousel_button_group {
