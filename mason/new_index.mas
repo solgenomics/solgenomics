@@ -16,7 +16,7 @@ $editable_stock_props => {}
  <style>  
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
-  opacity: 0.80;
+  opacity: 1.0;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,17 +24,17 @@ $editable_stock_props => {}
   
 }
 .bgimg-1 {
-  background-image: url("https://solgenomics.net/img/homepage_carousel/2.jpg");
+  background-image: url("/img/homepage/processing.png");
   min-height: 600px;
 }
 
 .bgimg-2 {
-  background-image: url("https://solgenomics.net/img/varitome/tomato_domestication.jpg");
+  background-image: url("/img/homepage/pepino_diversity.jpg");
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("https://solgenomics.net/img/homepage_carousel/3.jpg");
+  background-image: url("/img/homepage/BGCOMAV12_ceras.JPG");
   min-height: 400px;
 }
 
@@ -114,15 +114,8 @@ width:400px;
            </div>
 	 </div>
 	 
+	 
 	 <div class="panel panel-info">
-           <div class="panel-heading">Popular Species</div>
-           <div class="panel-body" style="overflow:hidden">
-             <& homepage/popular_species.mas &>
-           </div>
-	 </div>
-	 
-	 
-	 <div class="panel panel-info">q
            <div class="panel-heading">SOL Newsletters</div>
            <div class="panel-body">
              All SOL newsletters, edited by Joyce van Eck, are available on the <a href="/solanaceae-project/#sol_newsletters">Solanaceae Project page</a>
@@ -145,9 +138,7 @@ width:400px;
 	   <table class="table table-hover table-striped">
 	     <tbody>
     	       <tr><td><div class="container-fluid"><& homepage/publication_of_the_week.mas &></div></td></tr>
-    	       <tr><td><div class="container-fluid"><& homepage/image_of_the_week.mas &></div></td></tr>
-    	       <tr><td><div class="container-fluid"><& homepage/locus_of_the_week.mas &></div></td></tr>
-	       
+  	       	       
 	     </tbody>
 	   </table>
 	 </div>
@@ -155,19 +146,7 @@ width:400px;
 	 <div class="col-sm-0 col-md-1 col-lg-1 col-xl-2" >
 	 </div>
 	 
-	 <!-- div class="panel panel-info">
-              <div class="panel-heading">Affiliated Sites</div>
-              <div class="panel-body" style="overflow:hidden">
-		<& homepage/affiliated_sites.mas &>
-              </div>
-</div -->
-	 
-	 <!-- div class="panel panel-info">
-              <div class="panel-heading">Links</div>
-              <div class="panel-body" style="overflow:hidden">
-		<& homepage/other_links.mas &>
-              </div>
-        </div -->
+	
        </div>
      </div>
    </div>
