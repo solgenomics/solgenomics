@@ -135,18 +135,14 @@ width:400px;
 	 
 	 <div class="panel panel-info">
 	   <div class="panel-heading">SGN Featured</div>
-	   <table class="table table-hover table-striped">
-	     <tbody>
-    	       <tr><td><div class="container-fluid"><& homepage/publication_of_the_week.mas &></div></td></tr>
-  	       	       
-	     </tbody>
-	   </table>
+	   <div class="panel-body" style="overflow:hidden">     
+	     <& homepage/publication_of_the_week.mas &>
+	    </div>
 	 </div>
 
 	 <div class="col-sm-0 col-md-1 col-lg-1 col-xl-2" >
 	 </div>
 	 
-	
        </div>
      </div>
    </div>
