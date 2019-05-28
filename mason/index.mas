@@ -14,7 +14,7 @@ $editable_stock_props => {}
 <!-- & homepage/carousel.mas &  -->
 
  <style>  
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2 {
   position: relative;
   opacity: 1.0;
   background-attachment: fixed;
@@ -25,17 +25,12 @@ $editable_stock_props => {}
 }
 .bgimg-1 {
   background-image: url("/img/homepage/processing.png");
-  min-height: 800px;
+  min-height: 700px;
 }
 
 .bgimg-2 {
-  background-image: url("/img/homepage/varitome.jpeg");
-  min-height: 500px;
-}
-
-.bgimg-3 {
   background-image: url("/img/homepage/BGCOMAV12_ceras.JPG");
-  min-height: 400px;
+  min-height: 600px;
 }
 
 .between_images {
@@ -43,109 +38,83 @@ background-color:white;
 padding-top:10px;
 padding-bottom:30px;
 text-align:center;
-text-face:arial;
-font-size:18pt;
-color:darkgrey;
+min-height: 500px;
 }
 
 .on_image {
-background-color:rgba(77,77,77,0.6);
-color:white;
+background-color:rgba(255,255,255,0.9);
+color:black;
 padding-top:10px;
 padding-left:10px;
 padding-right:10px;
-padding-bottom:10px;
-min-height:200px;
+padding-bottom:10px;min-height:200px;
 width:400px;
 }
+
+
+.image_header {
+color:white;
+text-align: center;
+padding-top:20px;
+padding-bottom:10px;
+
+}
+
  </style>
- 
- <div class="bgimg-1">
-   <div class="caption">
-     <div style="position:relative;left:100px;top:50px">
+
+
+ <div style="position:relative;top:30px;">
+   <div class="bgimg-1">
+     <div class="image_header">
+       <h1> SOL-CODE Project</h1>
+       <h3> The SOL-CODE project will revolutionize biology in the 21st century!</h3>
+     </div>
+
+     <div style="position:relative;left:200px;top:50px">
        <div class="on_image">
-	 <h3>SOL-CODE Project</h3>
-	 The SOL-CODE project will revolutionize biology in the 21st century!
+	 <h3>News</h3>
+	 <& homepage/news.mas &>
        </div>
      </div>
    </div>
- </div> 
- 
- <div style="position:relative;">
-   <div class="between_images">SOL-CODE</div>
  </div>
+
+
+ 
+ <div class="between_images"  style="position:relative;left:100px;top:60px">
+     <div class="col-sm-6 col-md-5 col-lg-5 col-xl-4">
+     
+       <div class="panel panel-info">
+	 <div class="panel-heading">Events</div>
+	 <div class="panel-body" style="overflow:hidden">
+	   <& homepage/events.mas &>
+	 </div>
+       </div>  
+
+       <div class="panel panel-info">
+         <div class="panel-heading">SOL Newsletters</div>
+         <div class="panel-body">
+           All SOL newsletters, edited by Joyce van Eck, are available on the <a href="/solanaceae-project/#sol_newsletters">Solanaceae Project page</a>
+         </div>
+       </div>
+     </div>
+
+     <div class="col-sm-6 col-md-5 col-lg-5 col-xl-4">
+     </div>
+ </div>
+
  
  <div class="bgimg-2">
    <div class="caption">
-     <span class="on_image">SCROLL DOWN</span>
-   </div>
- </div> 
- 
- <div style="position:relative;">
-   <div class="between_images">VARITOME</di>
- </div>
- 
- <div class="bgimg-3">
-   <div class="caption">
-     <span class="border">SCROLL DOWN</span>
-   </div>
- </div> 
- 
- 
- <div style="position:relative;">
-   <div class="between_images">TOMATO GENOME</div>
- </div>
- 
- <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-      <div class="container-fluid">
     
-     <div class="row" >
-       
-       <div class="col-sm-0 col-md-1 col-lg-1 col-xl-2" >
-	 &nbsp;
-       </div>
-       
-       <div class="col-sm-6 col-md-5 col-lg-5 col-xl-4" >
-	 
-	 <div class="panel panel-info">
-           <div class="panel-heading">News</div>
-           <div class="panel-body" style="overflow:hidden">
-             <& homepage/news.mas &>
-           </div>
-	 </div>
-	 
-	 
-	 <div class="panel panel-info">
-           <div class="panel-heading">SOL Newsletters</div>
-           <div class="panel-body">
-             All SOL newsletters, edited by Joyce van Eck, are available on the <a href="/solanaceae-project/#sol_newsletters">Solanaceae Project page</a>
-           </div>
-	 </div>
-       </div>
-       
-       
-       <div class="col-sm-6 col-md-5 col-lg-5 col-xl-4">
-	 
-	 <div class="panel panel-info">
-	   <div class="panel-heading">Events</div>
-	   <div class="panel-body" style="overflow:hidden">
-	     <& homepage/events.mas &>
-	   </div>
-	 </div>
-	 
-	 <div class="panel panel-info">
-	   <div class="panel-heading">SGN Featured</div>
-	   <div class="panel-body" style="overflow:hidden">     
-	     <& homepage/publication_of_the_week.mas &>
-	    </div>
-	 </div>
-
-	 <div class="col-sm-0 col-md-1 col-lg-1 col-xl-2" >
-	 </div>
-	 
+     <div style="position:relative;left:200px;top:50px">
+       <div class="on_image">
+	   <h3>SGN Featured</h3>
+	   <& homepage/publication_of_the_week.mas &>
        </div>
      </div>
-   </div>
+   </div> 
  </div>
+
  
 
