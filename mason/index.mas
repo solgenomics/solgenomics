@@ -30,7 +30,7 @@ $editable_stock_props => {}
 
 .bgimg-2 {
   background-image: url("/img/homepage/BGCOMAV12_ceras.JPG");
-  min-height: 600px;
+  min-height: 700px;
 }
 
 .between_images {
@@ -38,7 +38,7 @@ background-color:white;
 padding-top:10px;
 padding-bottom:30px;
 text-align:center;
-min-height: 500px;
+min-height: 300px;
 }
 
 .on_image {
@@ -63,7 +63,7 @@ padding-bottom:10px;
  </style>
 
 
- <div style="position:relative;top:30px;">
+ <div style="position:relative;top:60px;">
    <div class="bgimg-1">
      <div class="image_header">
        <h1> SOL-CODE Project</h1>
@@ -82,7 +82,7 @@ padding-bottom:10px;
 
  
  <div class="between_images"  style="position:relative;left:100px;top:60px">
-     <div class="col-sm-6 col-md-5 col-lg-5 col-xl-4">
+     <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
      
        <div class="panel panel-info">
 	 <div class="panel-heading">Events</div>
@@ -91,18 +91,8 @@ padding-bottom:10px;
 	 </div>
        </div>  
 
-       <div class="panel panel-info">
-         <div class="panel-heading">SOL Newsletters</div>
-         <div class="panel-body">
-           All SOL newsletters, edited by Joyce van Eck, are available on the <a href="/solanaceae-project/#sol_newsletters">Solanaceae Project page</a>
-         </div>
-       </div>
-     </div>
-
-     <div class="col-sm-6 col-md-5 col-lg-5 col-xl-4">
      </div>
  </div>
-
  
  <div class="bgimg-2">
    <div class="caption">

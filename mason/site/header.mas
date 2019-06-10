@@ -1,4 +1,4 @@
-\<%args>
+<%args>
   $extra_headers => ''
 </%args>
 <?xml version="1.0" encoding="UTF-8"?>
@@ -19,7 +19,7 @@
 
   <div id="wrapper" class="container-fluid">
     <div id="main_row" class="row">
-      <div class="col-md-1 col-lg-1 col-xl-2" style="text-align:center">
+      <div class="col-md-1 col-lg-1 col-xl-2">
       </div>
       <div class="col-sm-12 col-md-10 col-lg-10 col-xl-8">
 
