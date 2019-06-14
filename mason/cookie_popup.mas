@@ -36,14 +36,16 @@ z-index: 10;
         jQuery('#cookie_agree_submit').click( function () {
             jQuery.cookie("cookies_approved", "1", { expires: 1000000000 } );
             jQuery('#cookie_popup_content_div').html('<div class="panel panel-success"><div class="panel-body bg-success"><center><h3>Thank you :-)</h3></center></div></div>');
+            jQuery('#bgimg-head').animate({paddingTop: '0px'}) ;
+    
             setTimeout(function() {
                 jQuery('#cookie_popup').hide('slow');
             }, 1500);
         });
 
         if (jQuery.cookie("cookies_approved") == 1) {
-           jQuery('#bgimg-head').animate({paddingTop: '5px'});
-           jQuery('#cookie_popup').hide();
+                jQuery('#cookie_popup').hide();
+                jQuery('#bgimg-head').animate({paddingTop: '0px'});
             
         } else {
             jQuery('#cookie_popup').show();
