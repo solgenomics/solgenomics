@@ -25,20 +25,20 @@ $editable_stock_props => {}
 
 .bgimg-1 {
   background-image: url("/img/homepage/processing.png");
-  min-height: 700px;
+  min-height: 800px;
   z-index: 1;
 }
 
 .bgimg-2 {
   background-image: url("/img/homepage/BGCOMAV12_ceras.JPG");
-  min-height: 700px;
+  min-height: 800px;
 }
 
 .between_images {
 background-color:white;
 padding-top:10px;
 text-align:center;
-min-height: 400px;
+min-height: 300px;
 }
 
 .on_image {
