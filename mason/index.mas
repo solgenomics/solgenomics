@@ -72,7 +72,7 @@ padding-bottom:10px;
 
        <div style="position:relative;">
 	 <div class="image_header">
-	   <h2>Welcome to the Solanaceae Genomics Network</h2> 
+	   <h1>Welcome to the Solanaceae Genomics Network</h1> 
 	   <br/>
 	 </div>
        </div>
