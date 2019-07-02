@@ -1,0 +1,57 @@
+
+<%args>
+</%args>
+
+<& /page/page_title.mas, title=>"SolCode project: GenoPheno in the Solanaceae" &>
+
+<&| /page/info_section.mas, title => 'Project overview'  &>
+
+
+<div><p>The Solanaceae community continues to harvest the fruits of the 2003 BAC-by-BAC genome sequencing consortium -
+    it galvanized a collaborating international community of scientists who meet yearly to share knowledge and excitement about our favorite plants' bio-diversity.
+    Until 2010 scientists from around the world raised together more than $50 Million for the Solanaceae genome tasks and for related scientific research.<br />
+    Fortunately for the SOL consortium, whole genome shotgun approaches came along and brought about the sequencing of 1000 genomes representing at least 15 species. Thus genomics not only delivered the code of some of the major Solanaceae crops and wild relatives but also established a cooperating international community from the academic world and the industry.
+    <br />
+    Following the success of the first SOL project the SOL Steering Committee has decided to launch the SOL- CODE project to link genes to traits in Solanaceae plants;
+    SOL-CODE is planned to be launched in Jerusalem on Sept 15-19. 2019.
+    The project will create a hub of knowledge about biology and plant breeding with a home in the SOL Genome Network (SGN). Partners will get access to unique -  long term developed germplasm resources and SGN will display this knowledge of genotypes and phenotypes.</p></div>
+</&>
+
+<&| /page/info_section.mas, title => 'Objectives' &>
+  
+<div>
+  <ul>
+    <li><b>Informatics:</b> Evolve SGN as an engine of discovery relating to genotypes, phenotypes and their interactions.</li>
+
+    <li><b>Geno-Pheno:</b> Cater passport data of genebank accessions with genome, epigenome, transcriptome, and other OMIC data.</li>
+
+    <li><b>Diversity Seed Bank:</b> To distribute seed of phytosanitary inspected germplasm of mutants, TILLING populations, CRISPR families and interspecific advanced backcrosses.</li>
+  </ul>
+  <br />
+  SGN will collect the data generated and provide tools for data browsing and for generating a system view of Solanaceae biology and breeding. The objective of SOL-CODE will attract funding from diverse agencies and foster research collaborations and translational research. In the coming 10 years the SOL-CODE project will employ its informatics engines to answer two eternal questions of life and agriculture:<br />
+  <ul>   
+    <li> How can a common set of genes in the Solanaceae give rise to such a wide range of morphologically and ecologically distinct organisms that occupy our planet?</li>
+    
+    <li> How can a deeper understanding of the biological basis of plant diversity be harnessed to better meet society's needs in an environmentally friendly and sustainable manner?</li>
+  </ul>
+  <br />
+  
+  <p>Since the launch of the first SOL project in 2003 the Solanaceae plant breeding industry has benefited from the tools and data that were generated, the people who were trained and the high quality of the science that can be rapidly translated into innovative breeding and cutting end research.
+    <br />
+    SOL-CODE aims to secure funding from competitive research grants and SOL industries to develop hubs of SOL knowledge, of germplasm resources (seed envelopes) to data visualization and analysis tools. SOL-CODE genetic resources will be distributed to interested academic scientists who will leverage this opportunity to submit highly competitive research grants to their national funding agencies. SOL-CODE will be steered by a team from the academic community and the industry who will direct this continuing international expedition.
+    <br />
+    In the coming months we will communicate via SGN about the launch of SOL-CODE in Jerusalem (September 15-19, 2019).
+    <br />
+    Finally, we want to thank all the SOL-CODE colleagues and friends who are helping to evolve this new international initiative.
+    <br />
+    <br />
+    See you in Jerusalem
+    <br />
+    <br />
+    Christian Bachem and Dani Zamir
+  </p>
+</div>
+
+
+</&>
+
