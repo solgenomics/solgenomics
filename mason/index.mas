@@ -22,7 +22,7 @@ $editable_stock_props => {}
 }
 
 .bgimg-1 {
-  background-image: url("/img/homepage/processing.png");
+  background-image: url("/img/homepage/tom_field.jpg");
   min-height: 700px;
   z-index: 1;
 }
@@ -81,7 +81,7 @@ padding-bottom:10px;
        <div style="position:relative;padding-top:50px;padding-left:100px;z-index:20">       
 	 <div class="on_image" style="display:inline-block;width:600px">
 	   <div style="position:relative;display:inline-block;z-index:20">
-	     <img src="/img/homepage/pepino_diversity.jpg" alt="sol_code" height="90">
+	     <img src="/img/homepage/pepino_small.jpg" alt="sol_code" height="90">
 	   </div>
 
 	   <div style="position:relative;display:inline-block;z-index:20;padding-left:20px">
@@ -95,7 +95,7 @@ padding-bottom:10px;
        <div style="position:relative;z-index:20;vertical-align:top;padding-top:50px;padding-left:200px">
 	 <div class="on_image" style="display:inline-block;width:600px">
 	   <div style="display:inline-block;z-index:20">
-	     <img src="/img/homepage/BGCOMAV12_ceras.JPG" alt="sol_code" height="90">
+	     <img src="/img/homepage/ceras_small.jpg" alt="sol_code" height="90">
 	   </div>
 	   
 	   <div style="position:relative;display:inline-block;z-index:20;padding-left:20px">
