@@ -1,0 +1,47 @@
+<%args>
+  $genome_organisms => []
+</%args>
+<%doc>
+
+=head1 NAME
+
+/genome/index.mas - display an index page for the available genomes
+
+=head1 ARGS
+
+=head2 genome_organisms
+
+Arrayref of BCS Organism rows to display links for.
+
+=head1 AUTHOR
+
+Lukas Mueller
+
+=cut
+
+</%doc>
+
+<& /page/page_title.mas, title=> "Genome Projects" &>
+
+<div style="width: 30em; margin: 0 auto">
+
+  <% @links ? @links : '<div class="ghosted" style="text-align: center">none found</div>' %>
+
+</div>
+
+<%init>
+
+  my @links =
+     sort
+     uniq
+     map {
+         my $species = $_->species;
+         my $oid     = $_->organism_id;
+         qq|<a href="/organism/$oid/genome" style="font-style: italic; display: block">$species</a>\n|
+     }
+     @$genome_organisms;
+
+</%init>
+<%once>
+  use List::AllUtils 'uniq';
+</%once>
