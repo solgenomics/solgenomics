@@ -8,6 +8,7 @@
     <li><a href="/organism/Capsicum_annuum/genome">Pepper</a></li>
     <li><a href="/organism/Solanum_pennellii/genome"><i>Solanum pennellii</i></a></li>
     <li><a href="/organism/Solanum_lycopersicoides/genome"><i>Solanum lycopersicoides</i></a></li>
+    <li><a href="/organism/Solanum_melongena/genome"><i>Solanum melongena</i></a></li>		
 
     <li role="separator" class="divider"></li>
     <li class="dropdown-header">Draft Genomes</li>
