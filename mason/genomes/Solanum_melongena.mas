@@ -1,10 +1,19 @@
 
+<%args>
+$dbh
+</%args>
+
 <%doc>
 
 </%doc>
 
 
 <& /page/page_title.mas, title=>"Genome: <i>Solanum melongena</i>" &>
+
+<center>
+<& /image/embed_image.mas, image_id=>49929, size=>"medium", dbh=>$dbh &>
+<& /image/embed_image.mas, image_id=>49928, size=>"medium", dbh=>$dbh &>
+</center>
 
 <br>
 <p>
@@ -29,7 +38,7 @@ Andolfo, Giuseppe; Aprea, Giuseppe;Avanzato, Carla; Bassolino, Laura; Comino, Ci
          __border   => 0,
          __multicol => 2,
          'Bulk Datasets (via FTP)' =>
-           '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_melongena">FTP</a>',
+           '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_melongena_consortium">FTP</a>',
          'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=303">Genomic scaffolds</a>',
 	 'BLAST protein sequences' => '<a href="/tools/blast/?db_id=305">Protein sequences</a>',
 	 'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=304">CDS sequences</a>',
