@@ -22,10 +22,10 @@ is a widely grown and consumed vegetable around the world.
 </p>
 <p>
 <h4>Reference</h4>
-Andolfo, Giuseppe; Aprea, Giuseppe;Avanzato, Carla; Bassolino, Laura; Comino, Cinzia; Molin, Alessandra Dal; Ferrarini, Alberto; Maor, Louise Chappell; Portis, Ezio; Reyes-Chin-Wo, Sebastian; Rinaldi, Riccardo; Sala, Tea; Scaglione, Davide; Sonawane, Prashant; Tononi, Paola; Almekias-Siegl, Efrat; Zago, Elisa; Ercolano, Maria Raffaella; Aharoni, Asaph; Delledonne, Massimo; Giuliano, Giovanni; Lanteri, Sergio; Rotino, Giuseppe Leonardo
+Barchi, Lorenzo; Pietrella, Marco; Venturini, Luca; Minio, Andrea; Toppino, Laura; Acquadro, Alberto; Andolfo, Giuseppe; Aprea, Giuseppe;Avanzato, Carla; Bassolino, Laura; Comino, Cinzia; Molin, Alessandra Dal; Ferrarini, Alberto; Maor, Louise Chappell; Portis, Ezio; Reyes-Chin-Wo, Sebastian; Rinaldi, Riccardo; Sala, Tea; Scaglione, Davide; Sonawane, Prashant; Tononi, Paola; Almekias-Siegl, Efrat; Zago, Elisa; Ercolano, Maria Raffaella; Aharoni, Asaph; Delledonne, Massimo; Giuliano, Giovanni; Lanteri, Sergio; Rotino, Giuseppe Leonardo
 (2019)
 "A chromosome-anchored eggplant genome sequence reveals key events in Solanaceae evolution"<br />
-<a href="https://www.nature.com/articles/s41598">Scientific Reports, (9):#11769</a>
+<a href="https://www.nature.com/articles/s41598-019-47985-w">Scientific Reports, (9):11769</a>
 </p>
 
 <h4>Abstract</h4>
@@ -43,7 +43,7 @@ Andolfo, Giuseppe; Aprea, Giuseppe;Avanzato, Carla; Bassolino, Laura; Comino, Ci
 	 'BLAST protein sequences' => '<a href="/tools/blast/?db_id=305">Protein sequences</a>',
 	 'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=304">CDS sequences</a>',
 	 #'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data%2Fjson%2Fspenn&loc=Spenn-ch01%3A43733407..65600109&tracks=DNA&highlight=">Browse genome</a>',
-	 'Genetic map' => '<a href="/cview/map?map_version_id=63">COS map</a>',
+	 'Genetic map' => '<a href="/cview/map.pl?map_version_id=63">COS map</a>',
 
      )
     %>
