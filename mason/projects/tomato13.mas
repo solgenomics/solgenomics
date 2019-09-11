@@ -1,0 +1,47 @@
+
+<%args>
+</%args>
+
+<& /page/page_title.mas, title=>"Chromosome-scale assembly and annotation of 13 diverse tomato accessions" &>
+
+<&| /page/info_section.mas, title => 'Project overview'  &>
+
+<div><p>
+Michael Alonge, Srividya Ramakrishnan, Sebastian Soyk, Xingang Wang, Matthias Benoit, Zachary B. Lippman, Michael C. Schatz
+<br /><br />
+The research groups of Michael C. Schatz and Zachary B. Lippman at Johns Hopkins University and Cold Spring Harbor Laboratory, respectively, have generated genome assemblies and associated gene annotations for <a href="ftp://ftp.solgenomics.net/genomes/tomato13/SV_Landscape_Long_Read_Assemblies/">13 diverse tomato accessions</a>. These assemblies and annotations, each with their own independent versioning, are beta pre-releases to the community.
+<br /><br />
+This large dataset is being made available for research under the "Toronto statement", which outlines rules for pre-publication data sharing, under which we, the authors, reserve the right to publish the first analyses of the data, which includes descriptions of whole chromosome or genome-level analyses of genes, variants, gene families, repetitive elements, and comparisons with other organisms
+<br /><br />
+The following accessions have been assembled and annotated and are included in this release.
+<br />
+<ul>
+<li>Brandywine</li>
+<li>M82</li>
+<li>Floradade</li>
+<li>EA00371</li>
+<li>EA00990</li>
+<li>PAS014479</li>
+<li>BGV006775</li>
+<li>BGV006865</li>
+<li>BGV007989</li>
+<li>BGV007931</li>
+<li>PI303721</li>
+<li>PI169588</li>
+<li>LYC1410</li>
+</ul>
+
+For each accession, we collected Oxford Nanopore (ONT) and Illumina sequencing data. Assemblies were generated with the MaSuRCA assembler (v3.3.3), which employed the Flye unitigging algorithm. The assemblies had a range of N50 contig sizes from 927,428bp to 5,319,880bp. Assemblies were then ordered and oriented with respect to the SL4.0 reference genome using RaGOO (v1.1). During ordering and orienting, putative chimeric contigs were broken if there was high or low read (MaSuRCA mega-reads) coverage spanning breakpoints. All unplaced sequence was concatenated and placed into a 'Chromosome 0'
+<br /><br />
+Genes were annotated by "lifting-over" a combination of Heinz ITAG 4.0 annotation and pan-genome genes (Gao et. al. 2019) onto the new assemblies. The in silico cDNA for each gene was aligned to assemblies with GMAP (version 2018-07-04) and Minimap2 (v2.16-r922). High confidence alignments were then used to annotate genes in our new assemblies.
+<br /><br />
+Annotated genes were assigned the same gene ids as their homologs in ITAG4.0. Annotated duplicate copy of a gene has the ITAG4.0 gene id with a '-c num' appended to their ids to keep them unique.
+<br /><br />
+These genome assemblies are beta versions, and we have released these data pre-publication in anticipation of immediate value for the Solanaceae and large plant biology communities. With this in mind, we note that none of the assemblies have been screened for bacterial contamination, and no formal assessment of assembly consensus or structural accuracy has been performed. Finally, though we have done some initial tests and QC on the gene models, we can make no formal claims about their accuracy. These data were initially produced to aid our study of structural variants in tomato, however, forthcoming genome versions will seek to improve all aspects of assembly, accuracy, and annotation in order to serve as general reference-quality resources.
+<br />
+<br />
+For further information, please contact <a href="mailto:lippman@cshl.edu">Zach B. Lippman</a> or <a href="mailto:mschatz@cs.jhu.edu">Michael C. Schatz</a>     
+</p></div>
+</&>
+
+
