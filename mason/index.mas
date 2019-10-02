@@ -7,6 +7,10 @@ $preferred_species => undef
 $editable_stock_props => {}
 </%args>
 
+<%perl>
+my $dbh= $schema->storage()->dbh();
+</%perl>
+
 </div>
 
 
@@ -23,7 +27,7 @@ $editable_stock_props => {}
 
 .bgimg-1 {
   background-image: url("/img/homepage/tom_field.jpg");
-  min-height: 800px;
+  min-height: 900px;
   z-index: 1;
 }
 
@@ -122,20 +126,20 @@ padding-bottom:10px;
 	 </div>
        </div>
 
-<!--       <div style="position:relative;z-index:20;vertical-align:top;padding-top:50px;padding-left:250px">
-         <div class="on_image" style="display:inline-block;width:600px">
+       <div style="position:relative;z-index:20;vertical-align:top;padding-top:50px;padding-left:175px">
+         <div class="on_image" style="display:inline-block;width:625px">
 	   <div style="display:inline-block;z-index:20">
-	     <img src="/img/homepage/tomato13.jpeg" alt="tomato13" height="90">
-	   </div>
+	     <& /image/embed_image.mas, image_id=>49929, size=>"small", height=>"90" , dbh=>$dbh &>
+	     </div>
 
-           <div style="position:relative;display:inline-block;z-index:20;padding-left:20px">
+           <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
 
-             <h3> <a href="/projects/tomato13/" style="">13 Tomato Genomes</h3></a>
-	     Genomes and annotation of 13 diverse tomato accessions
+             <h3> <a href="/organism/Solanum_melongena/genome/" style="">Eggplant Sequencing Consortium</h3></a>
+	     Genome release, version 3.0
 	   </div>
 	 </div>
        </div>
--->						     
+						     
      </div>
    </div>
  </div>
