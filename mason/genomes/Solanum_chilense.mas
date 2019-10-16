@@ -1,0 +1,43 @@
+
+<%args>
+$dbh
+</%args>
+
+<%doc>
+
+</%doc>
+
+
+<& /page/page_title.mas, title=>"Genome: <i>Solanum chilense</i>" &>
+
+<br>
+<p>
+  <a href="/chado/organism.pl?organism_id=1373"><i>Solanum chilense</i></a> is a wild tomato from southern Peru and northern Chile. It is distantly related to the domesticated <a href="/chado/organism.pl?organism_id=1"><i>Solanum lycopersium</i></a> and a sister species of Solanum peruvianum. It was sequenced by a group of scientists at the Helmholtz Centre in Munich and the Technical University of Munich. For questions, please contact Remco Stam
+</p>
+<p>
+<h4>Reference</h4>
+Stam R, Nosenko T, Hörger AC, Stephan W, Seidel M, Kuhn JMM, Haberer G, Tellier A (2019) <a href="https://doi.org/10.1534/g3.119.400529">The <i>de novo</i> reference genome and transcriptome assemblies of the wild tomato species <i>Solanum chilense</i> confirms birth and death of NLR genes between tomato species.</a>G3: Genes, Genomes, Genetics
+</p>
+<br />
+
+
+<h4>Abstract</h4>
+<div>Wild tomato species, like <i>Solanum chilense</i>, are important germplasm resources for enhanced biotic and abiotic stress resistance in tomato breeding. <i>S. chilense</i> also serves as a model to study adaptation of plants to drought and the evolution of seed banks. The absence of a well-annotated reference genome in this compulsory outcrossing, very diverse species limits in-depth studies on the genes involved. We generated ~134 Gb of DNA and 157 Gb of RNA sequence data for <i>S. chilense</i>, which yielded a draft genome with an estimated length of 914 Mb, encoding 25,885 high-confidence predicted gene models, which show homology to known protein-coding genes of other tomato species. Approximately 71% of these gene models are supported by RNA-seq data derived from leaf tissue samples. Benchmarking with Universal Single-Copy Orthologs (BUSCO) analysis of predicted gene models retrieved 93.3% of BUSCO genes. To further verify the genome annotation completeness and accuracy, we manually inspected the NLR resistance gene family and assessed its assembly quality. We find subfamilies of NLRs unique to <i>S. chilense</i>. Synteny analysis suggests significant degree of the gene order conservation between the <i>S. chilense</i>, <i>S. lycopersicum</i> and <i>S. pennellii</i> genomes. We generated the first genome and transcriptome sequence assemblies for the wild tomato species <i>Solanum chilense</i> and demonstrated their value in comparative genomics analyses. These data are an important resource for studies on adaptation to biotic and abiotic stress in <i>Solanaceae</i>, on evolution of self-incompatibility and for tomato breeding.
+</div>
+<br />
+<div>
+<&| /page/info_section.mas, title => 'Available Data' &>
+   <% info_table_html(
+         __border   => 0,
+         __multicol => 2,
+         'Bulk Datasets (via FTP)' =>
+           '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_chilense/Stam_et_al_2019">FTP</a>',
+     )
+    %>
+</&>
+</div>
+
+
+<%init>
+  use CXGN::Page::FormattingHelpers qw/info_table_html/;
+</%init>
