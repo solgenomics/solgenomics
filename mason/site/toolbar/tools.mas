@@ -4,6 +4,7 @@
     <li class="dropdown-header">Sequence Analysis</li>
     <li><a href="/tools/blast/">BLAST</a></li>
     <li><a href="http://vigs.solgenomics.net/">VIGS Tool</a></li>
+    <li><a  target="_blank" href="http://apollo.sgn.cornell.edu/apollo">Apollo annotation editor</a></li>
     <li><a href="/tools/align_viewer/">Alignment Analyzer</a></li>
     <li><a href="/tools/tree_browser/">Tree Browser</a></li>
 
