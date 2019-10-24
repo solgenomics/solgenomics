@@ -10,6 +10,12 @@ $dbh
 
 <& /page/page_title.mas, title=>"Genome: <i>Solanum chilense</i>" &>
 
+<center>
+<& /image/embed_image.mas, image_id=>49932, size=>"medium", dbh=>$dbh &>
+<& /image/embed_image.mas, image_id=>49931, size=>"medium", dbh=>$dbh &>
+<& /image/embed_image.mas, image_id=>49930, size=>"medium", dbh=>$dbh &>
+</center>
+
 <br>
 <p>
   <a href="/chado/organism.pl?organism_id=1373"><i>Solanum chilense</i></a> is a wild tomato from southern Peru and northern Chile. It is distantly related to the domesticated <a href="/chado/organism.pl?organism_id=1"><i>Solanum lycopersium</i></a> and a sister species of Solanum peruvianum. It was sequenced by a group of scientists at the Helmholtz Centre in Munich and the Technical University of Munich. For questions, please contact Remco Stam
