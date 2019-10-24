@@ -13,7 +13,6 @@ $dbh
 <center>
 <& /image/embed_image.mas, image_id=>49932, size=>"medium", dbh=>$dbh &>
 <& /image/embed_image.mas, image_id=>49931, size=>"medium", dbh=>$dbh &>
-<& /image/embed_image.mas, image_id=>49930, size=>"medium", dbh=>$dbh &>
 </center>
 
 <br>
