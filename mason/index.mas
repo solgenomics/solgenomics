@@ -90,8 +90,8 @@ padding-bottom:10px;
 
            <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
 	   	<h3> <a href="/organism/Solanum_lycopersicum/genome/">New tomato reference genome</a></h3> SL4.0 and ITAG4.0
-		<h4> <a href="/projects/tomato13/" style="">13 Tomato Genomes</h3></a>
-	        Genomes and annotation of 13 diverse tomato accessions
+		<h4> <a href="/projects/tomato100/" style="">100 Tomato Genomes</h3></a>
+	        Genomes, annotation, and structural variants of 100 diverse tomato accessions
  	   </div>
 	</div>
       </div>
