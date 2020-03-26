@@ -7,7 +7,7 @@
 <&| /page/info_section.mas, title => 'Project overview'  &>
 
 <div><p>
-Michael Alonge, Srividya Ramakrishnan, Sebastian Soyk, Xingang Wang, Matthias Benoit, Zachary B. Lippman, Michael C. Schatz
+Michael Alonge, Xingang Wang, Matthias Benoit, Sebastian Soyk, Srividya Ramakrishnan, Florian Maumus, Melanie Kirsche, Sergey Aganezov, T. Rhyker Ranallo-Benavidez, Zachary H. Lemmon, Jennifer Kim, Melissa Kramer, Sara Goodwin, W. Richard McCombie, Fritz J. Sedlazeck, Zachary B. Lippman, Michael C. Schatz
 <br /><br />
 The Michael C. Schatz lab at Johns Hopkins University and Zachary B. Lippman lab at Cold Spring Harbor Laboratory present structural variant calls for 100 diverse tomato accessions and provide genome assemblies and associated gene/repeat annotations for 14 of these 100 accessions.
 <br />
@@ -20,7 +20,7 @@ The Michael C. Schatz lab at Johns Hopkins University and Zachary B. Lippman lab
 This dataset is being made available for research under the "Toronto Statement", which outlines rules for pre-publication data sharing, under which the authors reserve the right to publish the first analyses of the data, which includes descriptions of whole chromosome or genome-level analyses of genes, variants, gene families, repetitive elements, and comparisons with other organisms.
 <br />
 <br />
-SVs were called by aligning Oxford Nanopore sequencing reads to the SL4.0 Heinz 1706 reference genome with NGMLR and inferring SVs with Sniffles. SVs were filtered, then merged and annotated with Jasmine and vcfanno respectively. Insertion and deletion sequences were also repeat annotated by REPET. 
+SVs were called by aligning Oxford Nanopore sequencing reads to the SL4.0 Heinz 1706 reference genome with NGMLR and inferring SVs with Sniffles. SVs were filtered, then merged and annotated with Jasmine and vcfanno, respectively. Insertion and deletion sequences were also repeat annotated by REPET. 
 <br />
 <br />
 Genome assemblies were generated with the MaSuRCA assembler (v3.3.3), which employed the Flye unitigging algorithm. Assemblies were screened for bacterial contamination and polished with POLCA. Assemblies were then ordered and oriented with respect to the SL4.0 Heinz 1706 reference genome using RaGOO (v1.1). During ordering and orienting, putative chimeric contigs were broken if there was high or low read (MaSuRCA mega-reads) coverage spanning breakpoints. All unplaced sequence was concatenated and placed into a 'Chromosome 0'. 
