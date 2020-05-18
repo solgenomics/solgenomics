@@ -48,8 +48,8 @@ Currently, databases for tomato, potato, and pepper are available, generated fro
  </ul>
 <h4>Multi-species databases:</h4>
 <ul>
-  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object="><b>Tobacco</b> Combined Nicotiana genus (NicotianaCyc)</a> <span class="tier">TIER 1</span></li>
-  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object="><b>Solanaceae</b> Combined Solanaceae database (SolanaCyc)</a> <span class="tier">TIER 1</span></li>
+  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=NICOTIANA"><b>Tobacco</b> Combined Nicotiana genus (NicotianaCyc)</a> <span class="tier">TIER 1</span></li>
+  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=SOLANA"><b>Solanaceae</b> Combined Solanaceae database (SolanaCyc)</a> <span class="tier">TIER 1</span></li>
 </ul>
 
 <p>
