@@ -17,9 +17,6 @@ The Michael C. Schatz lab at Johns Hopkins University and Zachary B. Lippman lab
 <a href="ftp://ftp.solgenomics.net/genomes/tomato100/March_02_2020_sv_landscape/">Assembly files</a>
 <br />
 <br />
-This dataset is being made available for research under the "Toronto Statement", which outlines rules for pre-publication data sharing, under which the authors reserve the right to publish the first analyses of the data, which includes descriptions of whole chromosome or genome-level analyses of genes, variants, gene families, repetitive elements, and comparisons with other organisms.
-<br />
-<br />
 SVs were called by aligning Oxford Nanopore sequencing reads to the SL4.0 Heinz 1706 reference genome with NGMLR and inferring SVs with Sniffles. SVs were filtered, then merged and annotated with Jasmine and vcfanno, respectively. Insertion and deletion sequences were also repeat annotated by REPET. 
 <br />
 <br />
@@ -28,8 +25,6 @@ Genome assemblies were generated with the MaSuRCA assembler (v3.3.3), which empl
 <br />
 Genes were annotated by "lifting-over" a combination of Heinz ITAG 4.0 annotation and pan-genome genes (Gao et. al. 2019) onto the new assemblies. The in silico cDNA for each gene was aligned to assemblies with GMAP (version 2018-07-04) and Minimap2 (v2.16-r922). High confidence alignments were then used to annotate genes in our new assemblies. Annotated genes were assigned the same gene ids as their homologs in ITAG4.0. Annotated duplicate copies of genes are labeled with the ITAG4.0 gene id with a '-c num' suffix to keep them unique. Finally, repeat sequences in assemblies were annotated by REPET.
 <br />
-<br />
-These data are beta versions, and we have released them pre-publication in anticipation of immediate value for the plant biology community.
 <br />
 For further information, please contact <a href="mailto:lippman@cshl.edu">Zach B. Lippman</a> or <a href="mailto:mschatz@cs.jhu.edu">Michael C. Schatz</a>     
 </p></div>
