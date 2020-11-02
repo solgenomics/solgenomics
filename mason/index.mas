@@ -85,25 +85,39 @@ padding-bottom:10px;
        <div style="position:relative;z-index:20;vertical-align:top;padding-top:50px;padding-left:100px">
          <div class="on_image" style="display:inline-block;width:700px;">
 	   <div style="display:inline-block;z-index:20;vertical-align:middle">
-	   	<img src="/img/homepage/tomato13.jpeg" alt="tomato13" height="100">
+	     <img src="/img/homepage/tomato13.jpeg" alt="tomato13" height="100">
 	   </div>
-
+	   
+	   <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
+	     <h3> <a href="/sol2020">The SOL Meeting 2020 goes virtual!</a></h3>
+	     <h3> <a href="/sol2020" style="">Nov 9-11, 2020</h3></a>
+	     REGISTRATION NOW OPEN! <a href="/static_content/SOL_INTERNATIONAL_Flyer.pdf">Download the flyer</a>.
+	     
+	   </div>
+	 </div>
+       
+       <div style="position:relative;z-index:20;vertical-align:top;padding-top:50px;padding-left:100px">
+         <div class="on_image" style="display:inline-block;width:700px;">
+	   <div style="display:inline-block;z-index:20;vertical-align:middle">
+	     <img src="/img/homepage/tomato13.jpeg" alt="tomato13" height="100">
+	   </div>
+	   
            <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
-	   	<h3> <a href="/organism/Solanum_lycopersicum/genome/">New tomato reference genome</a></h3> SL4.0 and ITAG4.0
-		<h4> <a href="/projects/tomato100/" style="">100 Tomato Genomes</h3></a>
-	        100 diverse tomato accessions
- 	   </div>
-	</div>
-      </div>
-						     
-
-
+	     <h3> <a href="/organism/Solanum_lycopersicum/genome/">New tomato reference genome</a></h3> SL4.0 and ITAG4.0
+	     <h3> <a href="/projects/tomato100/" style="">100 Tomato Genomes</h3></a>
+	     100 diverse tomato accessions
+	   </div>
+	 </div>
+       </div>
+       
+       
+       
        <div style="position:relative;padding-top:50px;padding-left:175px;z-index:20">       
 	 <div class="on_image" style="display:inline-block;width:625px">
 	   <div style="position:relative;display:inline-block;z-index:20">
 	     <img src="/img/homepage/pepino_small.jpg" alt="sol_code" height="90">
 	   </div>
-
+	   
 	   <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
 	     <h3><a href="/projects/solcode/">SOL-CODE Project</a></h3>
 	     Genomic code for better Solanaceae crops
@@ -125,26 +139,25 @@ padding-bottom:10px;
 	   </div>
 	 </div>
        </div>
-
-       <div style="position:relative;z-index:20;vertical-align:top;padding-top:50px;padding-left:175px">
+       
+       <!-- div style="position:relative;z-index:20;vertical-align:top;padding-top:50px;padding-left:175px">
          <div class="on_image" style="display:inline-block;width:625px">
 	   <div style="display:inline-block;z-index:20">
 	     <& /image/embed_image.mas, image_id=>49929, size=>"small", height=>"90" , dbh=>$dbh &>
-	     </div>
-
+	   </div>
+	   
            <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
-
-             <h3> <a href="/organism/Solanum_melongena/genome/" style="">Eggplant Sequencing Consortium</h3></a>
+	     
+	     <h3> <a href="/organism/Solanum_melongena/genome/" style="">Eggplant Sequencing Consortium</h3></a>
 	     Genome release, version 3.0
 	   </div>
 	 </div>
-       </div>
-						     
+       </div -->
+	     
+	     </div>
      </div>
    </div>
- </div>
-     
-
+</div>
 <div class="container-fluid">
  <div class="row">
 
