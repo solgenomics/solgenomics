@@ -6,7 +6,6 @@
 
 <& /page/page_title.mas, title=>"Genome: <i>Solanum pimpinellifolium</i>" &>
 
-<& /genomes/Solanum_pimpinellifolium/usage_popup.mas &>
 
 <div class="page_introduction">
 
@@ -22,28 +21,14 @@
   
 <&| /page/info_section.mas, title=>"Disclaimer and data access agreement" &>
 
-<div style="text-align: justify; border: 1px solid gray; padding: 2em 3em 3em 3em">
 
-<h3 style="text-align: center"><i>Solanum pimpinellifolium LA2093</i> Data Access Agreement</h3>
-<h4 style="text-align: center">PLEASE READ BEFORE ACCESSING THE PRE-PUBLICATION SEQUENCE OF SOLANUM PIMPINELLIFOLIUM</h4>
+The Boyce Thompson Institute is pleased to make the pre-publication 
+Solanum pimpinellifolium LA2093 genome sequences publicly available as a resource for plant breeding and biology. 
+<br /><br />
+<p>
+Wang, X., Gao, L., Jiao, C. et al. Genome of Solanum pimpinellifolium provides insights into structural variants during tomato breeding. Nat Commun 11, 5817 (2020). <a href="https://doi.org/10.1038/s41467-020-19682-0">https://doi.org/10.1038/s41467-020-19682-0</a>.
 
- The Boyce Thompson Institute is pleased to make the pre-publication 
- Solanum pimpinellifolium LA2093 genome sequences publicly available as a resource for plant breeding and biology. 
-
- By accessing these data, I hereby agree to respect the rights of the consortium to analyze and 
- publish the first global analyses in a peer-reviewed publication according to the Toronto agreement. 
- This includes: 
- 1) whole chromosome or whole genome level analyses on genes, gene families, and repetitive sequences and 
- 2) comparative analyses with other organisms. 
- Studies that do not overlap with those planned by the consortium may be undertaken following an agreement. 
- Please contact  <a href="mailto:zf25@cornell.edu">Dr. Zhangjun Fei</a> to discuss such possibilities. 
-
- The data may be freely downloaded and used by all who respect the restrictions described above.
- <b>Any use of the S. pimpinellifolium genome data prior to its publication must follow the agreement 
- and must credit the <a href="https://www.biorxiv.org/content/10.1101/2020.06.17.157859v1">BioRxiv preprint</a>.</b>
-
- 
-</div>  
+</p>   
 
 </&>
 
