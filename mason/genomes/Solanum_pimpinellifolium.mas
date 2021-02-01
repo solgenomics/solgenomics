@@ -16,6 +16,24 @@
    
 
 </div>
+<&| /page/info_section.mas, title=>"S. pimpinellifolium LA1670 denovo genome" ,collapsible=> 1 &>
+
+<p>
+Hitomi Takei, Kenta Shirasawa, Kosuke Kuwabara, Atsushi Toyoda, Yuma Matsuzawa, Shinji Iioka, Tohru Ariizumi, De novo genome assembly of two tomato ancestors, solanum pimpinellifolium and S. lycopersicum var. cerasiforme, by long-read sequencing, DNA Research, 2021;, dsaa029, <a href="https://doi.org/10.1093/dnares/dsaa029">https://doi.org/10.1093/dnares/dsaa029</a>
+</p>
+
+<&| /page/info_section.mas, title => 'Available Data' &>
+   <% info_table_html(
+            __border   => 0,
+	       __multicol => 3,
+	          'Download genome data' => '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_pimpinellifolium/LA1670/">FTP site</a>',
+   'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/Spimp1.5&tracks=DNA,gene_models"></a>',
+   BLAST =>
+      '<a href="/tools/blast/?db_id="></a>'
+           )
+	%>
+	</&>       
+</&>
 
 <&| /page/info_section.mas, title=>"S. pimpinellifolium LA2093 denovo genome" , collapsible=> 1 &>
   
@@ -43,11 +61,6 @@ contig N50: 10,912,915 bp<br>
 number of gene models: 35,761 <br>
 99% of the assembly is found in 12 chromosomes<br>
 </p>
-
-</&>
-
-
-<&| /page/info_section.mas, title => 'Annotation details' &>
 
 </&>
 
