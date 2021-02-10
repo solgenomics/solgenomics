@@ -67,8 +67,6 @@ $dbh
 </&>
   
 
-</&>
-
 <%init>
   use CXGN::Page::FormattingHelpers qw/info_table_html/;
 </%init>
