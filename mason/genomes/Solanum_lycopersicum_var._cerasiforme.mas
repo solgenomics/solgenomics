@@ -1,0 +1,38 @@
+
+<%doc>
+
+</%doc>
+
+
+<& /page/page_title.mas, title=>"Genome: <i>Solanum lycopersicum var. cerasiforme</i>" &>
+
+
+<div class="page_introduction">
+
+   <a href="/organism/Solanum%20lycopersicum%20var.%20cerasiforme/view/"><i>Solanum lycopersicum var. cerasiforme</i></a> is a sub species of domesticated tomato <a href="/organism/Solanum lycopersicum/view"><i>Solanum lycopersicum</i></a>.
+   
+
+</div>
+<&| /page/info_section.mas, title=>"S. lycopersicum var. cerasiforme LA1673 denovo genome" ,collapsible=> 1 &>
+
+<p>
+Hitomi Takei, Kenta Shirasawa, Kosuke Kuwabara, Atsushi Toyoda, Yuma Matsuzawa, Shinji Iioka, Tohru Ariizumi, De novo genome assembly of two tomato ancestors, solanum pimpinellifolium and S. lycopersicum var. cerasiforme, by long-read sequencing, DNA Research, 2021;, dsaa029, <a href="https://doi.org/10.1093/dnares/dsaa029">https://doi.org/10.1093/dnares/dsaa029</a>
+</p>
+
+<&| /page/info_section.mas, title => 'Available Data' &>
+   <% info_table_html(
+            __border   => 0,
+	       __multicol => 3,
+	          'Download genome data' => '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_lycopersicum_cerasiforme/LA1673/">FTP site</a>',
+   'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/Spimp1.5&tracks=DNA,gene_models"></a>',
+   BLAST =>
+      '<a href="/tools/blast/?db_id="></a>'
+           )
+	%>
+	</&>       
+</&>
+
+
+<%init>
+  use CXGN::Page::FormattingHelpers qw/info_table_html/;
+</%init>
