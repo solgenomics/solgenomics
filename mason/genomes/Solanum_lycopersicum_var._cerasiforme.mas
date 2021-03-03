@@ -26,7 +26,7 @@ Hitomi Takei, Kenta Shirasawa, Kosuke Kuwabara, Atsushi Toyoda, Yuma Matsuzawa, 
 	          'Download genome data' => '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_lycopersicum_cerasiforme/LA1673/">FTP site</a>',
    'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/Spimp1.5&tracks=DNA,gene_models"></a>',
    BLAST =>
-      '<a href="/tools/blast/?db_id="></a>'
+      '<a href="/tools/blast/?db_id=310">LA1673 genome contigs</a>'
            )
 	%>
 	</&>       
