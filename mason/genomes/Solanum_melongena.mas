@@ -60,7 +60,7 @@ $dbh
 	          'Download genome data' => '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_melongena_HQ-1315/">FTP site</a>',
    'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/Spimp1.5&tracks=DNA,gene_models"></a>',
    BLAST =>
-      '<a href="/tools/blast/?db_id="></a>'
+      '<a href="/tools/blast/?db_id=313">Solanum melongena HQ-1315 genome</a>'
            )
 	%>
 	</&>       
