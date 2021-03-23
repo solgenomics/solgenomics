@@ -21,7 +21,7 @@ $dbh
 
   </p>
 <center>
-<& /image/embed_image.mas, image_id=>51200, size=>"medium", dbh=>$dbh &>
+<& /image/embed_image.mas, image_id=>52717, size=>"medium", dbh=>$dbh &>
 </center>
 
   <&| /page/info_section.mas, title => 'Available Data' &>
@@ -30,13 +30,11 @@ $dbh
          __multicol => 2,
          'Bulk Datasets (via FTP)' =>
            '<a href="ftp://ftp.solgenomics.net/genomes/Coffea_humblotiana">FTP</a>',
-         'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=303">Genomic scaffolds</a>',
-	 'BLAST protein sequences' => '<a href="/tools/blast/?db_id=305">Protein sequences</a>',
-	 'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=304">CDS sequences</a>',
+         'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=314">Genomic scaffolds</a>',
+	 #'BLAST protein sequences' => '<a href="/tools/blast/?db_id=305">Protein sequences</a>',
+	 #'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=304">CDS sequences</a>',
 	 #'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data%2Fjson%2Fspenn&loc=Spenn-ch01%3A43733407..65600109&tracks=DNA&highlight=">Browse genome</a>',
-	 'Genetic map' => '<a href="/cview/map.pl?map_version_id=63">COS map</a>',
-
-     )
+	 )
    %>
 </&>
 
