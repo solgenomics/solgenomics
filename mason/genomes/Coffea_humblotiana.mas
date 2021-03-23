@@ -21,7 +21,7 @@ $dbh
 
   </p>
 <center>
-<& /image/embed_image.mas, image_id=>52717, size=>"medium", dbh=>$dbh &>
+<& /image/embed_image.mas, image_id=>51200, size=>"medium", dbh=>$dbh &>
 </center>
 
   <&| /page/info_section.mas, title => 'Available Data' &>
