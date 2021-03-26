@@ -15,7 +15,7 @@ my $dbh= $schema->storage()->dbh();
 
 
 
- <style>  
+ <style>
 .bgimg-1, .bgimg-2 {
   position: relative;
   opacity: 1.0;
@@ -68,7 +68,7 @@ padding-bottom:10px;
  </style>
 
  <div style="position:relative">
- 
+
 
    <div id="bgimg-head" style="position:relative;">
      <div class="bgimg-1">
@@ -76,18 +76,18 @@ padding-bottom:10px;
 
        <div style="position:relative;">
 	 <div class="image_header">
-	   <h1>Welcome to the Solanaceae Genomics Network</h1> 
+	   <h1>Welcome to the Solanaceae Genomics Network</h1>
 	   <br/>
 	 </div>
        </div>
 
 
-       <div style="position:relative;z-index:20;vertical-align:top;padding-top:50px;padding-left:100px">
+       <div style="position:relative;z-index:20;vertical-align:top;padding-top:30px;padding-left:100px">
          <div class="on_image" style="display:inline-block;width:700px;">
 	   <div style="display:inline-block;z-index:20;vertical-align:middle">
 	     <img src="/img/homepage/tomato13.jpeg" alt="tomato13" height="100">
 	   </div>
-	   
+
            <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
 	     <h3> <a href="/organism/Solanum_lycopersicum/genome/">New tomato reference genome</a></h3> SL4.0 and ITAG4.0
 	     <h3> <a href="/projects/tomato100/" style="">100 Tomato Genomes</h3></a>
@@ -95,51 +95,64 @@ padding-bottom:10px;
 	   </div>
 	 </div>
        </div>
-       
-       
-       
-       <div style="position:relative;padding-top:50px;padding-left:175px;z-index:20">       
+
+
+
+       <div style="position:relative;padding-top:30px;padding-left:175px;z-index:20">
 	 <div class="on_image" style="display:inline-block;width:625px">
 	   <div style="position:relative;display:inline-block;z-index:20">
 	     <img src="/img/homepage/pepino_small.jpg" alt="sol_code" height="90">
 	   </div>
-	   
+
 	   <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
 	     <h3><a href="/projects/solcode/">SOL-CODE Project</a></h3>
 	     Genomic code for better Solanaceae crops
 	   </div>
 	 </div>
        </div>
-       
-       
-       <div style="position:relative;z-index:20;vertical-align:top;padding-top:50px;padding-left:175px">
+
+
+       <div style="position:relative;z-index:20;vertical-align:top;padding-top:30px;padding-left:175px">
 	 <div class="on_image" style="display:inline-block;width:625px;">
 	   <div style="display:inline-block;z-index:20">
 	     <img src="/img/homepage/ceras_small.jpg" alt="varitome" height="90">
 	   </div>
-	   
+
 	   <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
-	     
+
 	     <h3> <a href="/projects/varitome/" style="">Varitome Project</h3></a>
 	     Genetic variation of tomato fruit quality traits
 	   </div>
 	 </div>
        </div>
-       
-       <div style="position:relative;z-index:20;vertical-align:top;padding-top:50px;padding-left:175px">
+
+       <div style="position:relative;z-index:20;vertical-align:top;padding-top:30px;padding-left:175px">
          <div class="on_image" style="display:inline-block;width:625px">
 	   <div style="display:inline-block;z-index:20">
 	     <& /image/embed_image.mas, image_id=>49929, size=>"small", height=>"90" , dbh=>$dbh &>
 	   </div>
-	   
+
            <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
-	     
+
 	     <h3> <a href="/organism/Solanum_melongena/genome/" style="">Eggplant Sequencing Consortium</h3></a>
 	     Genome release, version 3.0
 	   </div>
 	 </div>
        </div>
-	     
+
+       <div style="position:relative;z-index:20;vertical-align:top;padding-top:30px;padding-left:175px">
+         <div class="on_image" style="display:inline-block;width:625px;">
+           <div style="display:inline-block;z-index:20">
+             <img src="/img/homepage/ceras_small.jpg" alt="varitome" height="90">
+           </div>
+           <div style="position:relative;display:inline-block;z-index:20;padding-left:20px;vertical-align:middle">
+             <h3> <a href="/projects/tomatodisease/" style="">Tomato Immune Responses</h3></a>
+             Genomic data for accessions with immune response variation
+           </div>
+         </div>
+       </div>
+
+
 	     </div>
      </div>
    </div>
@@ -151,16 +164,16 @@ padding-bottom:10px;
       <div class="between_images"  style="position:relative;display:inline-block;padding-top:30px;padding-left:50px;padding-right:50px">
 
         <div class="col-sm-6 col-md-6 col-lg-6">
-	      
+
 	  <div class="panel panel-info">
 	    <div class="panel-heading">SGN Featured</div>
 	    <div class="panel-body" style="overflow:hidden">
 	      <& homepage/publication_of_the_week.mas &>
 	    </div>
-	  </div>  
+	  </div>
 	</div>
 
-	
+
 	<div class="col-sm-6 col-md-6 col-lg-6">
 
 	  <div class="panel panel-info">
@@ -174,6 +187,3 @@ padding-bottom:10px;
  </div>
 
 </div>
- 
-   
-
