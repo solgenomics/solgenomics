@@ -17,7 +17,7 @@ $dbh
 </div>
 <&| /page/info_section.mas, title=>"Coffea humblotiana genome V1.0" ,collapsible=> 1 &>
 
-  <p>
+  <p><pre>
 The C. humblotiana has a small genome size (422 Mb) consisting of 11 chromosomes.
 
 
@@ -39,7 +39,7 @@ The genome was sequenced at 102X coverage using PacBio technology, Illumina 2x15
 
 <b>Accession sequenced</b>
 The accession RM-CF-00679 (BM 19/20) conserved in the Coffea collection at La Reunion has been sequenced.
-  </p>
+ </pre> </p>
 <center>
 <& /image/embed_image.mas, image_id=>51200, size=>"medium", dbh=>$dbh &>
 </center>
@@ -56,13 +56,11 @@ The accession RM-CF-00679 (BM 19/20) conserved in the Coffea collection at La Re
 	 #'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data%2Fjson%2Fspenn&loc=Spenn-ch01%3A43733407..65600109&tracks=DNA&highlight=">Browse genome</a>',
 	 )
    %>
-</&>
 
-<&| /page/info_section.mas, title => 'Data Availability' &>
-<p>
+<br /><p>
   Genome assembly data have been deposited at NCBI under the bioproject ID: PRJNA665152.
   All data that support the findings of this study are also available from the corresponding authors upon request.
-  If you have any questions, please contact <a href="mailto:dominique.crouzillat@rdto.nestle.com">Dominique Crouzillat</a> and <a href="romain.guyot@ird.fr">Romain Guyot</a>
+  If you have any questions, please contact <a href="mailto:dominique.crouzillat@rdto.nestle.com">Dominique Crouzillat</a> and <a href="mailto:romain.guyot@ird.fr">Romain Guyot</a>
 </p>
 </&>
 <&| /page/info_section.mas, title => 'Links' &>
@@ -71,13 +69,14 @@ The accession RM-CF-00679 (BM 19/20) conserved in the Coffea collection at La Re
 </&>
 
 <&| /page/info_section.mas, title => 'References' &>
+<p>
+
 WCSdb: a database of wild Coffea species. Database, Volume 2020, 2020, baaa069, <a href="https://doi.org/10.1093/database/baaa069">https://doi.org/10.1093/database/baaa069</a>
-
-  <p>
+<br /> <br />
     Charr JC, Garavito A, Guyeux C, Crouzillat D, Descombes P, Fournier C, Ly SN, Raharimalala EN, Rakotomalala JJ, Stoffelen P, Janssens S, Hamon P, Guyot R. Complex evolutionary history of coffees revealed by full plastid genomes and 28,800 nuclear SNP analyses, with particular emphasis on Coffea canephora (Robusta coffee). Mol Phylogenet Evol. 2020 Oct;151:106906. doi: 10.1016/j.ympev.2020.106906.
-
+<br /> <br />
     Hamon P, Grover CE, Davis AP, Rakotomalala JJ, Raharimalala NE, Albert VA, Sreenath HL, Stoffelen P, Mitchell SE, Couturon E, Hamon S, de Kochko A, Crouzillat D, Rigoreau M, Sumirat U, Akaffou S, Guyot R. Genotyping-by-sequencing provides the first well-resolved phylogeny for coffee (Coffea) and insights into the evolution of caffeine content in its species: GBS coffee phylogeny and the evolution of caffeine content. Mol Phylogenet Evol. 2017 Apr;109:351-361. doi: 10.1016/j.ympev.2017.02.009.
-
+<br /> <br />
     Hamon P, Grover CE, Davis AP, Rakotomalala JJ, Raharimalala NE, Albert VA, Sreenath HL, Stoffelen P, Mitchell SE, Couturon E, Hamon S, de Kochko A, Crouzillat D, Rigoreau M, Sumirat U, Akaffou S, Guyot R. Genotyping-by-sequencing provides the first well-resolved phylogeny for coffee (Coffea) and insights into the evolution of caffeine content in its species: GBS coffee phylogeny and the evolution of caffeine content. Mol Phylogenet Evol. 2017 Apr;109:351-361. doi: 10.1016/j.ympev.2017.02.009.
 
   </p>
