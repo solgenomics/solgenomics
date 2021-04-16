@@ -12,23 +12,43 @@ $dbh
 
 <div class="page_introduction">
 
-   <a href="/organism/Coffea%20humblotiana/view/"><i>Coffea humblotiana</i></a> Bail. (1885) also called \"Cafeier de Humblot\" is the unique Coffea species endemic from the Comoro archipelago in the Mozambique channel. <i>C. humblotiana</i> was found in humid forests between 600-1000 m elevation, but now the species is classified as endangered in the IUCN red list of threatened species, due to the local expansion of agriculture. Outside living collection, less than 110 trees may survive in the wild. Coffee drink from <i>C. humblotiana</i> seeds had a good reputation \"good color and smell during roasting\", with \"a taste similar to Moka\", despite the presence of a bitter substance. But one of the most remarkable features of C. humblotiana, is the complete absence of caffeine in seeds and leaves. We estimate the separation time between C. canephora (also called Robusta) and C. humblotiana, of about 11 Mya. 
+   <a href="/organism/Coffea%20humblotiana/view/"><i>Coffea humblotiana</i></a> Bail. (1885) also called 'Cafeier de Humblot' is the unique Coffea species endemic from the Comoro archipelago in the Mozambique channel. <i>C. humblotiana</i> was found in humid forests between 600-1000 m elevation, but now the species is classified as endangered in the IUCN red list of threatened species, due to the local expansion of agriculture. Outside living collection, less than 110 trees may survive in the wild. Coffee drink from <i>C. humblotiana</i> seeds had a good reputation 'good color and smell during roasting', with 'a taste similar to Moka', despite the presence of a bitter substance. But one of the most remarkable features of C. humblotiana, is the complete absence of caffeine in seeds and leaves. We estimate the separation time between C. canephora (also called Robusta) and C. humblotiana, of about 11 Mya. 
 
 </div>
 <&| /page/info_section.mas, title=>"Coffea humblotiana genome V1.0" ,collapsible=> 1 &>
 
   <p>
+The C. humblotiana has a small genome size (422 Mb) consisting of 11 chromosomes.
 
+
+<b>Assembly statistics</b>
+Sequences	390	
+Total Length (Mbp)	420.72	
+Average length (bp)	52,943	
+Longest sequence (Mbp)	57.52	
+Shortest sequence (bp)	20098	
+N75 length (Mbp)	29.06	
+N50 length (Mbp)	29.63	
+N25 length (Mbp)	48.24	
+
+Number of gene models: 32,874
+88.7% of the assembly is found in 11 chromosomes
+
+<b>Sequencing approach</b>
+The genome was sequenced at 102X coverage using PacBio technology, Illumina 2x150 bp at 50X coverage and Dovetail HiRise.
+
+<b>Accession sequenced</b>
+The accession RM-CF-00679 (BM 19/20) conserved in the Coffea collection at La Reunion has been sequenced.
   </p>
 <center>
 <& /image/embed_image.mas, image_id=>51200, size=>"medium", dbh=>$dbh &>
 </center>
 
-  <&| /page/info_section.mas, title => 'Available Data' &>
-   <% info_table_html(
+<&| /page/info_section.mas, title => 'Available Data' &>
+  <% info_table_html(
          __border   => 0,
          __multicol => 2,
-         'Bulk Datasets (via FTP)' =>
+         'Download genome data (via FTP)' =>
            '<a href="ftp://ftp.solgenomics.net/genomes/Coffea_humblotiana">FTP</a>',
          'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=314">Genomic scaffolds</a>',
 	 #'BLAST protein sequences' => '<a href="/tools/blast/?db_id=305">Protein sequences</a>',
@@ -36,6 +56,31 @@ $dbh
 	 #'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data%2Fjson%2Fspenn&loc=Spenn-ch01%3A43733407..65600109&tracks=DNA&highlight=">Browse genome</a>',
 	 )
    %>
+</&>
+
+<&| /page/info_section.mas, title => 'Data Availability' &>
+<p>
+  Genome assembly data have been deposited at NCBI under the bioproject ID: PRJNA665152.
+  All data that support the findings of this study are also available from the corresponding authors upon request.
+  If you have any questions, please contact <a href="mailto:dominique.crouzillat@rdto.nestle.com">Dominique Crouzillat</a> and <a href="romain.guyot@ird.fr">Romain Guyot</a>
+</p>
+</&>
+<&| /page/info_section.mas, title => 'Links' &>
+  More information on Wild coffee species including Coffea humblotiana can be found at the <a href="http://publish.plantnet-project.org/project/wildcofdb_en">Wild Coffee species database</a>
+
+</&>
+
+<&| /page/info_section.mas, title => 'References' &>
+WCSdb: a database of wild Coffea species. Database, Volume 2020, 2020, baaa069, <a href="https://doi.org/10.1093/database/baaa069">https://doi.org/10.1093/database/baaa069</a>
+
+  <p>
+    Charr JC, Garavito A, Guyeux C, Crouzillat D, Descombes P, Fournier C, Ly SN, Raharimalala EN, Rakotomalala JJ, Stoffelen P, Janssens S, Hamon P, Guyot R. Complex evolutionary history of coffees revealed by full plastid genomes and 28,800 nuclear SNP analyses, with particular emphasis on Coffea canephora (Robusta coffee). Mol Phylogenet Evol. 2020 Oct;151:106906. doi: 10.1016/j.ympev.2020.106906.
+
+    Hamon P, Grover CE, Davis AP, Rakotomalala JJ, Raharimalala NE, Albert VA, Sreenath HL, Stoffelen P, Mitchell SE, Couturon E, Hamon S, de Kochko A, Crouzillat D, Rigoreau M, Sumirat U, Akaffou S, Guyot R. Genotyping-by-sequencing provides the first well-resolved phylogeny for coffee (Coffea) and insights into the evolution of caffeine content in its species: GBS coffee phylogeny and the evolution of caffeine content. Mol Phylogenet Evol. 2017 Apr;109:351-361. doi: 10.1016/j.ympev.2017.02.009.
+
+    Hamon P, Grover CE, Davis AP, Rakotomalala JJ, Raharimalala NE, Albert VA, Sreenath HL, Stoffelen P, Mitchell SE, Couturon E, Hamon S, de Kochko A, Crouzillat D, Rigoreau M, Sumirat U, Akaffou S, Guyot R. Genotyping-by-sequencing provides the first well-resolved phylogeny for coffee (Coffea) and insights into the evolution of caffeine content in its species: GBS coffee phylogeny and the evolution of caffeine content. Mol Phylogenet Evol. 2017 Apr;109:351-361. doi: 10.1016/j.ympev.2017.02.009.
+
+  </p>
 </&>
 
 </&>
