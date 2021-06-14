@@ -16,6 +16,32 @@ $dbh
    
 
 </div>
+
+<&| /page/info_section.mas, title=>"Eggplant genome consortium V4" ,collapsible=> 1 &>
+
+  <p>
+    Barchi, L., M. T. Rabanus-Wallace, J. Prohens, L. Toppino, S. Padmarasu, E. Portis, G. L. Rotino, N. Stein, S. Lanteri, and G. Giuliano. "Improved genome assembly and pan-genome provide key insights on eggplant domestication and breeding." The Plant Journal (2021). <a href="https://doi.org/10.1111/tpj.15313">https://doi.org/10.1111/tpj.15313</a>
+</p>
+
+  <&| /page/info_section.mas, title => 'Available Data' &>
+   <% info_table_html(
+         __border   => 0,
+         __multicol => 2,
+         'Bulk Datasets (via FTP)' =>
+           '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_melongena_V4_Pangenome">FTP</a>',
+         'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=320">Genomic sequence</a>',
+	 'BLAST protein sequences' => '<a href="/tools/blast/?db_id=323">Protein sequences</a>',
+         'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=322">CDS sequences</a>',
+   	 'BLAST pangenome sequences' => '<a href="/tools/blast/?db_id=321">Pangenome sequences</a>',
+	 #'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data%2Fjson%2Fspenn&loc=Spenn-ch01%3A43733407..65600109&tracks=DNA&highlight=">Browse genome</a>',
+	 #'Genetic map' => '<a href="/cview/map.pl?map_version_id=63">COS map</a>',
+   )
+   %>
+</&>
+
+</&>
+
+
 <&| /page/info_section.mas, title=>"Eggplant genome consortium V3" ,collapsible=> 1 &>
 
   <p>
@@ -32,10 +58,10 @@ $dbh
          __multicol => 2,
          'Bulk Datasets (via FTP)' =>
            '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_melongena_consortium">FTP</a>',
-         'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=303">Genomic scaffolds</a>',
+         'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=303">Genome sequence</a>',
 	 'BLAST protein sequences' => '<a href="/tools/blast/?db_id=305">Protein sequences</a>',
-	 'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=304">CDS sequences</a>',
-	 #'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data%2Fjson%2Fspenn&loc=Spenn-ch01%3A43733407..65600109&tracks=DNA&highlight=">Browse genome</a>',
+         'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=304">CDS sequences</a>',
+          #'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data%2Fjson%2Fspenn&loc=Spenn-ch01%3A43733407..65600109&tracks=DNA&highlight=">Browse genome</a>',
 	 'Genetic map' => '<a href="/cview/map.pl?map_version_id=63">COS map</a>',
 
      )
