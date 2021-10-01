@@ -9,6 +9,21 @@
 
 </&>
 
+<&| /page/info_section.mas, title => 'Genome resequencing data' &>
+
+<br />
+<% info_table_html(
+                   __border   => 0,
+                   __multicol => 2,
+                   'Bulk Datasets (via FTP)' =>
+                   '<a href="/ftp/varitome/GWAS/VCFs//">VCF files</a>',
+       'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/varitome">JBrowse</a>'
+                  )
+%>
+
+</&>
+
+
 <&| /page/info_section.mas, title => 'Major goals' &>
 
 
