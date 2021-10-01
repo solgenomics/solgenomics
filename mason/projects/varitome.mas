@@ -144,3 +144,7 @@ Funding is provided by the NSF (<a href="https://www.nsf.gov/awardsearch/showAwa
 <img src="/static/img/nsf_logo2.png" />
 
 </&>
+
+<%init>
+  use CXGN::Page::FormattingHelpers qw/info_table_html/;
+</%init>
