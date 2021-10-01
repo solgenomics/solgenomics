@@ -16,7 +16,7 @@
                    __border   => 0,
                    __multicol => 2,
                    'Bulk Datasets (via FTP)' =>
-                   '<a href="/ftp/varitome/GWAS/VCFs//">VCF files</a>',
+                   '<a href="https://solgenomics.net/ftp/varitome/GWAS/VCFs">VCF files</a>',
        'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/varitome">JBrowse</a>'
                   )
 %>
