@@ -52,7 +52,7 @@ Currently, databases for tomato, potato, and pepper are available, generated fro
 <ul>
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=NICOTIANA"><b>Tobacco</b> Combined Nicotiana genus (NicotianaCyc)</a> <span class="tier">TIER 1</span></li>
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=SOLANA"><b>Solanaceae</b> Combined Solanaceae database (SolanaCyc)</a> <span class="tier">TIER 1</span></li>
-  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=METATOB"><b>MetaTobaccoCyc</b> Combined database of all pathways of Ralstonia solanacearum and Nicotiana tabacum (MetaTobaccoCyc)</a> <span class="tier">TIER 1</span></li>	
+  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=METATOB"><b>MetaTobaccoCyc</b> Combined database of all manually curated pathways of Ralstonia solanacearum and Nicotiana tabacum (MetaTobaccoCyc)</a> <span class="tier">TIER 1</span></li>	
 </ul>
 
 <p>
