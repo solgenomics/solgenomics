@@ -37,7 +37,7 @@ Currently, databases for tomato, potato, and pepper are available, generated fro
   
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=PET"><b>Petunia</b> <i>Petunia hybrida</i> (PetCyc)</a></li>
 
-  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=TOBACCOCYC"><b>Tobacco</b> <i>Nicotiana tabacum</i> (K326Cyc)</a> <span class="tier">TIER 1</span></li>
+  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=NITAB5"><b>Tobacco</b> <i>Nicotiana tabacum</i> (K326Cyc)</a> <span class="tier">TIER 1</span><font style="red">UPDATED</font></li>
   
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=NATT"><i>Nicotiana attenuata</i> (NattCyc)</a> <span class="tier">TIER 1</span></li>
 
@@ -52,6 +52,7 @@ Currently, databases for tomato, potato, and pepper are available, generated fro
 <ul>
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=NICOTIANA"><b>Tobacco</b> Combined Nicotiana genus (NicotianaCyc)</a> <span class="tier">TIER 1</span></li>
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=SOLANA"><b>Solanaceae</b> Combined Solanaceae database (SolanaCyc)</a> <span class="tier">TIER 1</span></li>
+  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=METATOB"><b>(MetaTobaccoCyc)</b> Combined database for all the tobacco species (MetaTobaccoCyc)</a> <span class="tier">TIER 1</span></li>	
 </ul>
 
 <p>
