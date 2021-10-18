@@ -17,6 +17,27 @@ $dbh
 
 </div>
 
+<&| /page/info_section.mas, title=>"Eggplant genome consortium V4.1" ,collapsible=> 1 &>
+
+  <&| /page/info_section.mas, title => 'Available Data' &>
+   <% info_table_html(
+         __border   => 0,
+         __multicol => 2,
+         'Bulk Datasets (via FTP)' =>
+           '<a href="https://solgenomics.net/ftp/genomes/Solanum_melongena_V4.1/">FTP</a>',
+         #'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=320">Genomic sequence</a>',
+         #'BLAST protein sequences' => '<a href="/tools/blast/?db_id=323">Protein sequences</a>',
+         #'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=322">CDS sequences</a>',
+         #'BLAST pangenome sequences' => '<a href="/tools/blast/?db_id=321">Pangenome sequences</a>',
+         #'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data%2Fjson%2Fspenn&loc=Spenn-ch01%3A43733407..65600109&tracks=DNA&highlight=">Browse genome</a>',
+         #'Genetic map' => '<a href="/cview/map.pl?map_version_id=63">COS map</a>',
+   )
+   %>
+</&>
+
+</&>
+
+
 <&| /page/info_section.mas, title=>"Eggplant genome consortium V4" ,collapsible=> 1 &>
 
   <p>
@@ -28,7 +49,7 @@ $dbh
          __border   => 0,
          __multicol => 2,
          'Bulk Datasets (via FTP)' =>
-           '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_melongena_V4_Pangenome">FTP</a>',
+           '<a href="https://solgenomics.net/ftp/genomes/Solanum_melongena_V4_Pangenome">FTP</a>',
          'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=320">Genomic sequence</a>',
 	 'BLAST protein sequences' => '<a href="/tools/blast/?db_id=323">Protein sequences</a>',
          'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=322">CDS sequences</a>',
@@ -57,7 +78,7 @@ $dbh
          __border   => 0,
          __multicol => 2,
          'Bulk Datasets (via FTP)' =>
-           '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_melongena_consortium">FTP</a>',
+           '<a href="https://solgenomics.net/ftp/genomes/Solanum_melongena_consortium">FTP</a>',
          'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=303">Genome sequence</a>',
 	 'BLAST protein sequences' => '<a href="/tools/blast/?db_id=305">Protein sequences</a>',
          'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=304">CDS sequences</a>',
@@ -83,7 +104,7 @@ $dbh
    <% info_table_html(
             __border   => 0,
 	       __multicol => 3,
-	          'Download genome data' => '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_melongena_HQ-1315/">FTP site</a>',
+	          'Download genome data' => '<a href="https://solgenomics.net/ftp/genomes/Solanum_melongena_HQ-1315/">FTP site</a>',
    'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/Spimp1.5&tracks=DNA,gene_models"></a>',
    BLAST =>
       '<a href="/tools/blast/?db_id=313">Solanum melongena HQ-1315 genome</a>'
