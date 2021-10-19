@@ -13,7 +13,7 @@ $dbh
 <div class="page_introduction">
 
    <a href="/organism/Solanum%20melongena/view/"><i>Solanum melongena</i></a> is a widely grown and consumed vegetable around the world.
-   
+
 
 </div>
 
@@ -25,10 +25,9 @@ $dbh
          __multicol => 2,
          'Bulk Datasets (via FTP)' =>
            '<a href="https://solgenomics.net/ftp/genomes/Solanum_melongena_V4.1/">FTP</a>',
-         #'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=320">Genomic sequence</a>',
-         #'BLAST protein sequences' => '<a href="/tools/blast/?db_id=323">Protein sequences</a>',
-         #'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=322">CDS sequences</a>',
-         #'BLAST pangenome sequences' => '<a href="/tools/blast/?db_id=321">Pangenome sequences</a>',
+         'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=324">Genomic sequence</a>',
+         'BLAST protein sequences' => '<a href="/tools/blast/?db_id=326">Protein sequences</a>',
+         'BLAST transcripts sequences' => '<a href="/tools/blast/?db_id=325">Transcripts sequences</a>',
          #'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data%2Fjson%2Fspenn&loc=Spenn-ch01%3A43733407..65600109&tracks=DNA&highlight=">Browse genome</a>',
          #'Genetic map' => '<a href="/cview/map.pl?map_version_id=63">COS map</a>',
    )
@@ -110,9 +109,9 @@ $dbh
       '<a href="/tools/blast/?db_id=313">Solanum melongena HQ-1315 genome</a>'
            )
 	%>
-	</&>       
+	</&>
 </&>
-  
+
 
 <%init>
   use CXGN::Page::FormattingHelpers qw/info_table_html/;
