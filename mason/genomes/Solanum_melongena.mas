@@ -18,6 +18,9 @@ $dbh
 </div>
 
 <&| /page/info_section.mas, title=>"Eggplant genome consortium V4.1" ,collapsible=> 1 &>
+<p>
+Version 4.1 differs from version 4 (<a href="https://doi.org/10.1111/tpj.15313">Barchi et al. 2021. </a>) following a reorientation of the sequence of some chromosomes
+</p>
 
   <&| /page/info_section.mas, title => 'Available Data' &>
    <% info_table_html(
