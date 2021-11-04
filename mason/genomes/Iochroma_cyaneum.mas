@@ -1,11 +1,11 @@
+<%args>
+  $organism
+</%args>
+<& /page/page_title.mas, title => '<i>'.$organism->species.'</i> Genome Data' &>
 
-<%doc>
 
-</%doc>
-
-
-<& /page/page_title.mas, title=>"The <i>Iochroma cyaneum</i> Genome Consortium
-" &>
+#<& /page/page_title.mas, title=>"The <i>Iochroma cyaneum</i> Genome Consortium
+#" &>
 
 <& /genomes/Iochroma_cyaneum/usage_popup.mas &>
 
