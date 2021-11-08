@@ -65,9 +65,7 @@ Contig N50: 213 kb<br>
    <% info_table_html(
          __border   => 0,
          __multicol => 2,
-   'Bulk Datasets (via FTP)' => '<a href="/ftp/genomes/Iochroma_cyaneum/">FTP</a>',
-<!--   BLAST =>
-   '<a href="/tools/blast/?db_id=302">Genomic scaffolds</a>' -->
+   'Bulk Datasets (via FTP)' => '<a href="/ftp/genomes/Iochroma_cyaneum/">FTP</a>'
      )
     %>
 </&>
