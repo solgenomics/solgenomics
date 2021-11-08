@@ -3,13 +3,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="usagePolicyDialog">Please Note: I. cyaneum Data Access Agreement</h4>
+        <h4 class="modal-title" id="usagePolicyDialog">Please Note: <i>I. cyaneum</i> Data Access Agreement</h4>
       </div>
       <div class="modal-body">
         <div class="container-fluid">
-	     <h4>Iochroma cyaneum genome adheres to the <a href="https://www.nature.com/nature/journal/v461/n7261/full/461168a.html"> Toronto Agreement</a> on prepublication data release.</h4>
+	     <h4><i>Iochroma cyaneum</i> genome adheres to the <a href="https://www.nature.com/nature/journal/v461/n7261/full/461168a.html"> Toronto Agreement</a> on prepublication data release.</h4>
 The Boyce Thompson Institute and the University of Colorado are pleased to make the pre-publication
- Iochroma cyaneum genome assembly and annotation available as a resource for scientific research.
+ <i>Iochroma cyaneum</i> genome assembly and annotation available as a resource for scientific research.
 
  By accessing these data, I hereby agree to respect the rights of the consortium to analyze and
  publish the first global analyses in a peer-reviewed publication according to the Toronto agreement.
@@ -21,8 +21,8 @@ The Boyce Thompson Institute and the University of Colorado are pleased to make 
  to discuss such possibilities.
 
  The data may be freely downloaded and used by all who respect the restrictions described above.
- <b>Any use of the I. cyaneum genome data prior to its publication must follow the agreement
- and must credit "The Iochroma cyaneum Genome Consortium".</b>
+ <b>Any use of the <i>I. cyaneum</i> genome data prior to its publication must follow the agreement
+ and must credit "The <i>Iochroma cyaneum</i> Genome Consortium".</b>
 
         </div>
       </div>
