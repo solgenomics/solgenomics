@@ -1,0 +1,76 @@
+<%args>
+  $organism
+</%args>
+<& /page/page_title.mas, title => '<i>'.$organism->species.'</i> Genome Data' &>
+
+<& /genomes/Iochroma_cyaneum/usage_popup.mas &>
+
+<div class="page_introduction">
+
+  <a href="/organism/Iochroma%20cyaneum/view/"><i>Iochroma
+  cyaneum</i></a> is a showy-flowered Andean shrub in the tomatillo subfamily (Physalideae) of the Solanaceae.
+
+</div>
+
+<&| /page/info_section.mas, title=>"Disclaimer and Data Access Agreement" &>
+
+<div style="text-align: justify; border: 1px solid gray; padding: 2em 3em 3em 3em">
+
+<h3 style="text-align: center"><i>Iochroma cyaneum</i> Data Access Agreement</h3>
+<h4 style="text-align: center">PLEASE READ BEFORE ACCESSING THE PRE-PUBLICATION SEQUENCE OF <i>Iochroma cyaneum</i></h4>
+
+The Boyce Thompson Institute and the University of Colorado are pleased to make the pre-publication
+ <i>Iochroma cyaneum</i> genome assembly and annotation available as a resource for scientific research.
+
+ By accessing these data, I hereby agree to respect the rights of the consortium to analyze and
+ publish the first global analyses in a peer-reviewed publication according to the Toronto agreement.
+ This includes:
+ 1) whole chromosome or whole genome level analyses on genes, gene families, and repetitive sequences and
+ 2) comparative analyses with other organisms.
+ Studies that do not overlap with those planned by the consortium may be undertaken following an agreement.
+ Please contact  <a href="mailto:Stacey.D.Smith@colorado.edu">Dr. Stacey Smith</a> or  <a href="mailto:srs57@cornell.edu">Dr. Susan Strickler</a>
+ to discuss such possibilities.
+
+ The data may be freely downloaded and used by all who respect the restrictions described above.
+ <b>Any use of the <i>I. cyaneum</i> genome data prior to its publication must follow the agreement
+ and must credit "The <i>Iochroma cyaneum</i> Genome Consortium".</b>
+
+
+</div>
+
+</&>
+
+<&| /page/info_section.mas, title => 'Assembly Details' &>
+
+<p>
+The genome was sequenced using Nanopore and Illumina technology and was assembled with Masurca.  Contigs were error-corrected with Pilon and scaffolded with Hi-C.  Gaps were filled with PacBio sequence using LR_gapcloser.
+<br><br>
+Genome assembly total length: 2,716 Mb<br>
+No. of contigs: 37,881<br>
+Longest contig: 3996 kb<br>
+Contig N50: 213 kb<br>
+84.1% of the assembly is assigned to chromosomes.<br>
+</p>
+
+</&>
+
+
+<&| /page/info_section.mas, title => 'Annotation Details' &>
+<p>Annotation was conducted using the BRAKER pipeline, making use of both GeneMark-ET and AUGUSTUS for gene prediction. Sequence data used as input included RNA-seq from corollas, vegetative tissue (shoot plus root), reproductive tissue (stamen plus pistil), and seedlings. A total of 38,625 genes were predicted.</p>
+
+</&>
+
+
+<&| /page/info_section.mas, title => 'Available Data' &>
+   <% info_table_html(
+         __border   => 0,
+         __multicol => 2,
+   'Bulk Datasets (via FTP)' => '<a href="/ftp/genomes/Iochroma_cyaneum/">FTP</a>'
+     )
+    %>
+</&>
+
+
+<%init>
+  use CXGN::Page::FormattingHelpers qw/info_table_html/;
+</%init>
