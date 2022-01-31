@@ -1,0 +1,47 @@
+<%args>
+</%args>
+
+<& /page/page_title.mas, title=>"Tomato graph pangenome project" &>
+
+<&| /page/info_section.mas, title => 'Project overview'  &>
+
+
+Yao Zhou, Zhiyang Zhang, Zhigui Bao, Hongbo Li, Yaqing Lyu, Yanjun Zan, Yaoyao Wu, Lin Cheng, Yuhan Fang, Kun Wu, Jinzhe Zhang, Hongjun Lyu, Tao Lin, Qiang Gao, Surya Saha, Lukas Mueller, Zhangjun Fei, Thomas Städler, Shizhong Xu, Zhiwu Zhang, Doug Speed, Sanwen Huang
+
+The Sanwen Huang lab at Agricultural Genomics Institute at Shenzhen, Chinese Academy of Agricultural Sciences presents tomato graph pangenome (TGG) by integrating 838 genomes, including 32 new reference-level genome assemblies. All related data are provided as listed:
+<br />
+<br />
+<a href="https://solgenomics.net/ftp/genomes/TGG/genome/"> HiFi assemblies (32 accessions, including SL5.0</a>)
+<br />
+<a href="https://solgenomics.net/ftp/genomes/TGG/gff/">Genome annotation (46 accessions)</a>
+<br />
+<a href="http://solomics.agis.org.cn/tomato/ftp/TGG1.0/">TGG1.0 (vg format) </a>
+<br />
+<a href="http://solomics.agis.org.cn/tomato/ftp/TGG1.1/">TGG1.1 (vg format)</a>
+<br />
+<a href="https://solgenomics.net/ftp/genomes/TGG/TGG1.1/">TGG1.1 (vcf format) </a>
+<br />
+<a href="http://solomics.agis.org.cn/tomato/ftp/SV_array/">SV chip </a>
+<br />
+<br />
+
+<b>HiFi assemblies:</b> The preliminary genome assemblies including SL5.0 Heinz 1706 are generated with the `Flye` (v2.7), `Hicanu` (v2.0), and `Hifiasm` (v0.13), then the potential mis-assemblies are corrected by the `GALA`. For the scaffolding, the contigs of SL5.0 Heinz 1706 are ordered by Hi-C data. The remaining assemblies are anchored to chromosome with `RagTag` (v1.0.1).
+<br />
+<br />
+<b>Genome annotation:</b>
+<br />
+1) Gene structure annotation files: Intergrating repeat elements annotation, homology-based prediction, Ab initio prediction followed our pipeline.
+<br />
+2) Gene function annotation files: Aligning proteins to `UniProtKB/SwissProt` and `InterProScan` database.
+<br />
+<br />
+<b>ID convertor:</b> The gene ID in SL5.0 is not consitant with SL4.0 and a convertor is implemented in solomics website.
+<br />
+<br />
+<b>TGG1.0:</b> To get comprehensive variants for constructing tomato graph pangenome (TGG1.0), the above 31 individuals SVs vcf and SVs from previous 100 tomato accessions are merged and filltered redundant SVs following `vg` pipeline.  The 31 individuals SNPs and indels vcf are integrated with SVs vcf by `bcftools`.  TGG1.0 is constructed by these variants using `vg`.
+<br />
+<br />
+<b>TGG1.1:</b> All the variants used for the construction of TGG1.0 and the SNPs and InDels called from the 706 accessions were integrated and used to construct TGG1.1.
+<br />
+<br />
+<b>SV chip</b>: SV panel (20,955) selected for DNA capture array
