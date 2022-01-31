@@ -98,8 +98,8 @@ my $iframe_url = $jbrowse_url . "&tracklist=0&nav=1&overview=0" ;
 <&| /page/info_section.mas, id=>"gwas_data", title=>"GWAS data", collapsible=>1, collapsed=>0, hide_if_empty=>1 &>
 
   <ul>
-    <li> <a href="ftp://ftp.solgenomics.net/varitome/GWAS/VCFs">Varitome VCF SNPs files by chromosome</a></li>
-    <li><a href="ftp://ftp.solgenomics.net/varitome/GWAS/normalized_phen">Phenotyping files by trait for GWAS analysis</a></il>
+    <li> <a href="http://solgenomics.net/ftp/varitome/GWAS/VCFs">Varitome VCF SNPs files by chromosome</a></li>
+    <li><a href="http://solgenomics.net/ftp/varitome/GWAS/normalized_phen">Phenotyping files by trait for GWAS analysis</a></il>
   </ul>
 
 </&>
@@ -132,7 +132,7 @@ my $iframe_url = $jbrowse_url . "&tracklist=0&nav=1&overview=0" ;
 
 <&| /page/info_section.mas, title => 'Resources' &>
  <ul>
-    <li>Download the current version of  <a href="ftp://ftp.solgenomics.net/programs/tomato_analyzer_4.0/">Tomato Analyzer</a></li>
+    <li>Download the current version of  <a href="http://solgenomics.net/ftp/programs/tomato_analyzer_4.0/">Tomato Analyzer</a></li>
   </ul>
 </&>
 

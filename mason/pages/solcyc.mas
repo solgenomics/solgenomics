@@ -18,7 +18,7 @@ border:1px solid red;color:red;
 
 <div class="boxbgcolor1">
 <p>
-SolCyc is a collection of Pathway Genome Databases (PGDBs) for Solanaceae species generated using <a href="http://bioinformatics.ai.sri.com/ptools/">Pathway Tools</a> software from <a href="http://www.sri.com">SRI International</a>, the same software that is used in <a href="http://www.arabidopsis.org/tools/aracyc/">AraCyc</a> for <i>Arabidopsis thaliana</i> and <a href="http://www.ecocyc.org">EcoCyc</a> for <i>E. coli</i>. 
+SolCyc is a collection of Pathway Genome Databases (PGDBs) for Solanaceae species generated using <a href="http://bioinformatics.ai.sri.com/ptools/">Pathway Tools</a> software from <a href="http://www.sri.com">SRI International</a>, the same software that is used in <a href="http://www.arabidopsis.org/tools/aracyc/">AraCyc</a> for <i>Arabidopsis thaliana</i> and <a href="http://www.ecocyc.org">EcoCyc</a> for <i>E. coli</i>.
 </p>
 <p>
 Currently, databases for tomato, potato, and pepper are available, generated from the respective genome annotations. Databases that have received significant curation are marked with a <span class="tier">TIER 1</span>. The eggplant database is not longer supported or available.
@@ -28,17 +28,17 @@ Currently, databases for tomato, potato, and pepper are available, generated fro
 <h4>Species-specific databases:</h4>
 <ul>
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=LYCO"><b>Tomato</b> <i>Solanum lycopersicum</i> (LycoCyc)</a> </li>
-  
+
   <li><a target="_blank" href="http://solcyc.solgenomics.net/POTATO/server.html"><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=POTATO"><b>Potato</b> <i>Solanum tuberosum</i> (PotatoCyc)</a></li>
-  
+
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=CAP"><b>Pepper</b> <i>Capsicum annuum</i> (CapCyc)</a></li>
-  
+
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=COFFEA"><b>Coffee</b> <i>Coffea arabica</i> (CoffeaCyc)</a></li>
-  
+
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=PET"><b>Petunia</b> <i>Petunia hybrida</i> (PetCyc)</a></li>
 
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=NITAB5"><b>Tobacco</b> <i>Nicotiana tabacum</i> (TN90)</a> <span class="tier">TIER 1</span>&nbsp;<font style="red">UPDATED</font></li>
-  
+
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=NATT"><i>Nicotiana attenuata</i> (NattCyc)</a> <span class="tier">TIER 1</span></li>
 
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=NISYL"><i>Nicotiana sylvestris</i> (NiSylCyc)</a> <span class="tier">TIER 1</span></li>
@@ -52,7 +52,7 @@ Currently, databases for tomato, potato, and pepper are available, generated fro
 <ul>
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=NICOTIANA"><b>Tobacco</b> Combined Nicotiana genus (NicotianaCyc)</a> <span class="tier">TIER 1</span></li>
   <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=SOLANA"><b>Solanaceae</b> Combined Solanaceae database (SolanaCyc)</a> <span class="tier">TIER 1</span></li>
-  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=METATOB"><b>MetaTobaccoCyc</b> Combined database of all manually curated pathways of Ralstonia solanacearum and Nicotiana tabacum (MetaTobaccoCyc)</a> <span class="tier">TIER 1</span></li>	
+  <li><a target="_blank" href="http://solcyc.solgenomics.net/organism-summary?object=METATOB"><b>MetaTobaccoCyc</b> Combined database of all manually curated pathways of Ralstonia solanacearum and Nicotiana tabacum (MetaTobaccoCyc)</a> <span class="tier">TIER 1</span></li>
 </ul>
 
 <p>
@@ -66,6 +66,6 @@ Note the availability of the <a href="http://solcyc.solgenomics.net/expression.h
 
 <b>Programmatic interfaces for Pathway Tools</b>:<br />
 We currently maintain a Perl interface and a Java interface for Pathway Tools:
-<a href="ftp://ftp.solgenomics.net/programs/javacyc/javacyc.tar.gz">JavaCyc</a> and <a href="ftp://ftp.solgenomics.net/programs/perlcyc/perlcyc.tar.gz">PerlCyc</a>. More information is available on the <a href="/downloads/">software downloads</a> page.
+<a href="http://solgenomics.net/ftp/programs/javacyc/javacyc.tar.gz">JavaCyc</a> and <a href="http://solgenomics.net/ftp/programs/perlcyc/perlcyc.tar.gz">PerlCyc</a>. More information is available on the <a href="/downloads/">software downloads</a> page.
 
 };

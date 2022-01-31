@@ -15,7 +15,7 @@
 
 <center>
     <a class="btn btn-primary" href="/tools/blast/?db_id=276" target="_blank" style="color:white">BLAST</a>&nbsp;&nbsp;
-    <a class="btn btn-primary" href="ftp://ftp.solgenomics.net/genomes/Petunia_inflata/" target="_blank" style="color:white">FTP Site</a>&nbsp;&nbsp;
+    <a class="btn btn-primary" href="http://solgenomics.net/ftp/genomes/Petunia_inflata/" target="_blank" style="color:white">FTP Site</a>&nbsp;&nbsp;
     <a class="btn btn-primary" href="http://solgenomics.net/jbrowse_solgenomics/?data=data%2Fjson%2FPeinf101&loc=Peinf101Scf00001" target="_blank" style="color:white">JBrowse</a>&nbsp;&nbsp;
     <a class="btn btn-primary" href="http://vigs.solgenomics.net" target="_blank" style="color:white">VIGS Tool</a>
 </center>

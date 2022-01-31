@@ -16,7 +16,7 @@ anonymous rsync.
 For manually downloading a few files once in a while, anonymous FTP is
 particularly convenient.  From a web browser, SGN's ftp site can be
 reached at <a
-href="ftp://ftp.sgn.cornell.edu/">ftp://ftp.sgn.cornell.edu/</a>.
+href="http://sgn.cornell.edu/ftp/">http://sgn.cornell.edu/ftp/</a>.
 From other FTP clients, when prompted for a username enter
 <em>anonymous</em> and when prompted for password enter your email
 address.

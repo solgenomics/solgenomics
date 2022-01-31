@@ -28,7 +28,7 @@
 
 <center>
     <a id="blue_button" href="/tools/blast/?db_id=266" target="_blank">BLAST</a>&nbsp;&nbsp;
-    <a id="blue_button" href="ftp://ftp.solgenomics.net/genomes/Nicotiana_benthamiana" target="_blank">FTP Site</a>&nbsp;&nbsp;
+    <a id="blue_button" href="http://solgenomics.net/ftp/genomes/Nicotiana_benthamiana" target="_blank">FTP Site</a>&nbsp;&nbsp;
     <a id="blue_button" href="http://solgenomics.net/jbrowse_solgenomics/?data=data%2Fjson%2FNiben1.0.1&loc=Niben101Scf00005" target="_blank" style="background-image:none;">JBrowse</a>&nbsp;&nbsp;
     <a id="blue_button" href="http://vigs.solgenomics.net" target="_blank" style="background-image:none;">VIGS Tool</a>
 </center>
@@ -51,7 +51,7 @@ If you have any questions, please contact Professor <a href="mailto:gbm7@cornell
 
 <h4>Assembly Statistics</h4>
 
-<i>N. benthamiana</i> Genome v1.0.1. Statistics from file <a href="ftp://ftp.solgenomics.net/genomes/Nicotiana_benthamiana/assemblies/" target="_blank">Niben.genome.v1.0.1.scaffolds.nrcontigs.fasta</a>
+<i>N. benthamiana</i> Genome v1.0.1. Statistics from file <a href="http://solgenomics.net/ftp/genomes/Nicotiana_benthamiana/assemblies/" target="_blank">Niben.genome.v1.0.1.scaffolds.nrcontigs.fasta</a>
 <br />
 <br />
 

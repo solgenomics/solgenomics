@@ -41,22 +41,22 @@ Two versions of the <i>Nicotiana tabacum</i> genome (Sierro, N. et al. 2014 and 
 <br>
 <br>
 <&| /page/info_section.mas, title => 'Nicotiana tabacum and related genomes datasets' &>
-  
+
   <div class="container-fluid">
     <div class="row">
-    
+
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 dataset-title">
         <b>Genome sequence and Annotation</b><br>
         <ul>
           <li>
-            <a href="ftp://ftp.solgenomics.net/genomes/Nicotiana_tabacum/edwards_et_al_2017">Edwards 2017</a>
+            <a href="http://solgenomics.net/ftp/genomes/Nicotiana_tabacum/edwards_et_al_2017">Edwards 2017</a>
           </li>
           <li>
-            <a href="ftp://ftp.solgenomics.net/genomes/Nicotiana_tabacum/sierro_et_al_2014">Sierro 2014</a>
+            <a href="http://solgenomics.net/ftp/genomes/Nicotiana_tabacum/sierro_et_al_2014">Sierro 2014</a>
           </li>
         </ul>
       </div>
-      
+
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 dataset-title">
         <b>Genome browser (JBrowse)</b><br>
         <ul>
@@ -70,7 +70,7 @@ Two versions of the <i>Nicotiana tabacum</i> genome (Sierro, N. et al. 2014 and 
             <a href="/jbrowse_solgenomics/?data=data/json/Ntab_TN90/">TN90 Scf Sierro 2014</a>
           </li>
       </div>
-        
+
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 dataset-title">
         <b><i>N. tabacum</i> v1.0 Edwards 2017 BLAST</b><br>
         <ul>
@@ -184,7 +184,7 @@ Two versions of the <i>Nicotiana tabacum</i> genome (Sierro, N. et al. 2014 and 
           </li>
         </ul>
       </div>
-        
+
       </div>
     </div>
   </div>

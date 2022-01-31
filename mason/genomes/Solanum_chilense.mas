@@ -36,7 +36,7 @@ Stam R, Nosenko T, H&ouml;rger AC, Stephan W, Seidel M, Kuhn JMM, Haberer G, Tel
          __border   => 0,
          __multicol => 2,
          'Bulk Datasets (via FTP)' =>
-           '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_chilense/Stam_et_al_2019">FTP</a>',
+           '<a href="http://solgenomics.net/ftp/genomes/Solanum_chilense/Stam_et_al_2019">FTP</a>',
      )
     %>
 </&>

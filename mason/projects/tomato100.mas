@@ -12,21 +12,21 @@ Michael Alonge, Xingang Wang, Matthias Benoit, Sebastian Soyk, Srividya Ramakris
 The Michael C. Schatz lab at Johns Hopkins University and Zachary B. Lippman lab at Cold Spring Harbor Laboratory present structural variant calls for 100 diverse tomato accessions and provide genome assemblies and associated gene/repeat annotations for 14 of these 100 accessions.
 <br />
 <br />
-<a href="ftp://ftp.solgenomics.net/genomes/tomato100/March_02_2020_sv_landscape/variants/">SV files</a>
+<a href="http://solgenomics.net/ftp/genomes/tomato100/March_02_2020_sv_landscape/variants/">SV files</a>
 <br />
-<a href="ftp://ftp.solgenomics.net/genomes/tomato100/March_02_2020_sv_landscape/">Assembly files</a>
-<br />
-<br />
-SVs were called by aligning Oxford Nanopore sequencing reads to the SL4.0 Heinz 1706 reference genome with NGMLR and inferring SVs with Sniffles. SVs were filtered, then merged and annotated with Jasmine and vcfanno, respectively. Insertion and deletion sequences were also repeat annotated by REPET. 
+<a href="http://solgenomics.net/ftp/genomes/tomato100/March_02_2020_sv_landscape/">Assembly files</a>
 <br />
 <br />
-Genome assemblies were generated with the MaSuRCA assembler (v3.3.3), which employed the Flye unitigging algorithm. Assemblies were screened for bacterial contamination and polished with POLCA. Assemblies were then ordered and oriented with respect to the SL4.0 Heinz 1706 reference genome using RaGOO (v1.1). During ordering and orienting, putative chimeric contigs were broken if there was high or low read (MaSuRCA mega-reads) coverage spanning breakpoints. All unplaced sequence was concatenated and placed into a 'Chromosome 0'. 
+SVs were called by aligning Oxford Nanopore sequencing reads to the SL4.0 Heinz 1706 reference genome with NGMLR and inferring SVs with Sniffles. SVs were filtered, then merged and annotated with Jasmine and vcfanno, respectively. Insertion and deletion sequences were also repeat annotated by REPET.
+<br />
+<br />
+Genome assemblies were generated with the MaSuRCA assembler (v3.3.3), which employed the Flye unitigging algorithm. Assemblies were screened for bacterial contamination and polished with POLCA. Assemblies were then ordered and oriented with respect to the SL4.0 Heinz 1706 reference genome using RaGOO (v1.1). During ordering and orienting, putative chimeric contigs were broken if there was high or low read (MaSuRCA mega-reads) coverage spanning breakpoints. All unplaced sequence was concatenated and placed into a 'Chromosome 0'.
 <br />
 <br />
 Genes were annotated by "lifting-over" a combination of Heinz ITAG 4.0 annotation and pan-genome genes (Gao et. al. 2019) onto the new assemblies. The in silico cDNA for each gene was aligned to assemblies with GMAP (version 2018-07-04) and Minimap2 (v2.16-r922). High confidence alignments were then used to annotate genes in our new assemblies. Annotated genes were assigned the same gene ids as their homologs in ITAG4.0. Annotated duplicate copies of genes are labeled with the ITAG4.0 gene id with a '-c num' suffix to keep them unique. Finally, repeat sequences in assemblies were annotated by REPET.
 <br />
 <br />
-For further information, please contact <a href="mailto:lippman@cshl.edu">Zach B. Lippman</a> or <a href="mailto:mschatz@cs.jhu.edu">Michael C. Schatz</a>     
+For further information, please contact <a href="mailto:lippman@cshl.edu">Zach B. Lippman</a> or <a href="mailto:mschatz@cs.jhu.edu">Michael C. Schatz</a>
 </p></div>
 </&>
 

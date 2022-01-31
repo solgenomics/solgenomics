@@ -22,7 +22,7 @@
                      __border   => 0,
                      __multicol => 2,
                      'Bulk Datasets (via FTP)' =>
-                     '<a href="ftp://ftp.solgenomics.net/genomes/tomato_360/">VCF files</a>',
+                     '<a href="http://solgenomics.net/ftp/genomes/tomato_360/">VCF files</a>',
 		     'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/tomato_variants_2.5">JBrowse</a>'
                     )
   %>

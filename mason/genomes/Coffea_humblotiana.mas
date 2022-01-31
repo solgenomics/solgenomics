@@ -12,7 +12,7 @@ $dbh
 
 <div class="page_introduction">
 
-   <a href="/organism/Coffea%20humblotiana/view/"><i>Coffea humblotiana</i></a> Bail. (1885) also called 'Cafeier de Humblot' is the unique Coffea species endemic from the Comoro archipelago in the Mozambique channel. <i>C. humblotiana</i> was found in humid forests between 600-1000 m elevation, but now the species is classified as endangered in the IUCN red list of threatened species, due to the local expansion of agriculture. Outside living collection, less than 110 trees may survive in the wild. Coffee drink from <i>C. humblotiana</i> seeds had a good reputation 'good color and smell during roasting', with 'a taste similar to Moka', despite the presence of a bitter substance. But one of the most remarkable features of C. humblotiana, is the complete absence of caffeine in seeds and leaves. We estimate the separation time between C. canephora (also called Robusta) and C. humblotiana, of about 11 Mya. 
+   <a href="/organism/Coffea%20humblotiana/view/"><i>Coffea humblotiana</i></a> Bail. (1885) also called 'Cafeier de Humblot' is the unique Coffea species endemic from the Comoro archipelago in the Mozambique channel. <i>C. humblotiana</i> was found in humid forests between 600-1000 m elevation, but now the species is classified as endangered in the IUCN red list of threatened species, due to the local expansion of agriculture. Outside living collection, less than 110 trees may survive in the wild. Coffee drink from <i>C. humblotiana</i> seeds had a good reputation 'good color and smell during roasting', with 'a taste similar to Moka', despite the presence of a bitter substance. But one of the most remarkable features of C. humblotiana, is the complete absence of caffeine in seeds and leaves. We estimate the separation time between C. canephora (also called Robusta) and C. humblotiana, of about 11 Mya.
 
 </div>
 <&| /page/info_section.mas, title=>"Coffea humblotiana genome V1.0" ,collapsible=> 1 &>
@@ -22,14 +22,14 @@ The C. humblotiana has a small genome size (422 Mb) consisting of 11 chromosomes
 
 
 <b>Assembly statistics</b>
-Sequences	390	
-Total Length (Mbp)	420.72	
-Average length (bp)	52,943	
-Longest sequence (Mbp)	57.52	
-Shortest sequence (bp)	20098	
-N75 length (Mbp)	29.06	
-N50 length (Mbp)	29.63	
-N25 length (Mbp)	48.24	
+Sequences	390
+Total Length (Mbp)	420.72
+Average length (bp)	52,943
+Longest sequence (Mbp)	57.52
+Shortest sequence (bp)	20098
+N75 length (Mbp)	29.06
+N50 length (Mbp)	29.63
+N25 length (Mbp)	48.24
 
 Number of gene models: 32,874
 88.7% of the assembly is found in 11 chromosomes
@@ -49,7 +49,7 @@ The accession RM-CF-00679 (BM 19/20) conserved in the Coffea collection at La Re
          __border   => 0,
          __multicol => 2,
          'Download genome data (via FTP)' =>
-           '<a href="ftp://ftp.solgenomics.net/genomes/Coffea_humblotiana">FTP</a>',
+           '<a href="http://solgenomics.net/ftp/genomes/Coffea_humblotiana">FTP</a>',
          'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=314">Genomic scaffolds</a>',
 	 #'BLAST protein sequences' => '<a href="/tools/blast/?db_id=305">Protein sequences</a>',
 	 #'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=304">CDS sequences</a>',

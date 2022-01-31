@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
   <div class="row">
-  
+
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
     <p>
@@ -19,15 +19,15 @@
       Proceedings of the National Academy of Sciences USA. In press.
     </p>
   </div>
-  
+
 </div>
-  
-  
+
+
 <br>
 
 <center>
     <a class="btn btn-primary" href="/tools/blast/?db_id=293" target="_blank" style="color:white">BLAST</a>&nbsp;&nbsp;
-    <a class="btn btn-primary" href="ftp://ftp.sgn.cornell.edu/genomes/Nicotiana_attenuata/" target="_blank" style="color:white">FTP Site</a>&nbsp;&nbsp;
+    <a class="btn btn-primary" href="http://sgn.cornell.edu/ftp/genomes/Nicotiana_attenuata/" target="_blank" style="color:white">FTP Site</a>&nbsp;&nbsp;
     <!-- <a class="btn btn-primary" href="http://solgenomics.net/jbrowse_solgenomics/?data=data%2Fjson%2FPeaxi162&loc=Peaxi162Scf00001" target="_blank" style="color:white">JBrowse</a>&nbsp;&nbsp; -->
     <!-- <a class="btn btn-primary" href="http://vigs.solgenomics.net" target="_blank" style="color:white">VIGS Tool</a> -->
 </center>

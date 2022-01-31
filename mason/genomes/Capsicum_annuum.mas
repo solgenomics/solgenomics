@@ -5,7 +5,7 @@
 
 <!-- <div class="page_introduction"> -->
 <p>
-Linked-read sequencing technology was used to create a phased assembly that was scaffolded into chromosomes for an F1 of a wide cross (UCD-10X-F1) between a landrace, Criollos de Morelos 334 (CM334) and a nonpungent blocky pepper-breeding line. Please see <a href="https://www.nature.com/articles/s41438-017-0011-0">Hulse-Kemp et al. (2017)</a> for more details. This genome is available in <a href="/tools/blast?db_id=301">blast</a> and on the <a href="ftp://ftp.solgenomics.net/genomes/Capsicum_annuum/C.annuum_UCD10X/">FTP site</a>.  
+Linked-read sequencing technology was used to create a phased assembly that was scaffolded into chromosomes for an F1 of a wide cross (UCD-10X-F1) between a landrace, Criollos de Morelos 334 (CM334) and a nonpungent blocky pepper-breeding line. Please see <a href="https://www.nature.com/articles/s41438-017-0011-0">Hulse-Kemp et al. (2017)</a> for more details. This genome is available in <a href="/tools/blast?db_id=301">blast</a> and on the <a href="http://solgenomics.net/ftp/genomes/Capsicum_annuum/C.annuum_UCD10X/">FTP site</a>.
 </p>
 <p>
 The hot pepper genome (Mexican landrace of <i>Capsicum annuum</i> cv. CM334) has been sequenced by an international group of scientists from Korea, Israel and USA.
@@ -29,7 +29,7 @@ The official page for this genome sequences is <a href="http://peppersequence.ge
 
 <center>
     <a id="blue_button" href="/tools/blast/?db_id=217" target="_blank">BLAST</a>&nbsp;&nbsp;
-    <a id="blue_button" href="ftp://ftp.solgenomics.net/genomes/Capsicum_annuum/" target="_blank">FTP Site</a>&nbsp;&nbsp;
+    <a id="blue_button" href="http://solgenomics.net/ftp/genomes/Capsicum_annuum/" target="_blank">FTP Site</a>&nbsp;&nbsp;
     <a id="blue_button" href="http://solgenomics.net/jbrowse_solgenomics/?data=data%2Fjson%2FPepper.v.1.55&loc=Pepper1.55ch01" target="_blank" style="background-image:none;">JBrowse</a>&nbsp;&nbsp;
 </center>
 
@@ -41,7 +41,7 @@ The official page for this genome sequences is <a href="http://peppersequence.ge
                      __border   => 0,
                      __multicol => 2,
                      'Bulk Datasets (via FTP)' =>
-                     '<a href="ftp://ftp.solgenomics.net/genomes/Capsicum_annuum/">Genome sequence and Annotation</a>',
+                     '<a href="http://solgenomics.net/ftp/genomes/Capsicum_annuum/">Genome sequence and Annotation</a>',
                      BLAST => '<a href="/tools/blast/?db_id=219">Genomic sequence</a>',
                      'Genome browser' => '<a href="/jbrowse/JBrowse-1.11.4/?data=data/json/Pepper1.55/">Jbrowse</a>'
                     )

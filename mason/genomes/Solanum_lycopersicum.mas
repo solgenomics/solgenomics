@@ -21,7 +21,7 @@ All data is openly and freely available on <a href="/">SGN</a>, <a href="http://
 
 <&| /page/info_section.mas, title=>'Download' &>
 
-<a href="ftp://ftp.solgenomics.net/tomato_genome">FTP site</a> | <a href="/jbrowse_solgenomics/?data=data%2Fjson%2FSL2.50&loc=SL2.50ch00%3A8722915..13084079&tracks=DNA&highlight=">Genome Browser</a> | <a href="/tools/blast/">BLAST</a>
+<a href="http://solgenomics.net/ftp/tomato_genome">FTP site</a> | <a href="/jbrowse_solgenomics/?data=data%2Fjson%2FSL2.50&loc=SL2.50ch00%3A8722915..13084079&tracks=DNA&highlight=">Genome Browser</a> | <a href="/tools/blast/">BLAST</a>
 </&>
 
 
@@ -68,7 +68,7 @@ All data is openly and freely available on <a href="/">SGN</a>, <a href="http://
 <&| /page/info_section.mas, title => 'Other tomato genome pages on SGN', collapsible => 1 &>
   <ul>
   <li><a href="/about/tomato_project_overview.pl">Tomato Project Details</a></li>
-  <li><a href="ftp://ftp.sgn.cornell.edu/genomes/Solanum_lycopersicum/">Tomato genome FTP</a></li>
+  <li><a href="http://sgn.cornell.edu/ftp/genomes/Solanum_lycopersicum/">Tomato genome FTP</a></li>
     </ul>
 </&>
 
