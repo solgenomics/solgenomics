@@ -3,6 +3,7 @@
   <ul class="dropdown-menu">
 
     <li class="dropdown-header">Projects</li>
+    <li><a href="/projects/tgg">Tomato graph pangenome project</a></li>
     <li><a href="/projects/varitome">Varitome project</a></li>
     <li><a href="http://bti.cornell.edu/research/projects/nicotiana-benthamiana"><i>Nicotiana benthamiana</i> BTI site</a></li>
     <li><a href="/projects/tomato100">100 Tomato genomes project</a></li>
