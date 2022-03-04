@@ -12,9 +12,9 @@
 <div class="page_introduction">
 
   <a href="/organism/Solanum%20lycopersicoides/view/"><i>Solanum
-  lycopersicoides</i></a>  is a wild tomato species 
+  lycopersicoides</i></a>  is a wild tomato species
   related to the domesticated <a href="/organism/Solanum lycopersicum/view"><i>Solanum
-  lycopersicum</i></a>.  
+  lycopersicum</i></a>.
 
 </div>
 
@@ -25,31 +25,31 @@
 <h3 style="text-align: center"><i>Solanum lycopersicoides</i> Data Access Agreement</h3>
 <h4 style="text-align: center">PLEASE READ BEFORE ACCESSING THE PRE-PUBLICATION SEQUENCE OF SOLANUM LYCOPERSICOIDES</h4>
 
- The Boyce Thompson Institute and RWTH Aachen University are pleased to make the pre-publication 
- Solanum lycopersicoides LA2951 genome sequences publicly available as a resource for plant breeding and biology. 
+ The Boyce Thompson Institute and RWTH Aachen University are pleased to make the pre-publication
+ Solanum lycopersicoides LA2951 genome sequences publicly available as a resource for plant breeding and biology.
 
- By accessing these data, I hereby agree to respect the rights of the consortium to analyze and 
- publish the first global analyses in a peer-reviewed publication according to the Toronto agreement. 
- This includes: 
- 1) whole chromosome or whole genome level analyses on genes, gene families, and repetitive sequences and 
- 2) comparative analyses with other organisms. 
- Studies that do not overlap with those planned by the consortium may be undertaken following an agreement. 
- Please contact  <a href="mailto:usadel@bio1.rwth-aachen.de">Dr. Bjorn Usadel</a> or  <a href="mailto:srs57@cornell.edu">Dr. Susan Strickler</a>  
- to discuss such possibilities. 
+ By accessing these data, I hereby agree to respect the rights of the consortium to analyze and
+ publish the first global analyses in a peer-reviewed publication according to the Toronto agreement.
+ This includes:
+ 1) whole chromosome or whole genome level analyses on genes, gene families, and repetitive sequences and
+ 2) comparative analyses with other organisms.
+ Studies that do not overlap with those planned by the consortium may be undertaken following an agreement.
+ Please contact  <a href="mailto:usadel@bio1.rwth-aachen.de">Dr. Bjorn Usadel</a> or  <a href="mailto:srs57@cornell.edu">Dr. Susan Strickler</a>
+ to discuss such possibilities.
 
  The data may be freely downloaded and used by all who respect the restrictions described above.
- <b>Any use of the S. lycopersicoides genome data prior to its publication must follow the agreement 
+ <b>Any use of the S. lycopersicoides genome data prior to its publication must follow the agreement
  and must credit "The Solanum lycopersicoides Genome Consortium".</b>
 
- 
-</div>  
+
+</div>
 
 </&>
 
 <&| /page/info_section.mas, title => 'Assembly details' &>
 
 <p>
-The genome was sequenced at 90X coverage using PacBio technology and was assembled with Canu.  Contigs were error-corrected with Quiver and Pilon and scaffolded with Hi-C.  Gaps were filled with PacBio sequence using PBJelly. 
+The genome was sequenced at 90X coverage using PacBio technology and was assembled with Canu.  Contigs were error-corrected with Quiver and Pilon and scaffolded with Hi-C.  Gaps were filled with PacBio sequence using PBJelly.
 <br><br>
 contig total length: 1,254,763,366 bp<br>
 no contigs: 17,507<br>
@@ -76,9 +76,9 @@ longest sequence: 133,820,975 bp<br>
    <% info_table_html(
          __border   => 0,
          __multicol => 2,
-   'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/Slyd0.6&tracks=DNA,gene_models">Jbrowse</a>',
-   BLAST => 
-   '<a href="/tools/blast/?db_id=302">Genomic scaffolds</a>'
+   'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/Slyd2.0&tracks=DNA,gene_models">Jbrowse</a>',
+   BLAST => '<a href="/tools/blast/?db_id=328">Genomic Scaffolds</a>',
+   'Data Download' => '<a href="https://solgenomics.net/ftp/genomes/Solanum_lycopersicoides/">FTP Site</a>'
      )
     %>
 </&>
