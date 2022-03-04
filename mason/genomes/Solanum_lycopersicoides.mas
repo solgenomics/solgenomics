@@ -77,7 +77,7 @@ longest sequence: 133,820,975 bp<br>
          __border   => 0,
          __multicol => 2,
    'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/Slyd2.0&tracks=DNA,gene_models">Jbrowse</a>',
-   BLAST => '<a href="/tools/blast/?db_id=328">Chromosomes</a>',
+   BLAST => '<a href="/tools/blast/?db_id=328">Genomic Scaffolds</a>',
    'Data Download' => '<a href="https://solgenomics.net/ftp/genomes/Solanum_lycopersicoides/">FTP Site</a>'
      )
     %>
