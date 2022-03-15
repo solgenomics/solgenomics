@@ -31,7 +31,7 @@ Version 4.1 differs from version 4 (<a href="https://doi.org/10.1111/tpj.15313">
          'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=324">Genomic sequence</a>',
          'BLAST protein sequences' => '<a href="/tools/blast/?db_id=326">Protein sequences</a>',
          'BLAST transcripts sequences' => '<a href="/tools/blast/?db_id=325">Transcripts sequences</a>',
-         'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data/json/eggplant4.1=">Genome browser</a>',
+         'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data/json/eggplant4.1">Genome browser</a>',
          #'Genetic map' => '<a href="/cview/map.pl?map_version_id=63">COS map</a>',
    )
    %>
@@ -84,8 +84,8 @@ Version 4.1 differs from version 4 (<a href="https://doi.org/10.1111/tpj.15313">
          'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=303">Genome sequence</a>',
 	       'BLAST protein sequences' => '<a href="/tools/blast/?db_id=305">Protein sequences</a>',
          'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=304">CDS sequences</a>',
-         'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data/json/eggplant3.0=">Genome browser</a>',
-	       'Genetic map' => '<a href="/cview/map.pl?map_version_id=63">COS map</a>',
+         'JBrowse view' => '<a href="/jbrowse_solgenomics/?data=data/json/eggplant3.0">Genome browser</a>',
+	       #'Genetic map' => '<a href="/cview/map.pl?map_version_id=63">COS map</a>',
      )
    %>
 </&>
