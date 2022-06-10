@@ -24,7 +24,7 @@
                      __border   => 0,
                      __multicol => 2,
                      'Bulk Datasets (via FTP)' =>
-                     '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_lycopersicum/inbred_lines/gh13/">Consensus sequence</a>',
+                     '<a href="https://solgenomics.net/ftp/genomes/Solanum_lycopersicum/inbred_lines/gh13/">Consensus sequence</a>',
                      BLAST => '<a href="/tools/blast/?db_id=214">Genomic sequence</a>',
                      'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/SL2.40&tracks=DNA,bti87_snps,gene_models">Jbrowse</a>'
                     )
@@ -40,7 +40,7 @@
        __border   => 0,
     __multicol => 2,
     'Bulk Datasets (via FTP)' =>
-    '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_lycopersicum/inbred_lines/bti87/">Consensus sequence</a>',
+    '<a href="https://solgenomics.net/ftp/genomes/Solanum_lycopersicum/inbred_lines/bti87/">Consensus sequence</a>',
     BLAST => '<a href="/tools/blast/?db_id=215">Genomic sequence</a>',
     'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/SL2.40&tracks=DNA,gh13_snps,gene_models">Jbrowse</a>'
     )
@@ -55,7 +55,7 @@
        __border   => 0,
     __multicol => 2,
     'Bulk Datasets (via FTP)' =>
-    '<a href="ftp://ftp.solgenomics.net/genomes/Solanum_lycopersicum/inbred_lines/Fla630/">Consensus sequence</a>',
+    '<a href="https://solgenomics.net/ftp/genomes/Solanum_lycopersicum/inbred_lines/Fla630/">Consensus sequence</a>',
     BLAST => '<a href="/tools/blast/?db_id=300">Genomic sequence</a>',
     'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/SL2.50&tracks=DNA,630_snps,gene_models">Jbrowse</a>'
     )

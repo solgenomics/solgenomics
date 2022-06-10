@@ -12,7 +12,7 @@
 
 
 <&| /page/info_section.mas, title => '360 Tomato Genomes' &>
-  Genomic analyses provide insights into the history of tomato breeding <a href="http://www.nature.com/ng/journal/v46/n11/full/ng.3117.html">Lin et al. Nature Genetics, 2014</a><br />
+  Genomic analyses provide insights into the history of tomato breeding <a href="https://www.nature.com/ng/journal/v46/n11/full/ng.3117.html">Lin et al. Nature Genetics, 2014</a><br />
 
   See more info about the project on the <a href="http://bti.cornell.edu/news/new-genomics-study-mines-360-tomato-varieties-to-trace-history-find-room-for-improvement/">BTI web site</a>
 
@@ -22,7 +22,7 @@
                      __border   => 0,
                      __multicol => 2,
                      'Bulk Datasets (via FTP)' =>
-                     '<a href="http://solgenomics.net/ftp/genomes/tomato_360/">VCF files</a>',
+                     '<a href="https://solgenomics.net/ftp/genomes/tomato_360/">VCF files</a>',
 		     'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/tomato_variants_2.5">JBrowse</a>'
                     )
   %>

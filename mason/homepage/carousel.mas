@@ -28,8 +28,8 @@
               <a href="/jbrowse_solgenomics/?data=data/json/SL3.0"><li>Browse the tomato genome</li></a>
               <a href="/tools/blast?db_id=283"><li>Find sequences by similarity</li></a>
               <!--<a href="http://vigs.solgenomics.net"><li>Design VIGS constructs</li></a> -->
-              <a href="ftp://ftp.solgenomics.net/genomes/Solanum_lycopersicum/annotation/ITAG3.0_release/"><li>Download the annotations</li></a>
-              <a href="ftp://ftp.solgenomics.net/genomes/Solanum_lycopersicum/assembly/build_3.00/"><li>Download the Genome Sequence</li></a>
+              <a href="https://solgenomics.net/ftp/genomes/Solanum_lycopersicum/annotation/ITAG3.0_release/"><li>Download the annotations</li></a>
+              <a href="https://solgenomics.net/ftp/genomes/Solanum_lycopersicum/assembly/build_3.00/"><li>Download the Genome Sequence</li></a>
             </ul>
           </div>
         </div>
@@ -45,8 +45,8 @@
           <ul class="sgn_sm_list">
             <a href="/jbrowse_solgenomics/?data=data%2Fjson%2FPGSC_DM_v4.03"><li>Browse the potato genome</li></a>
             <a href="/tools/blast?db_id=262"><li>Find sequences by similarity</li></a>
-            <a href="ftp://ftp.solgenomics.net/genomes/Solanum_tuberosum/annotation/"><li>Download the annotations</li></a>
-            <a href="ftp://ftp.solgenomics.net/genomes/Solanum_tuberosum/assembly/PGSC_DM_v4.03/"><li>Download the Genome Sequence</li></a>
+            <a href="https://solgenomics.net/ftp/genomes/Solanum_tuberosum/annotation/"><li>Download the annotations</li></a>
+            <a href="https://solgenomics.net/ftp/genomes/Solanum_tuberosum/assembly/PGSC_DM_v4.03/"><li>Download the Genome Sequence</li></a>
           </ul>
         </div>
 
@@ -64,8 +64,8 @@
           <ul class="sgn_sm_list">
             <a href="/jbrowse_solgenomics/?data=data%2Fjson%2FPepper.v.1.55"><li>Browse the pepper genome</li></a>
             <a href="/tools/blast?db_id=217"><li>Find sequences by similarity</li></a>
-            <a href="ftp://ftp.solgenomics.net/genomes/Capsicum_annuum/"><li>Download the annotations</li></a>
-            <a href="ftp://ftp.solgenomics.net/genomes/Capsicum_annuum/"><li>Download the Genome Sequence</li></a>
+            <a href="https://solgenomics.net/ftp/genomes/Capsicum_annuum/"><li>Download the annotations</li></a>
+            <a href="https://solgenomics.net/ftp/genomes/Capsicum_annuum/"><li>Download the Genome Sequence</li></a>
           </ul>
         </div>
 
@@ -81,11 +81,11 @@
 
         <div class="carousel-sgn-links">
           <ul class="sgn_sm_list">
-            <a href="http://bti.cornell.edu/research/projects/nicotiana-benthamiana/"><li>The <i>N. benthamiana</i> sequencing project</li></a>
+            <a href="https://bti.cornell.edu/research/projects/nicotiana-benthamiana/"><li>The <i>N. benthamiana</i> sequencing project</li></a>
             <a href="/jbrowse_solgenomics/?data=data%2Fjson%2FNiben1.0.1&loc=Niben101Scf00005"><li>Browse the genome</li></a>
             <a href="/tools/blast/?db_id=266"><li>Find sequences by similarity</li></a>
-            <a href="http://vigs.solgenomics.net"><li>Design VIGS constructs</li></a>
-            <a href="ftp://ftp.solgenomics.net/genomes/Nicotiana_benthamiana"><li>Downloads</li></a>
+            <a href="https://vigs.solgenomics.net"><li>Design VIGS constructs</li></a>
+            <a href="https://solgenomics.net/ftp/genomes/Nicotiana_benthamiana"><li>Downloads</li></a>
           </ul>
         </div>
 
@@ -105,9 +105,9 @@
             <a href="/jbrowse_solgenomics/?data=data%2Fjson%2FPeaxi162&loc=Peaxi162Scf00001"><li>Browse the <i>P. axillaris</i> genome</li></a>
             <a href="/jbrowse_solgenomics/?data=data%2Fjson%2FPeinf101&loc=Peinf101Scf00001"><li>Browse the <i>P. inflata</i> genome</li></a>
             <a href="/tools/blast/?db_id=270"><li>Find sequences by similarity</li></a>
-            <a href="http://vigs.solgenomics.net"><li>Design VIGS constructs</li></a>
-            <a href="ftp://ftp.solgenomics.net/genomes/Petunia_axillaris"><li><i>P. axillaris</i> Downloads</li></a>
-            <a href="ftp://ftp.solgenomics.net/genomes/Petunia_inflata"><li><i>P. inflata</i> Downloads</li></a>
+            <a href="https://vigs.solgenomics.net"><li>Design VIGS constructs</li></a>
+            <a href="https://solgenomics.net/ftp/genomes/Petunia_axillaris"><li><i>P. axillaris</i> Downloads</li></a>
+            <a href="https://solgenomics.net/ftp/genomes/Petunia_inflata"><li><i>P. inflata</i> Downloads</li></a>
           </ul>
         </div>
 
@@ -125,8 +125,8 @@
           <div class="carousel-sgn-links">
             <ul class="sgn_sm_list">
               <a href="/tools/blast?db_id=248"><li>Find sequences by similarity</li></a>
-              <a href="ftp://ftp.solgenomics.net/genomes/Solanum_melongena/"><li>Download the annotations</li></a>
-              <a href="ftp://ftp.solgenomics.net/genomes/Solanum_melongena/"><li>Download the Genome Sequence</li></a>
+              <a href="https://solgenomics.net/ftp/genomes/Solanum_melongena/"><li>Download the annotations</li></a>
+              <a href="https://solgenomics.net/ftp/genomes/Solanum_melongena/"><li>Download the Genome Sequence</li></a>
             </ul>
           </div>
 

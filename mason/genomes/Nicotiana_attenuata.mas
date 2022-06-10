@@ -27,9 +27,9 @@
 
 <center>
     <a class="btn btn-primary" href="/tools/blast/?db_id=293" target="_blank" style="color:white">BLAST</a>&nbsp;&nbsp;
-    <a class="btn btn-primary" href="http://sgn.cornell.edu/ftp/genomes/Nicotiana_attenuata/" target="_blank" style="color:white">FTP Site</a>&nbsp;&nbsp;
-    <!-- <a class="btn btn-primary" href="http://solgenomics.net/jbrowse_solgenomics/?data=data%2Fjson%2FPeaxi162&loc=Peaxi162Scf00001" target="_blank" style="color:white">JBrowse</a>&nbsp;&nbsp; -->
-    <!-- <a class="btn btn-primary" href="http://vigs.solgenomics.net" target="_blank" style="color:white">VIGS Tool</a> -->
+    <a class="btn btn-primary" href="https://solgenomics.net/ftp/genomes/Nicotiana_attenuata/" target="_blank" style="color:white">FTP Site</a>&nbsp;&nbsp;
+    <!-- <a class="btn btn-primary" href="https://solgenomics.net/jbrowse_solgenomics/?data=data%2Fjson%2FPeaxi162&loc=Peaxi162Scf00001" target="_blank" style="color:white">JBrowse</a>&nbsp;&nbsp; -->
+    <!-- <a class="btn btn-primary" href="https://vigs.solgenomics.net" target="_blank" style="color:white">VIGS Tool</a> -->
 </center>
 
 <br>

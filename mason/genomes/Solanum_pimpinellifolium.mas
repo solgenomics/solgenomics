@@ -26,7 +26,7 @@ Hitomi Takei, Kenta Shirasawa, Kosuke Kuwabara, Atsushi Toyoda, Yuma Matsuzawa, 
    <% info_table_html(
             __border   => 0,
 	       __multicol => 3,
-	          'Download genome data' => '<a href="http://solgenomics.net/ftp/genomes/Solanum_pimpinellifolium/LA1670/">FTP site</a>',
+	          'Download genome data' => '<a href="https://solgenomics.net/ftp/genomes/Solanum_pimpinellifolium/LA1670/">FTP site</a>',
    'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/Spimp1.5&tracks=DNA,gene_models"></a>',
    BLAST =>
       '<a href="/tools/blast/?db_id=311">LA1670 genome contigs</a>'
@@ -69,7 +69,7 @@ number of gene models: 35,761 <br>
    <% info_table_html(
          __border   => 0,
    __multicol => 3,
-   'Download genome data' => '<a href="http://solgenomics.net/ftp/genomes/Solanum_pimpinellifolium/LA2093/Spimp_LA2093_genome_v1.5/">FTP site</a>',
+   'Download genome data' => '<a href="https://solgenomics.net/ftp/genomes/Solanum_pimpinellifolium/LA2093/Spimp_LA2093_genome_v1.5/">FTP site</a>',
    'Genome browser' => '<a href="/jbrowse_solgenomics/?data=data/json/Spimp1.5&tracks=DNA,gene_models"></a>',
    BLAST =>
    '<a href="/tools/blast/?db_id="></a>'
@@ -84,9 +84,9 @@ number of gene models: 35,761 <br>
 
   <div>
     The draft S. pimpinellifolium LA1589 genome was sequenced by a group of scientists at
-  the <a href="http://cshl.org">Cold Spring Harbor Laboratory</a>.
+  the <a href="https://cshl.org">Cold Spring Harbor Laboratory</a>.
 <br>
- These data have been published and are freely accessible. Please cite <a href="http://www.nature.com/nature/journal/v485/n7400/full/nature11119.html">Nature 485, 635-641</a> when using this resource. <br /><br />
+ These data have been published and are freely accessible. Please cite <a href="https://www.nature.com/nature/journal/v485/n7400/full/nature11119.html">Nature 485, 635-641</a> when using this resource. <br /><br />
  Please contact D. Ware or Z. B. Lippman (E-mail:
   <a href="mailto:ware@cshl.edu">ware@cshl.edu</a> or
   <a href="mailto:lippman@cshl.edu">lippman@cshl.edu</a>) with any questions.
@@ -100,7 +100,7 @@ number of gene models: 35,761 <br>
          __border   => 0,
          __multicol => 2,
          'Bulk Datasets (via FTP)' =>
-           '<a href="http://solgenomics.net/ftp/genomes/Solanum_pimpinellifolium/LA1589/assemblies/A-1.0/">Genomic scaffolds</a>',
+           '<a href="https://solgenomics.net/ftp/genomes/Solanum_pimpinellifolium/LA1589/assemblies/A-1.0/">Genomic scaffolds</a>',
          BLAST => '<a href="/tools/blast/?db_id=114">Genomic scaffolds</a>'
      )
     %>
