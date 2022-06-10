@@ -3,42 +3,13 @@
 </%args>
 <& /page/page_title.mas, title => '<i>'.$organism->species.'</i> Genome Data' &>
 
-<& /genomes/Iochroma_cyaneum/usage_popup.mas &>
-
 <div class="page_introduction">
 
   <a href="/organism/Iochroma%20cyaneum/view/"><i>Iochroma
   cyaneum</i></a> is a showy-flowered Andean shrub in the tomatillo subfamily (Physalideae) of the Solanaceae.
+  When using resources and data related to this genome, please cite the following publication: <a href="https://doi.org/10.1002/tpg2.20223">Genome sequence for the blue-flowered Andean shrub <i>Iochroma cyaneum</i> reveals extensive discordance across the berry clade of Solanaceae.</a>
 
 </div>
-
-<&| /page/info_section.mas, title=>"Disclaimer and Data Access Agreement" &>
-
-<div style="text-align: justify; border: 1px solid gray; padding: 2em 3em 3em 3em">
-
-<h3 style="text-align: center"><i>Iochroma cyaneum</i> Data Access Agreement</h3>
-<h4 style="text-align: center">PLEASE READ BEFORE ACCESSING THE PRE-PUBLICATION SEQUENCE OF <i>Iochroma cyaneum</i></h4>
-
-The Boyce Thompson Institute and the University of Colorado are pleased to make the pre-publication
- <i>Iochroma cyaneum</i> genome assembly and annotation available as a resource for scientific research.
-
- By accessing these data, I hereby agree to respect the rights of the consortium to analyze and
- publish the first global analyses in a peer-reviewed publication according to the Toronto agreement.
- This includes:
- 1) whole chromosome or whole genome level analyses on genes, gene families, and repetitive sequences and
- 2) comparative analyses with other organisms.
- Studies that do not overlap with those planned by the consortium may be undertaken following an agreement.
- Please contact  <a href="mailto:Stacey.D.Smith@colorado.edu">Dr. Stacey Smith</a> or  <a href="mailto:srs57@cornell.edu">Dr. Susan Strickler</a>
- to discuss such possibilities.
-
- The data may be freely downloaded and used by all who respect the restrictions described above.
- <b>Any use of the <i>I. cyaneum</i> genome data prior to its publication must follow the agreement
- and must credit "The <i>Iochroma cyaneum</i> Genome Consortium".</b>
-
-
-</div>
-
-</&>
 
 <&| /page/info_section.mas, title => 'Assembly Details' &>
 
