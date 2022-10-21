@@ -1,5 +1,98 @@
 <br />
-<& /page/page_title.mas, title=>"<i>Nicotiana benthamiana</i> draft genome sequence v1.0.1" &>
+<& /page/page_title.mas, title=>"<i>Nicotiana benthamiana</i> Genome Sequence" &>
+
+<&| /page/info_section.mas, title=>"<i>Nicotiana benthamiana</i> draft genome sequence v2.6.1" ,collapsible=> 1 &>
+
+<p>
+The N. benthamiana draft genome v2.6.1. is a new assembly version based on the Illumina data used in the version Niben1.0.1,
+with the addition of new Illumina mate pair data (20Kb, 15Kb and 5Kb) produced by Prof. Greg Martin and Prof. Lukas Mueller (BTI),
+PacBio Sequel Long reads produced by Dr. Brain Kivtko (UGA) and HiC data donated by Dr. Silin Zhong (HKCU).
+The result is an assembly with 19 pseudomolecules and 17,620 small scaffolds.
+</p>
+
+<center>
+    <a id="blue_button" href="/tools/blast/?db_id=330" target="_blank">BLAST</a>&nbsp;&nbsp;
+    <a id="blue_button" href="https://solgenomics.net/ftp/genomes/Nicotiana_benthamianaV261/" target="_blank">FTP Site</a>&nbsp;&nbsp;
+    <a id="blue_button" href="http://solgenomics.net/jbrowse_solgenomics/?data=data%2Fjson%2FNiben261" target="_blank" style="background-image:none;">JBrowse</a>&nbsp;&nbsp;
+</center>
+
+
+<h4> Assembly </h4>
+
+<p>
+The assembly was performed using SOAPdenovo2 with the default settings on the Illumina data (PE500bp + MP2Kb +MP5Kb + MP15Kb + MP20Kb)
+with one round of gap filling with GapCloser (Illumina PE500bp) and another round with PBJelly (10X coverage with PacBio Sequel).
+The assembly was re-scaffolded again with SSPACE-Long (PacBio Sequel) and the gaps filled again with another round of PBJelly.
+This final assembly was scaffolded into chromosomes using HiC data and the tool 3D-DNA.
+</p>
+
+<p>
+<b>STATS </b>
+
+<ul>
+<li>Total assembly size (Gb): 3.03. </li>
+<li>Total number of sequences: 19 chromosomes (>95% anchoring) + 17,620 scaffolds.</li>
+<li>Longest sequence (Mb): 194.60.</li>
+<li>N90 (sequences): 18</li>
+<li>L90 (Mb): 137.64</li>
+<li>BUSCO: C:95.9%[S:47.6%,D:48.3%],F:2.1%,M:2.0%</li>
+<li>C:97.7%[S:46.6%,D:51.1%],F:2.0%,M:0.3%,n:1375</li>
+<li>Merqury: <ul>
+ <li>Completeness: 98.12%</li>
+ <li>QV: 29.4</li>
+ <li>Consensus error rate: 0.001</li></ul></li>
+</ul>
+
+</p>
+
+<h4> Annotation </h4>
+
+<p>
+The annotation was performed with Maker-P. In brief, we downloaded all the RNA-Seq publicly available for N. benthamiana from NCBI SRA
+(this was in 2017) and we mapped to the Niben2.6.1 reference with STAR.
+A evidence-based set of gene models was created with StringTie. A de-novo repeat library was generated with RepeatModeler2.
+Then, the models created with StringTie were used to train Augustus using Braker.
+The models generated with StringTie, the training files from Augustus, the protein set from different Solanaceae genomes
+and the repeat library from RepeatModeler2 were used as inputs for Makert-P.
+</p>
+
+<b> STATS </b>
+
+<p>
+<ul>
+<li>Gene models: 61,328.</li>
+<li>Exons/gene model: 4.98</li>
+<li>Annotated 5' UTRs: 1,901</li>
+<li>Annotated 3' UTRs: 244</li>
+<li>Average protein length (Aa): 333</li>
+<li>Gene space size (Mb): 281.</li>
+<li>Repeats:
+ <ul>
+  <li>Low complexity: 1.27%</li>
+  <li>DNA Transposons: 1.25%</li>
+  <li>LINE Transposons: 1.57%</li>
+  <li>SINE Transposons: 0.36%</li>
+  <li>LTR/Copia: 4.60%</li>
+  <li>LTR/Gypsy: 10.73%</li>
+  <li>Other LTR transposons: 0.16%</li>
+  <li>rRNA: 0.03%</li>
+  <li>tRNA: <0.01%</li>
+  <li>snRNA: <0.01%</li>
+ </ul>
+ </li>
+ </ul>
+
+</p>
+
+
+<p>
+If you have any questions, please contact Professor <a href="mailto:abombarely@ibmcp.upv.es">Aureliano Bombarely</a>.
+</p>
+
+</&>
+
+
+<&| /page/info_section.mas, title=>"<i>Nicotiana benthamiana</i> draft genome sequence v1.0.1" ,collapsible=> 1 &>
 
 <p>
   A new draft sequence of the <i>Nicotiana benthamiana</i> genome has been released by researchers from the <a href="http://btiscience.org/" target="_blank">Boyce Thompson Institute for Plant Research (BTI)</a>.
@@ -207,7 +300,7 @@ Sequencing of the <i>N. benthamiana</i> genome was supported by funds from the B
 
 <br />
 <br />
-
+</&>
 
 <style>
 
