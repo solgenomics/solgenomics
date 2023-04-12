@@ -34,7 +34,7 @@
     <li role="separator" class="divider"></li>
     <li class="dropdown-header">Bulk Query</li>
     <li><a href="/tools/bulk?mode=ftp">FTP Site</a></li>
-    <li><a href="/tools/bulk?mode=genes">Download Gene Sequences</a></li>
+    <li><a href="/ftp/genomes">Download Gene Sequences</a></li>
     <li><a href="/tools/bulk">Clones, Arrays, Unigenes and BACs</a></li>
     <li><a href="/tools/bulk?mode=converter">Unigene Converter</a></li>
   </ul>
