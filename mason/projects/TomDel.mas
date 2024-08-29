@@ -20,7 +20,7 @@ Tomato genes in which deleterious mutations were detected can be searched on <a 
 </&>
 <&| /page/info_section.mas, title => 'TomDel on SGN' &>
 <br />
-On the Solanaceae Genomic Network, information and plots for deleterious mutations from each gene can be found by searching using the Search/Gene & Loci option;
+On the Solanaceae Genomic Network, information and plots for deleterious mutations from each gene can be found by searching using the <a href="/search/locus">Search/Gene & Loci</a> option;
 <br />
 e.g. see <a href="https://solgenomics.net/locus/9401/view%20for%20information%20on%20Solyc01g005000">https://solgenomics.net/locus/9401/view</a> for information on Solyc01g005000.
 <br />
