@@ -26,6 +26,7 @@
  Download from <a href="https://spuddb.uga.edu/dm_v6_1_download.shtml">SpudDB</a>
  </p>
  <br/>
+</&>
 
  <&| /page/info_section.mas, title => 'Available Data' &>
     <% info_table_html(
@@ -40,6 +41,7 @@
  	 'JBrowse view' => '<a href="/jbrowse2/"></a>',
       )
      %>
+ </&>
 
 <&| /page/info_section.mas,
       title       => 'Sequence datasets - previous versions',
@@ -70,3 +72,6 @@
   <& /genomes/default/annotation_sets.mas, %ARGS &>
 
 </&>
+<%init>
+  use CXGN::Page::FormattingHelpers qw/info_table_html/;
+</%init>
