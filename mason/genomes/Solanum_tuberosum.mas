@@ -6,20 +6,45 @@
 <div class="page_introduction">
 
    The potato genome has been sequenced by the <a
-   href="http://potatogenome.net">Potato Genome Sequence
+   href="https://spuddb.uga.edu">Potato Genome Sequence
    Consortium</a> (PGSC), an international group of scientists from 14
    countries. The sequence was published in <a
    href="http://www.ncbi.nlm.nih.gov/pubmed/21743474">Nature</a> in
    July 2011. Many potato lines are tetraploid; however, the sequenced
    accession was a homozygous diploid line (double haploid) <i>Solanum
    tuberosum phureja</i>. Below is a mirror of the files provided on
-   <a href="http://potatogenome.net">http://potatogenome.net</a>.
+   <a href="https://spuddb.uga.edu">https://spuddb.uga.edu</a>.
 
 </div>
 
 <&| /page/info_section.mas,
-      title       => 'Sequence datasets',
+      title       => 'Current genome version 6.1',
       collapsible => 1,
+ &>
+ <br/>
+ <p>
+ Download from <a href="https://spuddb.uga.edu/dm_v6_1_download.shtml">SpudDB</a>
+ </p>
+ <br/>
+
+ <&| /page/info_section.mas, title => 'Available Data' &>
+    <% info_table_html(
+          __border   => 0,
+          __multicol => 2,
+          'Bulk Datasets (via FTP)' =>
+            '<a href="https://solgenomics.net/ftp/genomes/Solanum_tuberosum/assembly/PGSC_DM_v6.1/">FTP</a>',
+          'BLAST WGS Assembly' => '<a href="/tools/blast/?db_id=335">Genomic scaffolds</a>',
+ 	 'BLAST protein sequences' => '<a href="/tools/blast/?db_id=336">Protein sequences</a>',
+ 	 'BLAST CDS sequences' => '<a href="/tools/blast/?db_id=337">CDS sequences</a>',
+     'BLAST CDNA sequences' => '<a href="/tools/blast/?db_id=338">CDNA sequences</a>',
+ 	 'JBrowse view' => '<a href="/jbrowse2/"></a>',
+      )
+     %>
+
+<&| /page/info_section.mas,
+      title       => 'Sequence datasets - previous versions',
+      collapsible => 1,
+      collapsed => 1,
  &>
   <& /genomes/default/genome_builds.mas, %ARGS &>
 </&>
@@ -38,6 +63,7 @@
 <&| /page/info_section.mas,
       title       => 'Annotation datasets',
       collapsible => 1,
+      collapsed => 1,
       hide_if_empty => 1,
  &>
 
