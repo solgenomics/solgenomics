@@ -12,7 +12,7 @@
 
 Benoit, M., Jenike, K.M., Satterlee, J., Ramakrishnan, S., Gentile, I., Hendelman, A., Passalacqua, M., Suresh, H., Shogat, H., Robitaille, G., Fitzgerald, B., Alonge, M., Wang, X., Santos, R., He, J., Ou, S., Golan, H., Green, Y., Swartwood, K., Sierra, G.P., Orejuela, A., Roda, F., Goodwin, S., McCombie, W.R., Kizito, E.B., Gagnon, E., Knaap, S., Särkinen, T.E., Frary, A., Gillis, J., Van Eck, J., Schatz, M.C., Lippman, Z.B. (2024) Solanum pan-genomics and pan-genetics reveal paralogs as contingencies in crop engineering. bioRxiv <a href="https://doi.org/10.1101/2024.09.10.612244 ">DOI:10.1101/2024.09.10.612244</a>
 <br /><br />
-The Michael C. Schatz lab at Johns Hopkins University and Zachary B. Lippman lab at Cold Spring Harbor Laboratory present a pan-genome of the genus Solanum comprised of 22 species and 9 additional accessions of the indigenous crop species S. aethiopicum (African eggplant).
+The Michael C. Schatz lab at Johns Hopkins University and Zachary B. Lippman lab at Cold Spring Harbor Laboratory and of the Howard Hughes Medical Institute present a pan-genome of the genus Solanum comprised of 22 species and 9 additional accessions of the indigenous crop species S. aethiopicum (African eggplant).
 <br />
 <br />
 <a href="https://solgenomics.net/ftp/genomes/Solanum_pangenomics/">Genome files</a>
@@ -33,6 +33,8 @@ For further information, please contact <a href="mailto:lippman@cshl.edu">Zach B
 </&>
 
 <&| /page/info_section.mas, title => ''  &>
-<center><img src="/img/solgenomics/SolPanGen.jpg" align="center" width="1200"/></center>
+<center><img src="/img/solgenomics/SolPanGen.jpg" align="center" width="900"/></center>
+<br />
+Image courtesy of Blaine Fitzgerald
 
 </&>
