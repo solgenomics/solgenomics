@@ -83,7 +83,7 @@ padding-bottom:10px;
 
 
       <div style="position:relative;z-index:20;vertical-align:top;padding-top:30px;padding-left:100px">
-        <div class="on_image" style="display:inline-block;max-width:800px;">
+        <div class="on_image" style="display:inline-block;width:800px;max-width:800px;">
           <div style="display:inline-block;z-index:20;vertical-align:middle">
             <img src="/img/solgenomics/SolPanGen.jpg" alt="SolPanGen" height="100">
           </div>
@@ -95,7 +95,7 @@ padding-bottom:10px;
       </div>
 
       <div style="position:relative;z-index:20;vertical-align:top;padding-top:30px;padding-left:175px">
-        <div class="on_image" style="display:inline-block;max-width:625px;">
+        <div class="on_image" style="display:inline-block;width:625px;max-width:625px;">
           <div style="display:inline-block;z-index:20">
             <img src="/img/homepage/leafsymptoms.png" alt="Immune response" height="90">
           </div>
@@ -107,7 +107,7 @@ padding-bottom:10px;
       </div>
 
        <div style="position:relative;z-index:20;padding-top:30px;padding-left:175px">
-         <div class="on_image" style="display:inline-block;max-width:625px;">
+         <div class="on_image" style="display:inline-block;width:625px;max-width:625px;">
 	   <div style="position:relative;display:inline-block;z-index:20">
 	     <img src="/img/homepage/tomato13.jpeg" alt="tomato13" height="90">
 	   </div>
@@ -135,7 +135,7 @@ padding-bottom:10px;
        </div>
 
        <div style="position:relative;z-index:20;vertical-align:top;padding-top:30px;padding-left:175px">
-         <div class="on_image" style="display:inline-block;max-width:625px">
+         <div class="on_image" style="display:inline-block;width:625px;max-width:625px">
 	   <div style="display:inline-block;z-index:20">
 	     <& /image/embed_image.mas, image_id=>49929, size=>"small", height=>"90" , dbh=>$dbh &>
 	   </div>
