@@ -5,11 +5,6 @@
 <& /page/page_title.mas, title=>"A pan-genome of Solanum and its indigenous crop African eggplant (S. aethiopicum)" &>
 
 
-<&| /page/info_section.mas, title => ''  &>
-<center><img src="/img/solgenomics/SolPanGen.jpg" align="center"/></center>
-
-</&>
-
 <&| /page/info_section.mas, title => 'Project overview'  &>
 
 <div><p>
@@ -35,4 +30,9 @@ Repeat annotation: De novo transposable element annotation was first performed o
 For further information, please contact <a href="mailto:lippman@cshl.edu">Zach B. Lippman</a> or <a href="mailto:mschatz@cs.jhu.edu">Michael C. Schatz</a>
 <br />
 </p></div>
+</&>
+
+<&| /page/info_section.mas, title => ''  &>
+<center><img src="/img/solgenomics/SolPanGen.jpg" align="center" width="1200"/></center>
+
 </&>
