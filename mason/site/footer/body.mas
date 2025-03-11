@@ -23,29 +23,30 @@
                                         <tr>
                                           <td --->
 			    <span style="margin-right:50px">
-                              <a href="http://bti.cornell.edu/" class="footer"><img width="160" alt="Boyce Thompson Institute" src="/documents/img/bti_logo_2016.png" title="Boyce Thompson Institute" border="0" style="padding-bottom:2px"/></a>
+                              <a href="http://bti.cornell.edu/" class="footer"><img width="160" alt="Boyce Thompson Institute" src="/documents/img/bti_logo_2024.png" title="Boyce Thompson Institute" border="0" style="padding-bottom:2px"/></a>
 			      </span>
                                             <!-- /td>
 						 <td -->
-					    <span style="margin-right:50px">
+					    <!-- span style="margin-right:50px">
                                               <a href="http://www.nsf.gov/" class="footer"><img width="77" alt="National Science Foundation" src="/documents/img/nsf_logo2.png" title="National Science Foundation" border="0"/></a>
-					      </span>
+					      </span -->
                                             <!-- /td>
 						 <td -->
 					    <span style="margin-right:50px">
                                               <a href="http://www.gmod.org/" class="footer"><img width="100" alt="Powered by GMOD" src="/documents/img/powered_by_gmod_150x71.png" title="Powered by GMOD" border="0" style="padding-top:15px"/></a>
 					      </span>
+					      <a href="https://brapi.org/" class="footer"><img width="100" alt="BrAPI" src="/documents/img/brapi-logo.svg" title="Powered by BrAPI"/> </a>
                                             <!-- /td>
                                             <td -->
-                                                <a href="http://www.nifa.usda.gov/" class="footer"><img width="80" alt="USDA NIFA" src="/documents/img/usda_logo2.png" title="USDA NIFA" border="0" style="padding-top:15px"/></a>
+                                                <!-- a href="http://www.nifa.usda.gov/" class="footer"><img width="80" alt="USDA NIFA" src="/documents/img/usda_logo2.png" title="USDA NIFA" border="0" style="padding-top:15px"/></a -->
                                             <!-- /td>
                                         </tr>
                                     </tbody>
-                                </table -->
+                                </table --> 
 
-                                <ul class="visible-xs-block list-inline center nav-justified">
+                                <!-- ul class="visible-xs-block list-inline center nav-justified">
                                     <li>
-                                        <a href="http://bti.cornell.edu/" class="footer"><img width="160" alt="Boyce Thompson Institute" src="/documents/img/bti_logo_2016.png" title="Boyce Thompson Institute" border="0" style="padding-top:5px"/></a>
+                                        <a href="http://btiscience.org/" class="footer"><img width="160" alt="Boyce Thompson Institute" src="/documents/img/bti_logo_2024.png" title="Boyce Thompson Institute" border="0" style="padding-top:5px"/></a>
                                     </li>
                                     <li>
                                         <a href="http://www.nsf.gov/" class="footer"><img width="77" alt="National Science Foundation" src="/documents/img/nsf_logo2.png" title="National Science Foundation" border="0" style="padding-top:5px"/></a>
@@ -53,15 +54,18 @@
                                     <li>
                                         <a href="http://www.gmod.org/" class="footer"><img width="100" alt="Powered by GMOD" src="/documents/img/powered_by_gmod_150x71.png" title="Powered by GMOD" border="0" style="padding-top:15px"/></a>
                                     </li>
+				    <li>
+				    
+				    </li>
                                     <li>
                                         <a href="http://www.nifa.usda.gov/" class="footer"><img width="80" alt="USDA NIFA" src="/documents/img/usda_logo2.png" title="USDA NIFA" border="0" style="padding-top:12px"/></a>
                                     </li>
-                                </ul>
+                                </ul -->
 
                             <!-- /div -->
 
                             <div style="margin-top:30px">
-                                <small>SGN is supported by <a class="footer" href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=0820612">NSF (#0820612)</a>, <a class="footer" href="http://www.usda.gov">USDA CSREES</a> and hosted at <a class="footer" href="http://bti.cornell.edu">BTI.</a>
+                                <!-- small>SGN was supported by <a class="footer" href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=0820612">NSF (#0820612)</a>, <a class="footer" href="http://www.usda.gov">USDA CSREES</a> and hosted at <a class="footer" href="http://bti.cornell.edu">BTI.</a -->
                                     <br />
                                     Cite SGN using <a class="footer" href="http://nar.oxfordjournals.org/content/early/2014/11/26/nar.gku1195.full" target="_new"> Fernandez-Pozo et al, 2014</a> | <a href="/legal.pl">Disclaimer</a></small>
                             </div>
