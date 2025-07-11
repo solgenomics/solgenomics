@@ -1,4 +1,6 @@
 *~
+sgn_local.conf
+bash_history
 !Build/
 .last_cover_stats
 /META.yml
