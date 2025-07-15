@@ -8,6 +8,9 @@ services:
       - 8927:8080
     volumes:
       - type: bind
+        source: /export/prod/tmp/solgenomics.net
+        target: /home/production/tmp
+      - type: bind
         source: /export/prod/public
         target: /home/production/volume
 #      - type: bind
