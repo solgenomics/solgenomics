@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  breedbase:
+    image: breedbase/breedbase:latest
+    container_name: breedbase_web_solgenomics2
+    ports:
+      - 8927:8080
+    volumes:
+      - type: bind
+        source: /export/prod/public
+        target: /home/production/volume
+#      - type: bind
+#        source: empty_db_without.test_users.sql
+#        target: /home/production/empty_dump.sql
+      - type: bind
+        source: /home/production/sgn_for_solgenomics
+        target: /home/production/cxgn/sgn
+      - type: bind
+        source: sgn_local.conf
+        target: /home/production/cxgn/sgn/sgn_local.conf
+      - type: bind
+        source: db_dumps
+        target: /db_dumps
+      - type: bind
+        source: crontab
+        target: /etc/crontab
+      - type: bind
+        source: bash_history
+        target: /home/production/.bash_history
+      - type: bind
+        source: /export/prod/blast/databases/current/
+        target: /home/production/blast
+      - type: bind
+        source: /home/production/solgenomics
+        target: /home/production/cxgn/solgenomics
+
+
+
+
+
