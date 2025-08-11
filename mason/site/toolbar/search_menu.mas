@@ -7,6 +7,7 @@
     <li role="separator" class="divider"></li>
     <li><a href="/search/expression">Expression</a></li>
     <li><a href="/search/stocks">Accessions and Plots</a></li>
+    <li><a href="/search/traits">Traits</a></li>
     <li><a href="/search/phenotypes/qtl">QTLs</a></li>
     <li><a href="/search/markers">Markers</a></li>
 
