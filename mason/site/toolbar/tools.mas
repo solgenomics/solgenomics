@@ -25,7 +25,8 @@
 
     <li role="separator" class="divider"></li>
     <li class="dropdown-header">Systems Biology</li>
-    <li><a href="/pages/solcyc/">SolCyc Biochemical Pathways</a></li>
+    <!-- li><a href="/pages/solcyc/">SolCyc Biochemical Pathways</a></li -->
+    <li href="https://crispget.breedbase.org/">CRISPget CRISPR designer</a></li>
     <li><a href="/tools/interactomics">Coffee Interactomic Data</a></li>
     <li><a href="/tools/onto/">SGN Ontology Browser</a></li>
 
