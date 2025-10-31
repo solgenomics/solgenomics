@@ -80,13 +80,6 @@ padding-bottom:10px;
 	 </div>
        </div>
 
-       <div style="position:relative;z-index:20;vertical-align:top;padding-top:30px;padding-left:80px">
- <div class="on_image" style="display:inline-block;width:100%;max-width:800px;">
-       
-       <h3><a href="https://solrub2025.org/">SOLRUB Conference 2025</h3></a> - Torino, Italy. September 22-26, 2025. <a href="https://solgenomics.net/ftp/solrub2025/solrub_announcement.pdf">More information</a>.
-       </div>
-</div>
-
       <div style="position:relative;z-index:20;vertical-align:top;padding-top:30px;padding-left:100px">
         <div class="on_image" style="display:inline-block;width:100%;max-width:800px;">
           <div style="display:inline-block;z-index:20;vertical-align:middle">
