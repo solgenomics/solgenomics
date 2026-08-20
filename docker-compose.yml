@@ -20,16 +20,16 @@ services:
         source: /home/production/sgn_for_solgenomics
         target: /home/production/cxgn/sgn
       - type: bind
-        source: sgn_local.conf
+        source: ./sgn_local.conf
         target: /home/production/cxgn/sgn/sgn_local.conf
       - type: bind
-        source: db_dumps
+        source: ./db_dumps
         target: /db_dumps
       - type: bind
-        source: crontab
+        source: ./crontab
         target: /etc/crontab
       - type: bind
-        source: bash_history
+        source: ./bash_history
         target: /home/production/.bash_history
       - type: bind
         source: /export/prod/blast/databases/current/
@@ -37,6 +37,9 @@ services:
       - type: bind
         source: /home/production/solgenomics
         target: /home/production/cxgn/solgenomics
+      - type: bind
+        source: /export/prod/cluster
+        target: /home/production/cluster
 
 
 
